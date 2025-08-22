@@ -4,6 +4,7 @@ import { headerItemsNav } from "../../data/headerItemsNav";
 import ItemNav from "./ItemNav";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import useWidth from "../../hooks/useWidth";
 
 gsap.registerPlugin(useGSAP);
 
@@ -11,6 +12,7 @@ export default function HeaderContainer(): ReactElement {
   const logo = useRef(null);
   const nav = useRef(null);
   const login = useRef(null);
+  let width: number = useWidth();
 
   useGSAP(() => {
     let tl = gsap.timeline();
@@ -20,44 +22,47 @@ export default function HeaderContainer(): ReactElement {
   }, []);
 
   return (
-    <Stack
-      direction="row"
-      spacing={1}
-      flexDirection="row"
-      justifyContent="space-between"
-      alignItems="center"
-      paddingX={5}
-    >
-      <Box ref={logo} sx={{ width: "fit-content" }}>
-        ExperiStay
-      </Box>
-      <Box ref={nav} component="nav">
-        <List
-          component="ul"
+    <Box>
+      {}
+      <Stack
+        direction="row"
+        spacing={1}
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center"
+        paddingX={5}
+      >
+        <Box ref={logo} sx={{ width: "fit-content" }}>
+          ExperiStay
+        </Box>
+        <Box ref={nav} component="nav">
+          <List
+            component="ul"
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            {headerItemsNav.map((el) => (
+              <ItemNav key={el.index} nameItem={el.nameItem} />
+            ))}
+          </List>
+        </Box>
+        <Button
+          ref={login}
+          variant="outlined"
           sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "100%",
+            fontWeight: 400,
+            backgroundColor: "background.default",
+            color: "text.primary",
           }}
         >
-          {headerItemsNav.map((el) => (
-            <ItemNav key={el.index} nameItem={el.nameItem} />
-          ))}
-        </List>
-      </Box>
-      <Button
-        ref={login}
-        variant="outlined"
-        sx={{
-          fontWeight: 400,
-          backgroundColor: "background.default",
-          color: "text.primary",
-        }}
-      >
-        Login
-      </Button>
-    </Stack>
+          Login
+        </Button>
+      </Stack>
+    </Box>
   );
 }
