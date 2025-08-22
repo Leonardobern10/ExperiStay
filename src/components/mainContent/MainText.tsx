@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import { forwardRef, type ReactElement } from "react";
-import type { MainTextProps } from "../types/MainTextProps";
+import type { MainTextProps } from "../../types/MainTextProps";
 import RealEstateAgentIcon from "@mui/icons-material/RealEstateAgent";
-import useWidth from "../hooks/useWidth";
+import useWidth from "../../hooks/useWidth";
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
   ({ title, desc }, ref): ReactElement => {

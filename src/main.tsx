@@ -4,19 +4,21 @@ import App from "./App.tsx";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./theme/theme.ts";
 import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "./components/Header/Home.tsx";
+import Services from "./pages/Services.tsx";
+import Home from "./pages/Home.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
+            <Route path="servicos" element={<Services />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   </StrictMode>
 );

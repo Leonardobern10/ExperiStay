@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import { useRef, type ReactElement } from "react";
 import backgroundImage from "../../assets/images/Gemini_Generated_Image_wvn7uswvn7uswvn7.png";
-import MainText from "../MainText";
+import MainText from "./MainText";
 import { mainTexts } from "../../data/mainTexts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

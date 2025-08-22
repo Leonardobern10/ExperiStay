@@ -1,10 +1,10 @@
 import { type ReactElement } from "react";
-import MainContentContainer from "../mainContent/MainContentContainer";
 import { Box, Grid } from "@mui/material";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import HeaderContainer from "./HeaderContainer";
+import HeaderContainer from "../components/Header/HeaderContainer";
+import MainContentContainer from "../components/mainContent/MainContentContainer";
 
 export default function Home(): ReactElement {
   gsap.registerPlugin(ScrollTrigger);
