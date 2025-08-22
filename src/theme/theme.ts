@@ -14,7 +14,7 @@ const theme = createTheme({
       dark: "#070606be",
     },
     background: {
-      default: "#6e6d6de5",
+      default: "#131313e5",
       paper: "#5c8374",
     },
     error: {
@@ -35,7 +35,6 @@ const theme = createTheme({
     h1: {
       fontSize: 64,
       fontWeight: 400,
-
     },
     h2: {
       fontSize: "3rem",
@@ -51,7 +50,7 @@ const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 15,
+    borderRadius: 20,
   },
   spacing: 5,
 });

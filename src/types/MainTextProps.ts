@@ -1,4 +1,4 @@
 export type MainTextProps = {
-    title: string;
-    desc: string;
-}
+  title: string;
+  desc: string;
+};

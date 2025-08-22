@@ -1,34 +1,61 @@
 import { Box, Grid } from "@mui/material";
-import type { ReactElement } from "react";
+import { useRef, type ReactElement } from "react";
 import HeaderContainer from "../Header/HeaderContainer";
-import backgroundImage from '../../assets/images/Gemini_Generated_Image_wvn7uswvn7uswvn7.png'
+import backgroundImage from "../../assets/images/Gemini_Generated_Image_wvn7uswvn7uswvn7.png";
 import MainText from "../MainText";
 import { mainTexts } from "../../data/mainTexts";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-export default function MainContentContainer (): ReactElement {
-    return (
-        <Box sx={{
-                backgroundImage: `url(${backgroundImage})`,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                filter: "brightness(80%) contrast(90%)",
-                height: '100vh',
-                width: '100%',
-                
-        }}>
-            <HeaderContainer />
-            <Grid container component='main' sx={{
-                width: '100%',
-                padding: 4,
-                justifyContent: 'flex-start',
-                alignItems: 'end',
-                backdropFilter: 'opacity(40%)',
-                height: '40%',
-                border: 2
-            }}>
-                <MainText title={mainTexts.title} desc={mainTexts.desc} />
-            </Grid>
-        </Box>
-    )
+export default function MainContentContainer(): ReactElement {
+  const container = useRef(null);
+  const mainText = useRef(null);
+
+  useGSAP(() => {
+    let tl = gsap.timeline();
+    tl.from(container.current, { duration: 1, opacity: 0 }).from(
+      mainText.current,
+      {
+        duration: 1,
+        opacity: 0,
+        x: -150,
+      }
+    );
+  }, []);
+  return (
+    <Box
+      ref={container}
+      sx={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        filter: "brightness(80%) contrast(90%)",
+        height: "100vh",
+        width: "100%",
+      }}
+    >
+      <HeaderContainer />
+      <Grid
+        justifyContent="space-between"
+        alignItems="center"
+        direction="row"
+        container
+        component="main"
+        sx={{
+          width: "100%",
+          padding: 4,
+          justifyContent: "flex-start",
+          alignItems: "end",
+          height: "90%",
+        }}
+      >
+        <MainText
+          ref={mainText}
+          title={mainTexts.title}
+          desc={mainTexts.desc}
+        />
+      </Grid>
+    </Box>
+  );
 }
