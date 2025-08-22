@@ -9,7 +9,9 @@ import HeaderMobile from "./HeaderMobile";
 
 gsap.registerPlugin(useGSAP);
 
-export default function HeaderContainer(): ReactElement {
+export default function HeaderContainer(props: {
+  className: string;
+}): ReactElement {
   let width: number = useWidth();
 
   const elem1: RefObject<null | HTMLElement> = useRef(null);
@@ -24,7 +26,13 @@ export default function HeaderContainer(): ReactElement {
   }, []);
 
   return (
-    <Box>
+    <Box
+      className={props.className}
+      sx={{
+        minHeight: "240px",
+        maxHeight: "100%",
+      }}
+    >
       {width > 768 ? (
         <HeaderDesktop
           refLogo={elem1}

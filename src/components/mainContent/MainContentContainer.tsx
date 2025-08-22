@@ -1,13 +1,14 @@
 import { Box, Grid } from "@mui/material";
 import { useRef, type ReactElement } from "react";
-import HeaderContainer from "../Header/HeaderContainer";
 import backgroundImage from "../../assets/images/Gemini_Generated_Image_wvn7uswvn7uswvn7.png";
 import MainText from "../MainText";
 import { mainTexts } from "../../data/mainTexts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-export default function MainContentContainer(): ReactElement {
+export default function MainContentContainer(props: {
+  className: string;
+}): ReactElement {
   const container = useRef(null);
   const mainText = useRef(null);
 
@@ -24,6 +25,7 @@ export default function MainContentContainer(): ReactElement {
   }, []);
   return (
     <Box
+      className={props.className}
       ref={container}
       sx={{
         backgroundImage: `url(${backgroundImage})`,
@@ -35,7 +37,6 @@ export default function MainContentContainer(): ReactElement {
         width: "100%",
       }}
     >
-      <HeaderContainer />
       <Grid
         justifyContent="space-between"
         alignItems="center"

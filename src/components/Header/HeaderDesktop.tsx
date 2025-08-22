@@ -17,6 +17,7 @@ export default function HeaderDesktop({
       justifyContent="space-between"
       alignItems="center"
       paddingX={5}
+      height="100%"
     >
       <Box ref={refLogo} sx={{ width: "fit-content" }}>
         ExperiStay
