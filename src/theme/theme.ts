@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material";
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: "#092635",
@@ -33,7 +33,7 @@ const theme = createTheme({
     fontSize: 16,
     fontFamily: "'Poppins', sans-serif",
     h1: {
-      fontSize: 64,
+      fontSize: "3rem",
       fontWeight: 400,
     },
     h2: {
@@ -54,5 +54,7 @@ const theme = createTheme({
   },
   spacing: 5,
 });
+
+theme = responsiveFontSizes(theme);
 
 export default theme;
