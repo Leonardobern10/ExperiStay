@@ -31,10 +31,11 @@ const theme = createTheme({
   },
   typography: {
     fontSize: 16,
-    fontFamily: "'Poppins', sans-serif;",
+    fontFamily: "'Poppins', sans-serif",
     h1: {
-      fontSize: "4rem",
-      fontWeight: 700,
+      fontSize: 64,
+      fontWeight: 400,
+
     },
     h2: {
       fontSize: "3rem",
@@ -46,7 +47,7 @@ const theme = createTheme({
     },
     button: {
       textTransform: "none",
-      padding: 2,
+      padding: 1,
     },
   },
   shape: {
