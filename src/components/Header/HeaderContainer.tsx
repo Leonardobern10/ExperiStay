@@ -25,8 +25,7 @@ export default function HeaderContainer(props: {
       className={props.className}
       sx={{
         height: "3rem",
-        paddingX: 4,
-        backdropFilter: "brightness(70%)",
+        padding: 4,
       }}
     >
       {width > 768 ? (
