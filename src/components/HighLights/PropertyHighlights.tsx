@@ -29,11 +29,23 @@ export default function PropertyHighLights(props: {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: {
+              xs: "column",
+              md: "row",
+            },
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: {
+              xs: "space-between",
+              md: "center",
+            },
             columnGap: 5,
-            height: "100%",
+            rowGap: 5,
+            height: {
+              xs: "6rem",
+              md: "100%",
+            },
+            width: "100%",
+            padding: { xs: 4, md: 0 },
           }}
         >
           <Typography color="primary" variant="h3">
@@ -41,7 +53,7 @@ export default function PropertyHighLights(props: {
           </Typography>
           <Box
             sx={{
-              width: "40%",
+              width: { xs: "100%", md: "40%" },
             }}
           >
             <Typography color="primary" variant="body1">
@@ -56,7 +68,7 @@ export default function PropertyHighLights(props: {
           height: "70%",
           width: "100vw",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-between",
           alignItems: "center",
           columnGap: 8,
@@ -65,10 +77,11 @@ export default function PropertyHighLights(props: {
         <Box
           sx={{
             height: "100%",
-            width: "40%",
+            width: { xs: "80%", md: "40%" },
             display: "flex",
-            flexDirection: "column",
+            flexDirection: { xs: "row", md: "column" },
             rowGap: 10,
+            columnGap: 4,
           }}
         >
           <Paper
@@ -77,6 +90,7 @@ export default function PropertyHighLights(props: {
               backgroundImage: `url(${anunc1})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
               width: "100%",
               height: "70%",
             }}
@@ -85,7 +99,7 @@ export default function PropertyHighLights(props: {
               variant="outlined"
               sx={{
                 position: "relative",
-                left: "77%",
+                left: { xs: "50%", md: "77%" },
                 top: "5%",
                 padding: 0,
               }}
