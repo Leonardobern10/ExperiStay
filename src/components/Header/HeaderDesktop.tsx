@@ -1,8 +1,8 @@
 import { Box, List, Stack } from "@mui/material";
 import type { ReactElement } from "react";
 import type { HeaderProps } from "../../types/HeaderProps";
-import ItemNav from "./ItemNav";
-import ButtonWithIcon from "../../theme/ButtonWithIcon";
+import NavItem from "./NavItem";
+import ButtonWithIcon from "../ui/ButtonWithIcon";
 
 export default function HeaderDesktop({
   refLogo,
@@ -27,7 +27,7 @@ export default function HeaderDesktop({
           }}
         >
           {headerItemsNav.map((el) => (
-            <ItemNav key={el.index} nameItem={el.nameItem} />
+            <NavItem key={el.index} nameItem={el.nameItem} />
           ))}
         </List>
       </Box>

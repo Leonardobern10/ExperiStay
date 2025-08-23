@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import HeaderContainer from "../components/Header/HeaderContainer";
 import MainContentContainer from "../components/mainContent/MainContentContainer";
-import PropertyHighLights from "../components/HighLights/PropertyHighlights";
+import PropertyHighlights from "../components/HighLights/PropertyHighlights";
 
 export default function Home(): ReactElement {
   gsap.registerPlugin(ScrollTrigger);
@@ -48,7 +48,7 @@ export default function Home(): ReactElement {
     >
       <HeaderContainer className="section" />
       <MainContentContainer className="section" />
-      <PropertyHighLights className="section" />
+      <PropertyHighlights className="section" />
       <Box
         className="section"
         sx={{

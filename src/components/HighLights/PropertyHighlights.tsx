@@ -1,10 +1,13 @@
-import { Box, Button, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import type { ReactElement } from "react";
 import anunc1 from "../../assets/images/anunc_1.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import anunc2 from "../../assets/images/anunc_2.png";
+import TopBoxHighlights from "../ui/TopBoxHighlights";
+import PaperImage from "../ui/PaperImage";
+import BottomBoxHighlights from "../ui/BottomBoxHightlights";
 
-export default function PropertyHighLights(props: {
+export default function PropertyHighlights(props: {
   className: string;
 }): ReactElement {
   return (
@@ -26,28 +29,7 @@ export default function PropertyHighLights(props: {
           padding: 1,
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: {
-              xs: "column",
-              md: "row",
-            },
-            justifyContent: "space-between",
-            alignItems: {
-              xs: "space-between",
-              md: "center",
-            },
-            columnGap: 5,
-            rowGap: 5,
-            height: {
-              xs: "6rem",
-              md: "100%",
-            },
-            width: "100%",
-            padding: { xs: 4, md: 0 },
-          }}
-        >
+        <TopBoxHighlights>
           <Typography color="primary" variant="h3">
             Destaques
           </Typography>
@@ -61,19 +43,9 @@ export default function PropertyHighLights(props: {
               marcantes.
             </Typography>
           </Box>
-        </Box>
+        </TopBoxHighlights>
       </Grid>
-      <Grid
-        sx={{
-          height: "70%",
-          width: "100vw",
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          justifyContent: "space-between",
-          alignItems: "center",
-          columnGap: 8,
-        }}
-      >
+      <BottomBoxHighlights>
         <Box
           sx={{
             height: "100%",
@@ -84,14 +56,10 @@ export default function PropertyHighLights(props: {
             columnGap: 4,
           }}
         >
-          <Paper
+          <PaperImage
             variant="outlined"
             sx={{
               backgroundImage: `url(${anunc1})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              width: "100%",
               height: "70%",
             }}
           >
@@ -106,7 +74,7 @@ export default function PropertyHighLights(props: {
             >
               <NorthEastIcon />
             </Button>
-          </Paper>
+          </PaperImage>
           <Typography variant="body1" color="primary.main">
             Urca, Rio de Janeiro.
           </Typography>
@@ -117,18 +85,13 @@ export default function PropertyHighLights(props: {
             height: "100%",
           }}
         >
-          <Paper
+          <PaperImage
             variant="outlined"
             sx={{
               height: "90%",
-              width: "100%",
               backgroundImage: `url(${anunc2})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
             }}
           >
-            {" "}
             <Button
               variant="outlined"
               sx={{
@@ -140,9 +103,9 @@ export default function PropertyHighLights(props: {
             >
               <NorthEastIcon />
             </Button>
-          </Paper>
+          </PaperImage>
         </Box>
-      </Grid>
+      </BottomBoxHighlights>
     </Grid>
   );
 }

@@ -1,6 +1,6 @@
 import { Box, List } from "@mui/material";
 import type { ReactElement, RefObject } from "react";
-import ItemNav from "./Header/ItemNav";
+import NavItem from "./Header/NavItem";
 import type { ItemNavProps } from "../types/ItemNavProps";
 
 export default function NavBar(props: {
@@ -23,7 +23,7 @@ export default function NavBar(props: {
         }}
       >
         {props.headerItemsNav.map((el) => (
-          <ItemNav key={el.index} nameItem={el.nameItem} />
+          <NavItem key={el.index} nameItem={el.nameItem} />
         ))}
       </List>
     </Box>

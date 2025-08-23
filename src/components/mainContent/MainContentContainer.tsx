@@ -3,26 +3,15 @@ import { useRef, type ReactElement } from "react";
 import backgroundImage from "../../assets/images/Gemini_Generated_Image_b5t0yb5t0yb5t0yb.png";
 import MainText from "./MainText";
 import { mainTexts } from "../../data/mainTexts";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import { useMainContentAnimation } from "../../hooks/useAnimation";
 
 export default function MainContentContainer(props: {
   className: string;
 }): ReactElement {
   const container = useRef(null);
   const mainText = useRef(null);
+  useMainContentAnimation(container, mainText);
 
-  useGSAP(() => {
-    let tl = gsap.timeline();
-    tl.from(container.current, { duration: 1, opacity: 0 }).from(
-      mainText.current,
-      {
-        duration: 1,
-        opacity: 0,
-        x: -150,
-      }
-    );
-  }, []);
   return (
     <Box
       className={props.className}

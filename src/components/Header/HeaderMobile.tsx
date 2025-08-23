@@ -1,7 +1,7 @@
 import { Box, List, Stack } from "@mui/material";
 import { type ReactElement } from "react";
 import type { HeaderProps } from "../../types/HeaderProps";
-import ItemNav from "./ItemNav";
+import NavItem from "./NavItem";
 
 export default function HeaderMobile({
   refLogo,
@@ -20,7 +20,7 @@ export default function HeaderMobile({
 
       <List>
         {headerItemsNav.map((el) => (
-          <ItemNav key={el.index} nameItem={el.nameItem} />
+          <NavItem key={el.index} nameItem={el.nameItem} />
         ))}
       </List>
     </Stack>
