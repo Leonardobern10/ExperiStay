@@ -13,10 +13,12 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
         ref={ref}
         sx={{
           width: `${width > 768 ? "60%" : "100%"}`,
-          backdropFilter: "blur(3px)", // efeito no fundo
+          backdropFilter: "brightness(70%)", // efeito no fundo
           display: "flex",
           flexDirection: "column",
           rowGap: 4,
+          padding: 4,
+          borderRadius: 2,
         }}
       >
         <Box>
