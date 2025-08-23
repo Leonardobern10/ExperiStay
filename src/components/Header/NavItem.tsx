@@ -8,7 +8,7 @@ export default function NavItem({ nameItem }: ItemNavProps): ReactElement {
       sx={{
         fontWeight: 200,
         color: "#FFF",
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
       }}
     >
       {nameItem}

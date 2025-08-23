@@ -11,7 +11,7 @@ import { useHeaderAnimation } from "../../hooks/useAnimation";
 gsap.registerPlugin(useGSAP);
 
 export default function HeaderContainer(props: {
-  className: string;
+  className?: string;
 }): ReactElement {
   let width: number = useWidth();
   let elem3: RefObject<null | HTMLButtonElement> = useRef(null);
@@ -24,8 +24,9 @@ export default function HeaderContainer(props: {
     <Box
       className={props.className}
       sx={{
-        minHeight: "240px",
-        maxHeight: "100%",
+        height: "3rem",
+        paddingX: 4,
+        backdropFilter: "brightness(70%)",
       }}
     >
       {width > 768 ? (

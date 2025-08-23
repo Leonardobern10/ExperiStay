@@ -4,6 +4,7 @@ import backgroundImage from "../../assets/images/Gemini_Generated_Image_b5t0yb5t
 import MainText from "./MainText";
 import { mainTexts } from "../../data/mainTexts";
 import { useMainContentAnimation } from "../../hooks/useAnimation";
+import HeaderContainer from "../Header/HeaderContainer";
 
 export default function MainContentContainer(props: {
   className: string;
@@ -26,6 +27,7 @@ export default function MainContentContainer(props: {
         width: "100%",
       }}
     >
+      <HeaderContainer />
       <Grid
         justifyContent="space-between"
         alignItems="center"
