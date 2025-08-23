@@ -1,10 +1,11 @@
-import { Box, Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import { useRef, type ReactElement } from "react";
 import backgroundImage from "../../assets/images/Gemini_Generated_Image_b5t0yb5t0yb5t0yb.png";
 import MainText from "./MainText";
 import { mainTexts } from "../../data/mainTexts";
 import { useMainContentAnimation } from "../../hooks/useAnimation";
 import HeaderContainer from "../Header/HeaderContainer";
+import ContainerMainText from "../ContainerMainText";
 
 export default function MainContentContainer(props: {
   className: string;
@@ -28,26 +29,15 @@ export default function MainContentContainer(props: {
       }}
     >
       <HeaderContainer />
-      <Grid
-        justifyContent="space-between"
-        alignItems="center"
-        direction="row"
-        container
-        component="main"
-        sx={{
-          width: "100%",
-          padding: 4,
-          justifyContent: "flex-start",
-          alignItems: "end",
-          height: "90%",
-        }}
-      >
-        <MainText
-          ref={mainText}
-          title={mainTexts.title}
-          desc={mainTexts.desc}
-        />
-      </Grid>
+      <ContainerMainText
+        child={
+          <MainText
+            ref={mainText}
+            title={mainTexts.title}
+            desc={mainTexts.desc}
+          />
+        }
+      />
     </Box>
   );
 }
