@@ -54,26 +54,23 @@ let theme = createTheme({
   },
   spacing: 5,
   components: {
-    MuiButton: {
+    MuiStack: {
       styleOverrides: {
         root: {
-          fontWeight: 400,
-          textTransform: "none",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: 4,
         },
       },
-      variants: [
-        {
-          props: { variant: "contained" },
-          style: {
-            backgroundColor: "background.default",
-            color: "text.primary",
-            padding: "12px 24px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          },
+    },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         },
-      ],
+      },
     },
   },
 });
