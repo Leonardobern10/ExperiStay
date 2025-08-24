@@ -14,11 +14,9 @@ export default function PropertyHighlights(props: {
     <Grid
       container
       sx={{
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         backgroundColor: "#c4c1c1ff",
-        paddingX: 4,
-        paddingBottom: 2,
       }}
       className={props.className}
     >
@@ -26,7 +24,7 @@ export default function PropertyHighlights(props: {
         sx={{
           width: "100vw",
           height: "30%",
-          padding: 1,
+          padding: 4,
         }}
       >
         <TopBoxHighlights>
@@ -54,6 +52,7 @@ export default function PropertyHighlights(props: {
             flexDirection: { xs: "row", md: "column" },
             rowGap: 10,
             columnGap: 4,
+            padding: 4,
           }}
         >
           <PaperImage

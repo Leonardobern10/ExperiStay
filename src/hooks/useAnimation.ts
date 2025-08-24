@@ -3,6 +3,8 @@ import type { RefObject } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const useHeaderAnimation = (
   el1: RefObject<null | HTMLElement>,
   el2: RefObject<null | HTMLElement>,
@@ -34,7 +36,6 @@ export const useMainContentAnimation = (
 };
 
 export const useScrollSectionsAnimations = (classTarget: string) => {
-  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const panels: HTMLElement[] = gsap.utils.toArray<HTMLElement>(classTarget);
 
@@ -43,6 +44,7 @@ export const useScrollSectionsAnimations = (classTarget: string) => {
         trigger: panel,
         start: "top top",
         pin: true,
+        scrub: 1,
         pinSpacing: false,
       });
     });
