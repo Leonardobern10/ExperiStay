@@ -4,8 +4,6 @@ import MainContentContainer from "../components/mainContent/MainContentContainer
 import PropertyHighlights from "../components/HighLights/PropertyHighlights";
 
 export default function Home(): ReactElement {
-
-
   return (
     <Grid
       sx={{
