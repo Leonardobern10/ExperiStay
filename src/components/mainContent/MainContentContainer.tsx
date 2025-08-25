@@ -5,7 +5,7 @@ import MainText from "./MainText";
 import { mainTexts } from "../../data/mainTexts";
 import { useMainContentAnimation } from "../../hooks/useAnimation";
 import HeaderContainer from "../Header/HeaderContainer";
-import ContainerMainText from "../ContainerMainText";
+import GridMainText from "./GridMainText";
 
 export default function MainContentContainer(props: {
   className: string;
@@ -29,7 +29,7 @@ export default function MainContentContainer(props: {
       }}
     >
       <HeaderContainer />
-      <ContainerMainText
+      <GridMainText
         child={
           <MainText
             ref={mainText}
