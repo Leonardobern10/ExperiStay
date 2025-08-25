@@ -35,35 +35,3 @@ export const useMainContentAnimation = (
   }, []);
 };
 
-export const useScrollSectionsAnimations = (classTarget: string) => {
-  useGSAP(() => {
-    const panels: HTMLElement[] = gsap.utils.toArray<HTMLElement>(classTarget);
-
-    panels.forEach((panel) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: "top top",
-        pin: true,
-        scrub: 1,
-        pinSpacing: false,
-      });
-    });
-
-    ScrollTrigger.create({
-      snap: {
-        snapTo: (_, self: any) => {
-          const panelPositions = panels.map(
-            (p) => ScrollTrigger.create({ trigger: p, start: "top top" }).start
-          );
-          const closest = gsap.utils.snap(panelPositions, self.scroll());
-          return gsap.utils.normalize(
-            0,
-            ScrollTrigger.maxScroll(window),
-            closest
-          );
-        },
-        duration: 0.5, // duração da animação do snap
-      },
-    });
-  }, []);
-};
