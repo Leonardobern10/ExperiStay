@@ -17,9 +17,9 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
           backdropFilter: "brightness(70%)", // efeito no fundo
           display: "flex",
           flexDirection: "column",
-          rowGap: 4,
-          padding: 4,
-          borderRadius: 2,
+          rowGap: (theme) => theme.spacing(2),
+          padding: (theme) => theme.spacing(3),
+          borderRadius: (theme) => theme.shape.borderRadius,
         }}
       >
         <Box>

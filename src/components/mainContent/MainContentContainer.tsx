@@ -5,7 +5,7 @@ import MainText from "./MainText";
 import { mainTexts } from "../../data/mainTexts";
 import { useMainContentAnimation } from "../../hooks/useAnimation";
 import HeaderContainer from "../Header/HeaderContainer";
-import GridMainText from "./GridMainText";
+import GridMainText from "./ContainerMainText";
 
 export default function MainContentContainer(props: {
   className: string;

@@ -16,7 +16,7 @@ export default function PropertyHighlights(props: {
       sx={{
         width: "100%",
         height: "100vh",
-        backgroundColor: "#c4c1c1ff",
+        backgroundColor: (theme) => theme.palette.background.paper,
       }}
       className={props.className}
     >

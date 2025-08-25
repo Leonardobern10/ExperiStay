@@ -4,7 +4,7 @@ let theme = createTheme({
   palette: {
     primary: {
       main: "#464f53ff",
-      light: "#9EC8B9",
+      light: "#476a5eff",
       dark: "#1B4242 ",
       contrastText: "#5C8374 ",
     },
@@ -50,7 +50,7 @@ let theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 20,
+    borderRadius: '2rem',
   },
   spacing: 5,
   components: {
