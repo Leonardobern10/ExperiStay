@@ -1,4 +1,4 @@
-import { Box, List, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import type { ReactElement } from "react";
 import type { HeaderProps } from "../../types/HeaderProps";
 import NavItem from "./NavItem";
