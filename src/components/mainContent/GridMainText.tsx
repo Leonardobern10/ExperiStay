@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import type { ReactElement } from "react";
 
-export default function ContainerMainText(props: {
+export default function GridMainText(props: {
   child: ReactElement;
 }): ReactElement {
   return (
