@@ -12,7 +12,7 @@ export default function Home(): ReactElement {
     <Grid
       sx={{
         height: "100%",
-        width: "100vw",
+        width: "100%",
       }}
     >
       <MainContentContainer className="section" />

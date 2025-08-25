@@ -20,13 +20,15 @@ function App() {
       sx={{
         justifyContent: "space-between",
         alignItems: "center",
-        width: "100dvw",
+        width: "100%",
+        border: 2,
+        borderColor: 'red'
       }}
     >
       {loading ? (
         <Box
           sx={{
-            width: "100vw",
+            width: "100%",
             height: "100vh",
             display: "flex",
             justifyContent: "center",
