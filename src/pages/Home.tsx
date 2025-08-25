@@ -5,7 +5,8 @@ import PropertyHighlights from "../components/HighLights/PropertyHighlights";
 import { useScrollSectionsAnimations } from "../hooks/useAnimation";
 
 export default function Home(): ReactElement {
-  useScrollSectionsAnimations(".section");
+
+  //useScrollSectionsAnimations(".section");
 
   return (
     <Grid
