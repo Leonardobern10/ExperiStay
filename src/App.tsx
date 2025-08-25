@@ -21,8 +21,6 @@ function App() {
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
-        border: 2,
-        borderColor: 'red'
       }}
     >
       {loading ? (
