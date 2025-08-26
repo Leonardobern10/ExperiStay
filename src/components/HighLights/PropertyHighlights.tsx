@@ -1,11 +1,11 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import type { ReactElement } from "react";
 import anunc1 from "../../assets/images/anunc_1.png";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
 import anunc2 from "../../assets/images/anunc_2.png";
 import TopBoxHighlights from "../ui/TopBoxHighlights";
 import PaperImage from "../ui/PaperImage";
 import BottomBoxHighlights from "../ui/BottomBoxHightlights";
+import ImageComponent from "../ImageComponent";
 
 export default function PropertyHighlights(props: {
   className: string;
@@ -16,8 +16,7 @@ export default function PropertyHighlights(props: {
       sx={{
         width: "100%",
         height: "100vh",
-        backgroundColor: "#c4c1c1ff",
-        padding: { xs: 2, md: 4 },
+        backgroundColor: (theme) => theme.palette.background.paper,
       }}
       className={props.className}
     >
@@ -56,24 +55,8 @@ export default function PropertyHighlights(props: {
             padding: 4,
           }}
         >
-          <PaperImage
-            variant="outlined"
-            sx={{
-              backgroundImage: `url(${anunc1})`,
-              height: "70%",
-            }}
-          >
-            <Button
-              variant="outlined"
-              sx={{
-                position: "relative",
-                left: { xs: "50%", md: "77%" },
-                top: "5%",
-                padding: 0,
-              }}
-            >
-              <NorthEastIcon />
-            </Button>
+          <PaperImage variant="outlined">
+            <ImageComponent alt="Imagem do imovel de destaque 1" src={anunc1} />
           </PaperImage>
           <Typography variant="body1" color="primary.main">
             Urca, Rio de Janeiro.
@@ -85,24 +68,8 @@ export default function PropertyHighlights(props: {
             height: "100%",
           }}
         >
-          <PaperImage
-            variant="outlined"
-            sx={{
-              height: "90%",
-              backgroundImage: `url(${anunc2})`,
-            }}
-          >
-            <Button
-              variant="outlined"
-              sx={{
-                position: "relative",
-                left: "90%",
-                top: "5%",
-                padding: 0,
-              }}
-            >
-              <NorthEastIcon />
-            </Button>
+          <PaperImage variant="outlined">
+            <ImageComponent alt="Imagem do imovel de destaque 2" src={anunc2} />
           </PaperImage>
         </Box>
       </BottomBoxHighlights>

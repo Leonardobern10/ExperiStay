@@ -1,8 +1,9 @@
-import { Box, List, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { type ReactElement } from "react";
 import type { HeaderProps } from "../../types/HeaderProps";
 import NavItem from "./NavItem";
 import Logo from "../Logo";
+import NavList from "../ui/NavList";
 
 export default function HeaderMobile({
   refLogo,
@@ -13,16 +14,15 @@ export default function HeaderMobile({
       direction="column"
       justifyContent="space-between"
       alignItems="center"
-      padding={4}
+      padding={(theme) => theme.spacing(3)}
     >
 
       <Logo ref={refLogo} />
-
-      <List>
+      <NavList>
         {headerItemsNav.map((el) => (
           <NavItem key={el.index} nameItem={el.nameItem} />
         ))}
-      </List>
+      </NavList>
     </Stack>
   );
 }

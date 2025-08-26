@@ -7,19 +7,19 @@ import ButtonWithIcon from "../ui/ButtonWithIcon";
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
   ({ title, desc }, ref): ReactElement => {
-    let width: number = useWidth();
+    let width: boolean = useWidth('md');
 
     return (
       <Box
         ref={ref}
         sx={{
-          width: `${width > 768 ? "60%" : "100%"}`,
+          width: `${width ? "60%" : "100%"}`,
           backdropFilter: "brightness(70%)", // efeito no fundo
           display: "flex",
           flexDirection: "column",
-          rowGap: 4,
-          padding: 4,
-          borderRadius: 2,
+          rowGap: (theme) => theme.spacing(2),
+          padding: (theme) => theme.spacing(3),
+          borderRadius: (theme) => theme.shape.borderRadius,
         }}
       >
         <Box>
@@ -33,7 +33,7 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
           >
             {title}
           </Typography>
-          {width > 768 && (
+          {width && (
             <Typography sx={{ textShadow: "2px 2px 2px black" }} color="white">
               {desc}
             </Typography>
