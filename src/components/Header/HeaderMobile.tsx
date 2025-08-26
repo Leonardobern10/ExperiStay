@@ -2,6 +2,7 @@ import { Box, List, Stack } from "@mui/material";
 import { type ReactElement } from "react";
 import type { HeaderProps } from "../../types/HeaderProps";
 import NavItem from "./NavItem";
+import Logo from "../Logo";
 
 export default function HeaderMobile({
   refLogo,
@@ -14,9 +15,8 @@ export default function HeaderMobile({
       alignItems="center"
       padding={4}
     >
-      <Box ref={refLogo} sx={{ width: "fit-content" }}>
-        ExperiStay
-      </Box>
+
+      <Logo ref={refLogo} />
 
       <List>
         {headerItemsNav.map((el) => (

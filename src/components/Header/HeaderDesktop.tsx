@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import type { HeaderProps } from "../../types/HeaderProps";
 import NavItem from "./NavItem";
 import ButtonWithIcon from "../ui/ButtonWithIcon";
+import Logo from "../Logo";
 
 export default function HeaderDesktop({
   refLogo,
@@ -12,9 +13,7 @@ export default function HeaderDesktop({
 }: HeaderProps): ReactElement {
   return (
     <Stack direction="row" flexDirection="row" height="100%">
-      <Box ref={refLogo} sx={{ width: "fit-content" }}>
-        ExperiStay
-      </Box>
+      <Logo ref={refLogo} />
       <Box ref={refNav} component="nav">
         <List
           component="ul"

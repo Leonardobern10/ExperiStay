@@ -8,7 +8,7 @@ import HeaderContainer from "../Header/HeaderContainer";
 import ContainerMainText from "../ContainerMainText";
 
 export default function MainContentContainer(props: {
-  className: string;
+  className?: string;
 }): ReactElement {
   const container = useRef(null);
   const mainText = useRef(null);
@@ -23,9 +23,10 @@ export default function MainContentContainer(props: {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        filter: "brightness(80%) contrast(90%)",
+        filter: "brightness(80%)",
         height: "100vh",
         width: "100%",
+        padding: { xs: 1, md: 2 },
       }}
     >
       <HeaderContainer />

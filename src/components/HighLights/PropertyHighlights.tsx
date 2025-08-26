@@ -17,6 +17,7 @@ export default function PropertyHighlights(props: {
         width: "100%",
         height: "100vh",
         backgroundColor: "#c4c1c1ff",
+        padding: { xs: 2, md: 4 },
       }}
       className={props.className}
     >
