@@ -21,6 +21,7 @@ function App() {
         justifyContent: "space-between",
         alignItems: "center",
         width: "100%",
+        backgroundColor: (theme) => theme.palette.background.default
       }}
     >
       {loading ? (
