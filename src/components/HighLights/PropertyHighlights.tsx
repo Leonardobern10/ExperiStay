@@ -1,11 +1,15 @@
 import { Box, Grid, Typography } from "@mui/material";
 import type { ReactElement } from "react";
 import anunc1 from "../../assets/images/anunc_1.png";
-import anunc2 from "../../assets/images/anunc_2.png";
 import TopBoxHighlights from "../ui/TopBoxHighlights";
-import PaperImage from "../ui/PaperImage";
 import BottomBoxHighlights from "../ui/BottomBoxHightlights";
-import ImageComponent from "../ImageComponent";
+import HighlightComponent from "./HighlightComponent";
+import amazonas from '../../assets/images/highlights/amazonas_highlight.png';
+import bahia from '../../assets/images/highlights/bahia_highlight.png';
+import sc from '../../assets/images/highlights/florianopolis_highlight.png';
+import paraiba from '../../assets/images/highlights/paraiba_highlight.png';
+import recife from '../../assets/images/highlights/recife_highlight.png';
+import saopaulo from '../../assets/images/highlights/sao_paulo_highlight.png';
 
 export default function PropertyHighlights(props: {
   className: string;
@@ -42,34 +46,28 @@ export default function PropertyHighlights(props: {
           </Box>
         </TopBoxHighlights>
       </Grid>
-      <BottomBoxHighlights>
+      <BottomBoxHighlights sx={{
+        height: '80%'
+      }}>
         <Box
           sx={{
             height: "100%",
-            width: { xs: "80%", md: "40%" },
+            width: { xs: "80%", md: "100%" },
+            overflowX: 'scroll',
             display: "flex",
-            flexDirection: { xs: "row", md: "column" },
+            flexDirection: { xs: "row", md: "row" },
             rowGap: (theme) => theme.spacing(4),
             columnGap: (theme) => theme.spacing(4),
             padding: (theme) => theme.spacing(4),
-          }}
-        >
-          <PaperImage variant="outlined">
-            <ImageComponent alt="Imagem do imovel de destaque 1" src={anunc1} />
-          </PaperImage>
-          <Typography variant="body1" color="primary.main">
-            Urca, Rio de Janeiro.
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
-          <PaperImage variant="outlined">
-            <ImageComponent alt="Imagem do imovel de destaque 2" src={anunc2} />
-          </PaperImage>
+          }}>
+          <HighlightComponent highlightName="Urca, Rio de Janeiro" src={anunc1} />
+          <HighlightComponent highlightName="Manaus, Amazonas" src={amazonas} />
+          <HighlightComponent highlightName="Salvador, Bahia" src={bahia} />
+          <HighlightComponent highlightName="Florianópolis, Santa Catarina" src={sc} />
+          <HighlightComponent highlightName="João Pessoa, Paraíba" src={paraiba} />
+          <HighlightComponent highlightName="Recife, Pernambuco" src={recife} />
+          <HighlightComponent highlightName="São Paulo, São Paulo" src={saopaulo} />
+
         </Box>
       </BottomBoxHighlights>
     </Grid>

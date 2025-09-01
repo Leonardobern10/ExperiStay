@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 
 const ImageCustom = styled('img')(() => ({
-    width: '100%',
+    width: '20rem',
     height: '100%',
     objectFit: 'cover',
     objectPosition: 'center'

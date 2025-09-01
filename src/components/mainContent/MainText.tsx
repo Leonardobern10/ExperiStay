@@ -3,7 +3,7 @@ import { forwardRef, type ReactElement } from "react";
 import type { MainTextProps } from "../../types/MainTextProps";
 import RealEstateAgentIcon from "@mui/icons-material/RealEstateAgent";
 import useWidth from "../../hooks/useWidth";
-import ButtonWithIcon from "../ui/ButtonWithIcon";
+import ButtonWithIcon from "../ButtonWithIcon";
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
   ({ title, desc }, ref): ReactElement => {
@@ -25,11 +25,11 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
         <Box sx={{
           display: 'flex',
           flexDirection: 'column',
-          rowGap: (theme) => theme.spacing(4)
+          rowGap: (theme) => theme.spacing(2)
         }}>
           <Typography
             color="textPrimary"
-            variant="h3"
+            variant="h1"
             sx={{
               width: "100%",
               textShadow: "2px 2px 2px black",
@@ -43,15 +43,7 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
             </Typography>
           )}
         </Box>
-        <ButtonWithIcon
-          variant="outlined"
-          sx={{
-            width: "fit-content",
-          }}
-        >
-          <Typography>Exibir catálogo</Typography>
-          <RealEstateAgentIcon />
-        </ButtonWithIcon>
+        <ButtonWithIcon buttonName="Exibir catálogo" buttonIcon={RealEstateAgentIcon} />
       </Box>
     );
   }

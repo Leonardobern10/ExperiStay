@@ -1,6 +1,6 @@
 import { Button, styled } from "@mui/material";
 
-const ButtonWithIcon = styled(Button)(({ theme }) => ({
+const ButtonWithIconUI = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
   display: "flex",
@@ -9,4 +9,4 @@ const ButtonWithIcon = styled(Button)(({ theme }) => ({
   fontWeight: 200
 }));
 
-export default ButtonWithIcon;
+export default ButtonWithIconUI;
