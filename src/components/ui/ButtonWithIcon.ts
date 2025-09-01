@@ -5,7 +5,8 @@ const ButtonWithIcon = styled(Button)(({ theme }) => ({
   color: theme.palette.text.primary,
   display: "flex",
   alignItems: "center",
-  gap: "8px",
+  gap: theme.spacing(2),
+  fontWeight: 200
 }));
 
 export default ButtonWithIcon;

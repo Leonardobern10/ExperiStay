@@ -21,7 +21,7 @@ export default function HeaderContainer(props: {
       className={props.className}
       sx={{
         height: "3rem",
-        padding: 4,
+        padding: (theme) => theme.spacing(6),
       }}
     >
       {width ? (

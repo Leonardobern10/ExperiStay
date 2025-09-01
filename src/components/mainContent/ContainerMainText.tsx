@@ -12,7 +12,7 @@ export default function GridMainText(props: {
         display: "flex",
         flexDirection: "row",
         width: "100%",
-        padding: 4,
+        padding: (theme) => theme.spacing(2),
         justifyContent: "flex-start",
         alignItems: "end",
         height: "90%",

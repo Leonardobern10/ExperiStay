@@ -16,7 +16,6 @@ export default function PropertyHighlights(props: {
       sx={{
         width: "100%",
         height: "100vh",
-        backgroundColor: (theme) => theme.palette.background.default,
       }}
       className={props.className}
     >
@@ -24,7 +23,7 @@ export default function PropertyHighlights(props: {
         sx={{
           width: "100vw",
           height: "30%",
-          padding: 4,
+          padding: (theme) => theme.spacing(6),
         }}
       >
         <TopBoxHighlights>
@@ -50,9 +49,10 @@ export default function PropertyHighlights(props: {
             width: { xs: "80%", md: "40%" },
             display: "flex",
             flexDirection: { xs: "row", md: "column" },
-            rowGap: 10,
-            columnGap: 4,
-            padding: 4,
+            rowGap: (theme) => theme.spacing(4),
+            columnGap: (theme) => theme.spacing(4),
+            padding: (theme) => theme.spacing(4),
+            border: 2
           }}
         >
           <PaperImage variant="outlined">

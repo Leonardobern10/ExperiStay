@@ -10,6 +10,7 @@ export default function Home(): ReactElement {
       sx={{
         height: "100%",
         width: "100%",
+        backgroundColor: (theme) => theme.palette.background.default
       }}
     >
       <HeaderContainer />

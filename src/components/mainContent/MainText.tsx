@@ -18,14 +18,18 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
           display: "flex",
           flexDirection: "column",
           rowGap: (theme) => theme.spacing(2),
-          padding: (theme) => theme.spacing(3),
+          padding: (theme) => theme.spacing(4),
           borderRadius: (theme) => theme.shape.borderRadius,
         }}
       >
-        <Box>
+        <Box sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          rowGap: (theme) => theme.spacing(4)
+        }}>
           <Typography
-            color="white"
-            variant="h1"
+            color="textPrimary"
+            variant="h3"
             sx={{
               width: "100%",
               textShadow: "2px 2px 2px black",
@@ -34,7 +38,7 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
             {title}
           </Typography>
           {width && (
-            <Typography sx={{ textShadow: "2px 2px 2px black" }} color="white">
+            <Typography variant="subtitle1" sx={{ textShadow: "2px 2px 2px black" }} color='textPrimary '>
               {desc}
             </Typography>
           )}

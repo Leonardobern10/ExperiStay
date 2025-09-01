@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { useRef, type ReactElement } from "react";
-import backgroundImage from "../../assets/images/Gemini_Generated_Image_b5t0yb5t0yb5t0yb.png";
+import backgroundImage from "../../assets/images/downloadedImage_1.png";
 import MainText from "./MainText";
 import { mainTexts } from "../../data/mainTexts";
 import { useMainContentAnimation } from "../../hooks/useAnimation";
@@ -17,19 +17,17 @@ export default function MainContentContainer(props: {
     <Box
       className={props.className}
       ref={container}
-      sx={{
-        padding: (theme) => theme.spacing(5),
-        borderRadius: '5rem'
-      }}
+      sx={{padding: (theme) => theme.spacing(5)}}
     >
       <Box  sx={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        height: "100vh",
+        height: "80vh",
         width: "100%",
         padding: { xs: 1, md: 2},
+        borderRadius: (theme) => theme.shape.borderRadius
       }}>
 
       <GridMainText
