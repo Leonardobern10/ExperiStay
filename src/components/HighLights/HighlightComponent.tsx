@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import type { ReactElement } from "react";
 import ImageComponent from "../ImageComponent";
 import PaperImage from "../ui/PaperImage";
