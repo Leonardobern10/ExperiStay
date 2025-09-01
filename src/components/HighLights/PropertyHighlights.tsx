@@ -52,7 +52,6 @@ export default function PropertyHighlights(props: {
             rowGap: (theme) => theme.spacing(4),
             columnGap: (theme) => theme.spacing(4),
             padding: (theme) => theme.spacing(4),
-            border: 2
           }}
         >
           <PaperImage variant="outlined">
