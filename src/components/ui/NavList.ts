@@ -1,8 +1,9 @@
 import { List, styled } from "@mui/material";
 
-const NavList = styled(List)(({theme}) => ({
+const NavList = styled(List)(({ theme }) => ({
+    display: "flex",
+    flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
-        display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",

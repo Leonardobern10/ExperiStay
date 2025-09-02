@@ -15,7 +15,10 @@ export default function GridMainText(props: {
         padding: (theme) => theme.spacing(2),
         justifyContent: "flex-start",
         alignItems: "end",
-        height: "90%",
+        height: "fit-content",
+        position: 'relative',
+        left: 0,
+        top: 0,
       }}
     >
       {props.child}

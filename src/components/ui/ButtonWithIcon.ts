@@ -2,7 +2,7 @@ import { Button, styled } from "@mui/material";
 
 const ButtonWithIconUI = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
-  color: theme.palette.text.primary,
+  color: '#ab9f19ff',
   display: "flex",
   alignItems: "center",
   gap: theme.spacing(2),

@@ -2,7 +2,6 @@ import { Box, Stack } from "@mui/material";
 import type { ReactElement } from "react";
 import type { HeaderProps } from "../../types/HeaderProps";
 import NavItem from "./NavItem";
-import ButtonWithIconUI from "../ui/ButtonWithIcon";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NavList from "../ui/NavList";
 import ButtonWithIcon from "../ButtonWithIcon";
@@ -14,7 +13,7 @@ export default function HeaderDesktop({
   headerItemsNav,
 }: HeaderProps): ReactElement {
   return (
-    <Stack direction="row" height="100%">
+    <Stack direction="row" width='100%'>
       <Box ref={refLogo} sx={{ width: "fit-content" }}>
         ExperiStay
       </Box>

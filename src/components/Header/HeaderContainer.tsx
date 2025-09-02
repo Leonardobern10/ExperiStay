@@ -20,7 +20,14 @@ export default function HeaderContainer(props: {
     <Box
       className={props.className}
       sx={{
+        position: "fixed",
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         height: "3rem",
+        width: '100%',
+        backgroundColor: (theme) => theme.palette.background.default,
         padding: (theme) => theme.spacing(6),
       }}
     >

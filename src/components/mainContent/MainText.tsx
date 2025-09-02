@@ -14,7 +14,7 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
         ref={ref}
         sx={{
           width: `${width ? "60%" : "100%"}`,
-          backdropFilter: "brightness(70%)", // efeito no fundo
+          // backdropFilter: "brightness(70%)", // efeito no fundo
           display: "flex",
           flexDirection: "column",
           rowGap: (theme) => theme.spacing(2),
@@ -28,17 +28,17 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
           rowGap: (theme) => theme.spacing(2)
         }}>
           <Typography
-            color="textPrimary"
+            color="#ab9f19ff"
             variant="h1"
             sx={{
               width: "100%",
-              textShadow: "2px 2px 2px black",
+              textShadow: "2px 2px 2px black"
             }}
           >
             {title}
           </Typography>
           {width && (
-            <Typography variant="subtitle1" sx={{ textShadow: "2px 2px 2px black" }} color='textPrimary '>
+            <Typography variant="subtitle1" sx={{ textShadow: "4px 4px 4px black" }} color='textPrimary '>
               {desc}
             </Typography>
           )}

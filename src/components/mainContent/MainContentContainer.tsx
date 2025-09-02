@@ -17,7 +17,7 @@ export default function MainContentContainer(props: {
     <Box
       className={props.className}
       ref={container}
-      sx={{ padding: (theme) => theme.spacing(5) }}
+      sx={{ padding: (theme) => theme.spacing(5), marginTop: (theme) => theme.spacing(15) }}
     >
       <Box sx={{
         backgroundImage: `url(${backgroundImage})`,
@@ -29,7 +29,6 @@ export default function MainContentContainer(props: {
         padding: { xs: 1, md: 2 },
         borderRadius: (theme) => theme.shape.borderRadius
       }}>
-
         <GridMainText
           child={
             <MainText
