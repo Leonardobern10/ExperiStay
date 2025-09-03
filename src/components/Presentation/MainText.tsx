@@ -1,9 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { forwardRef, type ReactElement } from "react";
 import type { MainTextProps } from "../../types/MainTextProps";
-import RealEstateAgentIcon from "@mui/icons-material/RealEstateAgent";
 import useWidth from "../../hooks/useWidth";
-import ButtonWithIcon from "../ButtonWithIcon";
+import MainTitle from "./MainTitle";
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
   ({ title, desc }, ref): ReactElement => {
@@ -13,8 +12,7 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
       <Box
         ref={ref}
         sx={{
-          width: `${width ? "60%" : "100%"}`,
-          // backdropFilter: "brightness(70%)", // efeito no fundo
+          width: `${width ? "80%" : "100%"}`,
           display: "flex",
           flexDirection: "column",
           rowGap: (theme) => theme.spacing(2),
@@ -25,25 +23,16 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
         <Box sx={{
           display: 'flex',
           flexDirection: 'column',
-          rowGap: (theme) => theme.spacing(2)
+          rowGap: (theme) => theme.spacing(2),
         }}>
-          <Typography
-            color="#ab9f19ff"
-            variant="h1"
-            sx={{
-              width: "100%",
-              textShadow: "2px 2px 2px black"
-            }}
-          >
-            {title}
-          </Typography>
+          <MainTitle string={title} />
           {width && (
-            <Typography variant="subtitle1" sx={{ textShadow: "4px 4px 4px black" }} color='textPrimary '>
+            <Typography variant="subtitle1" sx={{ textShadow: "1px 1px 1px black" }} color='textPrimary'>
               {desc}
             </Typography>
           )}
         </Box>
-        <ButtonWithIcon buttonName="Exibir catálogo" buttonIcon={RealEstateAgentIcon} />
+        {/*<ButtonWithIcon buttonName="Exibir catálogo" buttonIcon={RealEstateAgentIcon}> */}
       </Box>
     );
   }

@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import type { ReactElement } from "react";
 
 export default function GridMainText(props: {
-  child: ReactElement;
+  children: ReactElement;
 }): ReactElement {
   return (
     <Grid
@@ -13,15 +13,16 @@ export default function GridMainText(props: {
         flexDirection: "row",
         width: "100%",
         padding: (theme) => theme.spacing(2),
-        justifyContent: "flex-start",
-        alignItems: "end",
+        justifySelf: 'flex-start',
+        justifyContent: "center",
+        alignItems: "center",
         height: "fit-content",
         position: 'relative',
         left: 0,
         top: 0,
       }}
     >
-      {props.child}
+      {props.children}
     </Grid>
   );
 }

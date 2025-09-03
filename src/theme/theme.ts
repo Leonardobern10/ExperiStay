@@ -1,9 +1,10 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
+import type { } from '@mui/x-date-pickers/themeAugmentation';
 
 let theme = createTheme({
     palette: {
         primary: {
-            main: "#BCABAE",
+            main: "#ab9f19ff",
             light: "#FBFBFB",
             dark: "#0F0F0F ",
             contrastText: "#716969 ",
@@ -15,7 +16,7 @@ let theme = createTheme({
         },
         background: {
             default: "#000000af",
-            paper: "#939e9aff",
+            paper: "#dac612ff",
         },
         error: {
             main: "#912424bb",
@@ -33,8 +34,9 @@ let theme = createTheme({
         fontSize: 16,
         fontFamily: "'Poppins', sans-serif",
         h1: {
-            fontSize: "3rem",
-            fontWeight: 400,
+            fontSize: "4rem",
+            fontWeight: 600,
+            fontFamily: '"Montserrat", sans-serif;'
         },
         h2: {
             fontSize: "2.5rem",
@@ -49,9 +51,9 @@ let theme = createTheme({
             fontWeight: 400,
         },
         subtitle1: {
-            fontSize: '1rem',
-            fontWeight: 200,
-            letterSpacing: 1,
+            fontSize: '1.2rem',
+            fontWeight: 600,
+            letterSpacing: 1.2,
         }
     },
     shape: {
@@ -84,8 +86,23 @@ let theme = createTheme({
                     fontWeight: 300
                 }
             }
-        }
-    },
+        },
+
+        MuiDatePicker: {
+            defaultProps: {
+                displayWeekNumber: true,
+            },
+        },
+        MuiDateCalendar: {
+            styleOverrides: {
+                root: {
+                    color: '#000',
+                    borderRadius: '20px',
+                    borderColor: '#000000ff',
+                }
+            }
+        },
+    }
 });
 
 theme = responsiveFontSizes(theme);
