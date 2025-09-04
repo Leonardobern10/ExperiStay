@@ -46,6 +46,10 @@ let theme = createTheme({
             fontSize: "2rem",
             fontWeight: 500,
         },
+        h4: {
+            fontSize: "1.8rem",
+            fontWeight: 400,
+        },
         body1: {
             fontSize: "1rem",
             fontWeight: 400,
@@ -56,9 +60,12 @@ let theme = createTheme({
             letterSpacing: 1.2,
         },
         subtitle2: {
-            fontSize: '1.2rem',
-            fontWeight: 300,
-        }
+            fontSize: '1.1rem',
+            fontWeight: 400,
+            width: '60%',
+            textAlign: 'center',
+            color: '#828080ff'
+        },
     },
     shape: {
         borderRadius: 5,
@@ -106,7 +113,7 @@ let theme = createTheme({
                     props: { variant: 'default' },
                     style: ({ theme }) => ({
                         backgroundColor: theme.palette.background.default,
-                        color: theme.palette.primary.contrastText
+                        color: theme.palette.secondary.light
                     })
                 }
 

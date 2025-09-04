@@ -4,6 +4,7 @@ import PresentationContainer from "../components/Presentation/PresentationContai
 import HeaderContainer from "../components/Header/HeaderContainer";
 import EssentialServicesSection from "../components/EssentialsServices/EssentialServicesSection";
 import PropertyHighlights from "../components/HighLights/PropertyHighlights";
+import UnbelivableExperiences from "../components/UnbelivableExperiences/UnbelivableExperiencesContainer";
 
 export default function Home(): ReactElement {
   return (
@@ -22,7 +23,7 @@ export default function Home(): ReactElement {
       <HeaderContainer />
       <PresentationContainer className="section" />
       <PropertyHighlights className="section" />
-      <EssentialServicesSection className='section' />
+      <UnbelivableExperiences className='section' />
     </Grid>
   );
 }

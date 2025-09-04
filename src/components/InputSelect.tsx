@@ -1,6 +1,6 @@
 import { FormControl, InputLabel, MenuItem } from "@mui/material";
 import { useState, type ReactElement } from "react";
-import SelectCustomUI from "./InputCustomUI";
+import SelectCustomUI from "./ui/InputCustomUI";
 
 export default function InputSelect(): ReactElement {
 

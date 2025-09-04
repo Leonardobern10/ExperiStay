@@ -6,7 +6,7 @@ import { allProperties, propertyHighlightsData } from "../../data/PropertyHighli
 import HighlightComponent from "./HightlightComponent";
 import MainTitle from "../Presentation/MainTitle";
 
-export default function PropertyHighlights(props: { className: string, title: string, subtitle: string }): ReactElement {
+export default function PropertyHighlights(props: { className: string }): ReactElement {
     const data: PropertyHighlightsType = propertyHighlightsData;
 
     return (
@@ -18,6 +18,7 @@ export default function PropertyHighlights(props: { className: string, title: st
             rowGap: (theme) => theme.spacing(20),
             paddingY: (theme) => theme.spacing(15),
             paddingX: (theme) => theme.spacing(8),
+            border: 2
         }}>
             <Box sx={{
                 width: '100%',
@@ -27,10 +28,7 @@ export default function PropertyHighlights(props: { className: string, title: st
             }}>
 
                 <MainTitle align="center" string={data.title} />
-                <Typography sx={{
-                    width: '60%',
-                    textAlign: 'center'
-                }} variant="subtitle2" color="textSecondary">{data.subtitle}</Typography>
+                <Typography variant="subtitle2">{data.subtitle}</Typography>
             </Box>
             <Box sx={{
                 paddingX: (theme) => theme.spacing(8),
