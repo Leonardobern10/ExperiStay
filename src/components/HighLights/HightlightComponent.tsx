@@ -6,6 +6,7 @@ import RatingValue from "../RatingValue";
 import LikedComponent from "../LikedComponent";
 import PriceHighlight from "./PriceHighlight";
 import DescriptionHighlight from "./DescriptionHighlight";
+import LabelHighlight from "./LabelHighlight";
 
 export default function HighlightComponent(hightLightData: HighlightType): ReactElement {
 
@@ -22,6 +23,7 @@ export default function HighlightComponent(hightLightData: HighlightType): React
             }}>
                 <ImageComponent src={hightLightData.img} alt={`imagem do imovel em destaque ${hightLightData.name} no(a) ${hightLightData.location}`} />
                 <RatingValue value={hightLightData.rating} />
+                <LabelHighlight labelName={hightLightData.label} />
             </Box>
             <Box sx={{
                 height: '50%',
@@ -31,7 +33,6 @@ export default function HighlightComponent(hightLightData: HighlightType): React
                 rowGap: (theme) => theme.spacing(3)
             }}>
                 <Box>
-
                     <Typography variant="h5" color="textPrimary">{hightLightData.name}</Typography>
                     <Typography variant="body2" color="textSecondary">{hightLightData.location}</Typography>
                 </Box>
