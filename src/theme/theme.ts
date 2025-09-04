@@ -106,7 +106,7 @@ let theme = createTheme({
                     props: { variant: 'default' },
                     style: ({ theme }) => ({
                         backgroundColor: theme.palette.background.default,
-                        color: theme.palette.primary.main
+                        color: theme.palette.primary.contrastText
                     })
                 }
 
