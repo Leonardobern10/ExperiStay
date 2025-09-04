@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, MenuItem, type SelectChangeEvent } from "@mui/material";
+import { FormControl, InputLabel, MenuItem } from "@mui/material";
 import { useState, type ReactElement } from "react";
 import SelectCustomUI from "./InputCustomUI";
 
