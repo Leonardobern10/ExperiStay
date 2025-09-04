@@ -4,7 +4,7 @@ import type { HeaderProps } from "../../types/HeaderProps";
 import NavItem from "./NavItem";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NavList from "../ui/NavList";
-import ButtonWithIcon from "../ButtonWithIcon";
+import Button from "../ButtonWithIcon";
 
 export default function HeaderDesktop({
   refLogo,
@@ -24,7 +24,7 @@ export default function HeaderDesktop({
           ))}
         </NavList>
       </Box>
-      <ButtonWithIcon ref={refButton} buttonName="Login" buttonIcon={AccountCircleIcon} />
+      <Button ref={refButton} buttonName="Login" buttonIcon={AccountCircleIcon} />
     </Stack>
   );
 }

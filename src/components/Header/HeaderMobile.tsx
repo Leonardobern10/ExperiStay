@@ -4,7 +4,7 @@ import type { HeaderProps } from "../../types/HeaderProps";
 import NavItem from "./NavItem";
 import Logo from "../Logo";
 import NavList from "../ui/NavList";
-import ButtonWithIcon from "../ButtonWithIcon";
+import Button from "../ButtonWithIcon";
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function HeaderMobile({
@@ -26,7 +26,7 @@ export default function HeaderMobile({
       sx={{ width: '100%' }}
     >
       <Logo ref={refLogo} />
-      <ButtonWithIcon ref={refButton} onClick={() => toggleMenu(true)} buttonName="Menu" buttonIcon={MenuIcon} />
+      <Button ref={refButton} onClick={() => toggleMenu(true)} buttonName="Menu" buttonIcon={MenuIcon} />
       <Drawer open={open} onClose={() => toggleMenu(false)}>
         <NavList>
           {headerItemsNav.map((el) => (
