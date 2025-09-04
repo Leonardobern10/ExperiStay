@@ -7,4 +7,5 @@ export type HighlightType = {
     rating: number;
     liked: boolean;
     img: string;
+    label: string;
 }

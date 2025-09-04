@@ -42,7 +42,7 @@ export default function PropertyHighlights(props: { className: string, title: st
                 columnGap: (theme) => theme.spacing(6)
             }}>
                 {allProperties.map((el) => (
-                    <HighlightComponent key={el.index} index={el.index} name={el.name} location={el.location} description={el.description} price={el.price} rating={el.rating} liked={el.liked} img={el.img} />)
+                    <HighlightComponent key={el.index} index={el.index} name={el.name} location={el.location} description={el.description} price={el.price} rating={el.rating} liked={el.liked} img={el.img} label={el.label} />)
                 )}
             </Box>
             <Button buttonName={data.buttonName} />
