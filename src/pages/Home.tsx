@@ -1,9 +1,9 @@
 import { type ReactElement } from "react";
 import { Grid } from "@mui/material";
 import PresentationContainer from "../components/Presentation/PresentationContainer";
-import PropertyHighlights from "../components/HighLights/PropertyHighlights";
 import HeaderContainer from "../components/Header/HeaderContainer";
 import EssentialServicesSection from "../components/EssentialsServices/EssentialServicesSection";
+import PropertyHighlights from "../components/HighLights/PropertyHighlights";
 
 export default function Home(): ReactElement {
   return (
