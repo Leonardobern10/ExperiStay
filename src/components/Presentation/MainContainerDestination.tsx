@@ -31,7 +31,7 @@ export default function ContainerMainDestination(): ReactElement {
                 <DatePickerCustom label="Chegada" value={arrival} onChange={(newArrival) => setArrival(newArrival)} />
                 <DatePickerCustom label="Saída" value={exit} onChange={(newExit) => setExit(newExit)} />
                 <InputSelect />
-                <Button buttonIcon={SearchIcon} buttonName="Buscar" />
+                <Button main={true} buttonIcon={SearchIcon} buttonName="Buscar" />
             </Box>
         </LocalizationProvider>
 
