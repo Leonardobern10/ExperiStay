@@ -5,7 +5,7 @@ import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import type { Moment } from "moment";
 import InputSelect from "../InputSelect";
 import DatePickerCustom from "../DatePickerCustom";
-import ButtonWithIcon from "../ButtonWithIcon";
+import Button from "../ButtonWithIcon";
 import SearchIcon from '@mui/icons-material/Search';
 
 export default function ContainerMainDestination(): ReactElement {
@@ -31,7 +31,7 @@ export default function ContainerMainDestination(): ReactElement {
                 <DatePickerCustom label="Chegada" value={arrival} onChange={(newArrival) => setArrival(newArrival)} />
                 <DatePickerCustom label="Saída" value={exit} onChange={(newExit) => setExit(newExit)} />
                 <InputSelect />
-                <ButtonWithIcon buttonIcon={SearchIcon} buttonName="Buscar" />
+                <Button buttonIcon={SearchIcon} buttonName="Buscar" />
             </Box>
         </LocalizationProvider>
 

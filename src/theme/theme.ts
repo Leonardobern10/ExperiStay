@@ -10,12 +10,12 @@ let theme = createTheme({
             contrastText: "#716969 ",
         },
         secondary: {
-            main: "#2D2E2E",
+            main: "#252525ff",
             light: "#ffffffb0",
             dark: "#070606be",
         },
         background: {
-            default: "#000000af",
+            default: "#101010d0",
             paper: "#dac612ff",
         },
         error: {
@@ -26,25 +26,25 @@ let theme = createTheme({
         },
         text: {
             primary: "#fcededd3",
-            secondary: "#6d62627c",
+            secondary: "#828080ff",
             disabled: "#02020295",
         },
     },
     typography: {
         fontSize: 16,
-        fontFamily: "'Poppins', sans-serif",
+        fontFamily: "'Lexend', sans-serif",
         h1: {
             fontSize: "4rem",
-            fontWeight: 600,
-            fontFamily: '"Montserrat", sans-serif;'
+            fontWeight: 400,
+            fontFamily: "Poppins, sans-serif;"
         },
         h2: {
             fontSize: "2.5rem",
-            fontWeight: 200,
+            fontWeight: 400,
         },
         h3: {
             fontSize: "2rem",
-            fontWeight: 300,
+            fontWeight: 500,
         },
         body1: {
             fontSize: "1rem",
@@ -54,6 +54,10 @@ let theme = createTheme({
             fontSize: '1.2rem',
             fontWeight: 600,
             letterSpacing: 1.2,
+        },
+        subtitle2: {
+            fontSize: '1.2rem',
+            fontWeight: 300,
         }
     },
     shape: {
