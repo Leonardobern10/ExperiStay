@@ -85,11 +85,32 @@ let theme = createTheme({
         },
         MuiButton: {
             styleOverrides: {
-                root: {
+                root: ({ theme }) => ({
                     textTransform: 'none',
-                    fontWeight: 300
+                    fontWeight: 300,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: theme.spacing(2),
+                    width: 'fit-content'
+                })
+            },
+            variants: [
+                {
+                    props: { variant: 'main' },
+                    style: ({ theme }) => ({
+                        backgroundColor: theme.palette.primary.main,
+                        color: theme.palette.primary.dark
+                    })
+                },
+                {
+                    props: { variant: 'default' },
+                    style: ({ theme }) => ({
+                        backgroundColor: theme.palette.background.default,
+                        color: theme.palette.primary.main
+                    })
                 }
-            }
+
+            ]
         },
 
         MuiDatePicker: {

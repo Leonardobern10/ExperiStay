@@ -1,16 +1,15 @@
 import type { ReactElement } from "react";
-import ButtonWithIconUI from "./ui/ButtonWithIcon";
 import type { ButtonWithIconProps } from "../types/ButtonWithIconProps";
+import { Button } from "@mui/material";
 
-export default function ButtonWithIcon({ buttonName, buttonIcon: Icon, onClick }: ButtonWithIconProps): ReactElement {
+export default function ButtonCustom({ buttonName, buttonIcon: Icon, onClick, main }: ButtonWithIconProps): ReactElement {
     return (
-        <ButtonWithIconUI
-            variant="outlined"
-            sx={{ width: "fit-content" }}
+        <Button
+            variant={main ? 'main' : 'default'}
             onClick={onClick}
             startIcon={Icon ? <Icon /> : undefined}
         >
             {buttonName}
-        </ButtonWithIconUI>
+        </Button>
     );
 }
