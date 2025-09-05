@@ -1,0 +1,60 @@
+import { Box, Stack, Typography } from '@mui/material';
+import type { ReactElement } from 'react';
+import { advantages, dataContainer } from '../../data/specialPropertiesAdData';
+import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';
+import ButtonCustom from '../ButtonWithIcon';
+import MainTitle from '../Presentation/MainTitle';
+
+export default function SpecialPropertiesAdContainer(props: {
+     className: string;
+}): ReactElement {
+     return (
+          <Box
+               className={props.className}
+               sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '95%',
+                    rowGap: (theme) => theme.spacing(8),
+                    paddingX: (theme) => theme.spacing(8),
+                    paddingY: (theme) => theme.spacing(12),
+                    border: 0.5,
+                    borderColor: (theme) => theme.palette.primary.contrastText,
+                    borderRadius: (theme) => theme.shape.borderRadius,
+               }}>
+               <Box
+                    sx={{
+                         display: 'flex',
+                         flexDirection: 'column',
+                         alignItems: 'center',
+                    }}>
+                    <MainTitle
+                         string={dataContainer.title + '?'}
+                         align="center"
+                    />
+                    <Typography variant="subtitle2">
+                         {dataContainer.subtitle}
+                    </Typography>
+               </Box>
+               <Stack
+                    direction="row"
+                    spacing={4}>
+                    {advantages.map((el) => (
+                         <AdvantagePropertiesAdComponent
+                              key={el.index}
+                              title={el.title}
+                              description={el.description}
+                         />
+                    ))}
+               </Stack>
+               <Stack
+                    direction="row"
+                    spacing={8}>
+                    <ButtonCustom buttonName={dataContainer.buttonRegister} />
+                    <ButtonCustom buttonName={dataContainer.buttonMore} />
+               </Stack>
+          </Box>
+     );
+}
