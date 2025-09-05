@@ -16,7 +16,7 @@ let theme = createTheme({
           },
           background: {
                default: '#101010d0',
-               paper: '#dac612ff',
+               paper: '#252525ff',
           },
           error: {
                main: '#912424bb',
