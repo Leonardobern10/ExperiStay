@@ -6,6 +6,7 @@ import PropertyHighlights from '../components/HighLights/PropertyHighlights';
 import UnbelivableExperiences from '../components/UnbelivableExperiences/UnbelivableExperiencesContainer';
 import ExclusiveDestinyContainer from '../components/ExclusiveDestinys/ExclusiveDestinyContainer';
 import RatingsContainer from '../components/Ratings/RatingsContainer';
+import SpecialPropertiesAdContainer from '../components/SpecialPropertiesAd/SpecialPropertiesAdContainer';
 
 export default function Home(): ReactElement {
      return (
@@ -17,17 +18,17 @@ export default function Home(): ReactElement {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    rowGap: (theme) => theme.spacing(5),
+                    rowGap: (theme) => theme.spacing(8),
                     backgroundColor: (theme) =>
                          theme.palette.background.default,
-               }}
-          >
+               }}>
                <HeaderContainer />
                <PresentationContainer className="section" />
                <PropertyHighlights className="section" />
                <UnbelivableExperiences className="section" />
                <ExclusiveDestinyContainer className="section" />
-               <RatingsContainer />
+               <RatingsContainer className="section" />
+               <SpecialPropertiesAdContainer className="section" />
           </Grid>
      );
 }
