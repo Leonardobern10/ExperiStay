@@ -1,5 +1,5 @@
 export type PropertyHighlightsType = {
-    title: string;
-    subtitle: string;
-    buttonName: string;
-}
+     title: string;
+     subtitle: string;
+     buttonName: string;
+};

@@ -1,13 +1,13 @@
 {
-    "arrowParens": "always",
-    "objectWrap": "preserve",
-    "bracketSpacing": true,
-    "semi": true,
-    "singleQuote": true,
-    "jsxSingleQuote": false,
-    "singleAttributePerLine": true,
-    "htmlWhitespaceSensitivity": "css",
-    "printWidth": 80,
-    "tabWidth": 5,
-    "embeddedLanguageFormatting": "auto"
+     "arrowParens": "always",
+     "objectWrap": "preserve",
+     "bracketSpacing": true,
+     "semi": true,
+     "singleQuote": true,
+     "jsxSingleQuote": false,
+     "singleAttributePerLine": true,
+     "htmlWhitespaceSensitivity": "css",
+     "printWidth": 80,
+     "tabWidth": 5,
+     "embeddedLanguageFormatting": "auto"
 }

@@ -1,4 +1,4 @@
 export type ItemNavProps = {
-    index?: number;
-    nameItem: string;
-}
+     index?: number;
+     nameItem: string;
+};
