@@ -4,9 +4,12 @@ import MainTitle from '../Presentation/MainTitle';
 import { ratings } from '../../data/ratingsData';
 import RatingComponent from './RatingComponent';
 
-export default function RatingsContainer(): ReactElement {
+export default function RatingsContainer(props: {
+     className: string;
+}): ReactElement {
      return (
           <Box
+               className={props.className}
                sx={{
                     display: 'flex',
                     flexDirection: 'column',
