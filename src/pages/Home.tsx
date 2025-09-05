@@ -5,6 +5,7 @@ import HeaderContainer from '../components/Header/HeaderContainer';
 import PropertyHighlights from '../components/HighLights/PropertyHighlights';
 import UnbelivableExperiences from '../components/UnbelivableExperiences/UnbelivableExperiencesContainer';
 import ExclusiveDestinyContainer from '../components/ExclusiveDestinys/ExclusiveDestinyContainer';
+import RatingsContainer from '../components/Ratings/RatingsContainer';
 
 export default function Home(): ReactElement {
      return (
@@ -26,6 +27,7 @@ export default function Home(): ReactElement {
                <PropertyHighlights className="section" />
                <UnbelivableExperiences className="section" />
                <ExclusiveDestinyContainer className="section" />
+               <RatingsContainer />
           </Grid>
      );
 }
