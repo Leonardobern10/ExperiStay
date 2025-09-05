@@ -12,7 +12,7 @@ export default function LabelHighlight(props: {
                     top: 15,
                     right: 15,
                     width: 'fit-content',
-                    color: (theme) => theme.palette.primary.dark,
+                    color: (theme) => theme.palette.primary.main,
                     paddingX: (theme) => theme.spacing(2),
                     borderRadius: (theme) => theme.shape.borderRadius,
                }}
