@@ -18,7 +18,6 @@ export default function PropertyHighlights(props: { className: string }): ReactE
             rowGap: (theme) => theme.spacing(20),
             paddingY: (theme) => theme.spacing(15),
             paddingX: (theme) => theme.spacing(8),
-            border: 2
         }}>
             <Box sx={{
                 width: '100%',
