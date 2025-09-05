@@ -16,7 +16,8 @@ export default function HighlightComponent(
                sx={{
                     backgroundColor: (theme) => theme.palette.secondary.main,
                     borderRadius: (theme) => theme.shape.borderRadius,
-                    height: '30rem',
+                    height: '33rem',
+                    overflow: 'hidden',
                }}
           >
                <Box
@@ -35,8 +36,8 @@ export default function HighlightComponent(
                </Box>
                <Box
                     sx={{
-                         height: '50%',
-                         padding: (theme) => theme.spacing(4),
+                         height: '100%',
+                         padding: (theme) => theme.spacing(8),
                          display: 'flex',
                          flexDirection: 'column',
                          rowGap: (theme) => theme.spacing(3),
