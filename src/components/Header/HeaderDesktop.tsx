@@ -16,6 +16,10 @@ export default function HeaderDesktop({
           <Stack
                direction="row"
                width="100%"
+               height="fit-content"
+               sx={{
+                    padding: (theme) => theme.spacing(4),
+               }}
           >
                <Box
                     ref={refLogo}

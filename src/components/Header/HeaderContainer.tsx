@@ -29,7 +29,6 @@ export default function HeaderContainer(props: {
                     width: '100%',
                     backgroundColor: (theme) =>
                          theme.palette.background.default,
-                    padding: (theme) => theme.spacing(6),
                }}
           >
                {width ? (

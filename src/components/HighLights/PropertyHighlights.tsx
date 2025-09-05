@@ -22,6 +22,7 @@ export default function PropertyHighlights(props: {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     alignItems: 'center',
+                    width: '100%',
                     rowGap: (theme) => theme.spacing(20),
                     paddingY: (theme) => theme.spacing(15),
                     paddingX: (theme) => theme.spacing(8),

@@ -19,7 +19,7 @@ export default function PresentationContainer(props: {
                className={props.className}
                ref={container}
                sx={{
-                    width: '100vw',
+                    width: '100%',
                     height: '100%',
                     marginTop: (theme) => theme.spacing(12),
                }}

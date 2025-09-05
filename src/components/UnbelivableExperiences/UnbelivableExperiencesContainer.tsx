@@ -17,6 +17,7 @@ export default function UnbelivableExperiences(props: {
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     rowGap: (theme) => theme.spacing(8),
+                    width: '100%',
                }}
           >
                <Box

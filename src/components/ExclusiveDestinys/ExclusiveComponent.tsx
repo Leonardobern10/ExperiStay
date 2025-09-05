@@ -10,10 +10,11 @@ export default function ExclusiveComponent(
           <Paper
                variant="elevation"
                sx={{
-                    height: '20rem',
+                    height: '25rem',
                     width: '20rem',
                     position: 'relative',
                     overflow: 'hidden',
+                    borderRadius: (theme) => theme.shape.borderRadius,
                }}
           >
                {/* Imagem */}
@@ -32,11 +33,16 @@ export default function ExclusiveComponent(
                          zIndex: 2, // acima do gradiente
                          color: 'white',
                          width: '100%',
-                         p: 2,
+                         padding: (theme) => theme.spacing(4),
                     }}
                >
-                    <Typography variant="body1">{data.name}</Typography>
-                    <Typography variant="body2">
+                    <Typography variant="h5">{data.name}</Typography>
+                    <Typography
+                         sx={{
+                              color: (theme) => theme.palette.text.secondary,
+                         }}
+                         variant="body2"
+                    >
                          {data.available} propriedades disponíveis
                     </Typography>
                </Box>

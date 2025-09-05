@@ -16,8 +16,9 @@ function App() {
      return (
           <Grid
                component="div"
-               direction="column"
                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     width: '100%',
