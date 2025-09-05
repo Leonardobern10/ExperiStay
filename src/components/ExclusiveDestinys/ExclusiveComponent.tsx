@@ -1,0 +1,59 @@
+import { Box, Paper, Typography } from '@mui/material';
+import type { ReactElement } from 'react';
+import type { ExclusiveDestinyProps } from '../../types/ExcluviseDestinyProps';
+import ImageCustom from '../ui/ImageCustom';
+
+export default function ExclusiveComponent(
+     data: ExclusiveDestinyProps,
+): ReactElement {
+     return (
+          <Paper
+               variant="elevation"
+               sx={{
+                    height: '20rem',
+                    width: '20rem',
+                    position: 'relative',
+                    overflow: 'hidden',
+               }}
+          >
+               {/* Imagem */}
+               <Box sx={{ position: 'relative', height: '70%' }}>
+                    <ImageCustom
+                         src={data.img}
+                         alt={`Imagem do destino ${data.name}`}
+                    />
+               </Box>
+
+               {/* Texto */}
+               <Box
+                    sx={{
+                         position: 'absolute',
+                         bottom: 0,
+                         zIndex: 2, // acima do gradiente
+                         color: 'white',
+                         width: '100%',
+                         p: 2,
+                    }}
+               >
+                    <Typography variant="body1">{data.name}</Typography>
+                    <Typography variant="body2">
+                         {data.available} propriedades disponíveis
+                    </Typography>
+               </Box>
+
+               {/* Gradiente de fundo */}
+               <Box
+                    sx={{
+                         position: 'absolute',
+                         background:
+                              'linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, rgba(14, 12, 12, 0.77) 69%, rgba(0, 0, 0, 1) 100%)',
+                         width: '100%',
+                         height: '100%',
+                         bottom: 0,
+                         left: 0,
+                         zIndex: 0, // fica atrás de tudo
+                    }}
+               />
+          </Paper>
+     );
+}
