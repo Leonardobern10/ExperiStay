@@ -1,7 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import MainTitle from '../Presentation/MainTitle';
-import { SubtitleUI } from '../ui/SubtitleUI';
 
 export default function ExclusiveDestinyContainer(props: {
      className: string;
