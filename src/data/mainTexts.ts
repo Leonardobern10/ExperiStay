@@ -1,7 +1,7 @@
 import type { MainTextProps } from "../types/MainTextProps";
 
 export const mainTexts: MainTextProps = {
-  title: "Cada casa, uma experiência",
+  title: "Cada casa uma experiência",
   desc: "A ExperiStay é a sua plataforma de acesso a um universo de imóveis por temporada, situados em pontos estratégicos e vibrantes."
 };
 
