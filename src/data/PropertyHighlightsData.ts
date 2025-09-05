@@ -25,7 +25,7 @@ export const allProperties: Array<HighlightType> = [
           label: 'Luxo Urbano',
      },
      {
-          index: 0,
+          index: 1,
           name: 'Salvador Luxury',
           location: 'Salvador, BA',
           description:
@@ -37,7 +37,7 @@ export const allProperties: Array<HighlightType> = [
           label: 'Experiência Única',
      },
      {
-          index: 0,
+          index: 2,
           name: 'Manaus Adventure',
           location: 'Manaus, AM',
           description:
