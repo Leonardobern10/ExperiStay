@@ -3,6 +3,7 @@
      "objectWrap": "preserve",
      "bracketSpacing": true,
      "semi": true,
+     "bracketSameLine": true,
      "singleQuote": true,
      "jsxSingleQuote": false,
      "singleAttributePerLine": true,
