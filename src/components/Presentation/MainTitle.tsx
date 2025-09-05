@@ -1,13 +1,14 @@
 import { Typography } from "@mui/material";
-import { type ReactElement } from "react";
+import { useMemo, type ReactElement } from "react";
 
 export default function MainTitle(props: { string: string, align?: 'center' | 'flex-end' | 'flex-start' }): ReactElement {
 
-    const handleString = () => {
+    const strings = useMemo(() => {
         let defaultText: Array<string> = props.string.split(' ');
-        let coloredText = defaultText.pop();
-        return [defaultText, coloredText];
-    }
+        let coloredText = defaultText.splice(-1);
+
+        return [defaultText.join(' '), coloredText[0]];
+    }, [props.string]);
 
     return (
         <Typography color={'textPrimary'}
@@ -17,9 +18,9 @@ export default function MainTitle(props: { string: string, align?: 'center' | 'f
                 textShadow: "2px 2px 2px black",
                 textAlign: `${props.align && props.align}`
             }}>
-            {handleString()[0]}
+            {strings[0]}
             <Typography variant="h1" component={'span'} color="#ab9f19ff">
-                {handleString()[1]}
+                {` ${strings[1]}`}
             </Typography>
         </Typography>
     )
