@@ -41,7 +41,7 @@ let theme = createTheme({
           h2: {
                fontSize: '3rem',
                fontWeight: 400,
-               fontFamily: '"Playfair Display", serif',
+               fontFamily: '"Poppins", sans-serif',
           },
           h3: {
                fontSize: '2rem',
