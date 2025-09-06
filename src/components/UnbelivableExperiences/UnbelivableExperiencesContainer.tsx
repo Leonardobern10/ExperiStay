@@ -3,31 +3,20 @@ import type { ReactElement } from 'react';
 import MainTitle from '../Presentation/MainTitle';
 import ExperienceComponent from './ExperienceComponent';
 import { experienceComponents } from '../../data/unbelivableExperiences';
+import ContainerSectionHome from '../ui/ContainerSectionHome';
 
 export default function UnbelivableExperiences(props: {
      className: string;
 }): ReactElement {
      return (
-          <Box
-               className={props.className}
-               sx={{
-                    paddingY: (theme) => theme.spacing(8),
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    rowGap: (theme) => theme.spacing(8),
-                    width: '100%',
-               }}
-          >
+          <ContainerSectionHome className={props.className}>
                <Box
                     sx={{
                          display: 'flex',
                          flexDirection: 'column',
                          justifyContent: 'space-evenly',
                          alignItems: 'center',
-                    }}
-               >
+                    }}>
                     <MainTitle
                          align="center"
                          string="Experiências incríveis"
@@ -43,8 +32,7 @@ export default function UnbelivableExperiences(props: {
                          gridTemplateColumns: 'repeat(2, 1fr)',
                          gap: (theme) => theme.spacing(2),
                          padding: (theme) => theme.spacing(6),
-                    }}
-               >
+                    }}>
                     {experienceComponents.map((el) => (
                          <ExperienceComponent
                               key={el.index}
@@ -55,6 +43,6 @@ export default function UnbelivableExperiences(props: {
                          />
                     ))}
                </Box>
-          </Box>
+          </ContainerSectionHome>
      );
 }

@@ -3,23 +3,13 @@ import type { ReactElement } from 'react';
 import MainTitle from '../Presentation/MainTitle';
 import { exclusiveDestines } from '../../data/exclusiveDestinyData';
 import ExclusiveComponent from './ExclusiveComponent';
+import ContainerSectionHome from '../ui/ContainerSectionHome';
 
 export default function ExclusiveDestinyContainer(props: {
      className: string;
 }): ReactElement {
      return (
-          <Box
-               className={props.className}
-               sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    height: '100%',
-                    width: '100%',
-                    rowGap: (theme) => theme.spacing(8),
-               }}
-          >
+          <ContainerSectionHome className={props.className}>
                <Box
                     sx={{
                          width: '100%',
@@ -27,8 +17,7 @@ export default function ExclusiveDestinyContainer(props: {
                          flexDirection: 'column',
                          justifyContent: 'space-between',
                          alignItems: 'center',
-                    }}
-               >
+                    }}>
                     <MainTitle
                          align="center"
                          string="Destinos exclusivos"
@@ -43,8 +32,7 @@ export default function ExclusiveDestinyContainer(props: {
                     sx={{
                          columnGap: (theme) => theme.spacing(8),
                          padding: (theme) => theme.spacing(8),
-                    }}
-               >
+                    }}>
                     {exclusiveDestines.map((el) => (
                          <ExclusiveComponent
                               key={el.index}
@@ -54,6 +42,6 @@ export default function ExclusiveDestinyContainer(props: {
                          />
                     ))}
                </Stack>
-          </Box>
+          </ContainerSectionHome>
      );
 }

@@ -4,23 +4,19 @@ import { advantages, dataContainer } from '../../data/specialPropertiesAdData';
 import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';
 import ButtonCustom from '../ButtonWithIcon';
 import MainTitle from '../Presentation/MainTitle';
+import { paddingYContainer } from '../../constants';
+import ContainerSectionHome from '../ui/ContainerSectionHome';
 
 export default function SpecialPropertiesAdContainer(props: {
      className: string;
 }): ReactElement {
      return (
-          <Box
+          <ContainerSectionHome
                className={props.className}
                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
                     width: '95%',
-                    rowGap: (theme) => theme.spacing(8),
-                    paddingX: (theme) => theme.spacing(8),
-                    paddingY: (theme) => theme.spacing(12),
                     border: 0.5,
+                    paddingY: (theme) => theme.spacing(10),
                     borderColor: (theme) => theme.palette.primary.contrastText,
                     borderRadius: (theme) => theme.shape.borderRadius,
                }}>
@@ -55,6 +51,6 @@ export default function SpecialPropertiesAdContainer(props: {
                     <ButtonCustom buttonName={dataContainer.buttonRegister} />
                     <ButtonCustom buttonName={dataContainer.buttonMore} />
                </Stack>
-          </Box>
+          </ContainerSectionHome>
      );
 }

@@ -3,31 +3,20 @@ import type { ReactElement } from 'react';
 import MainTitle from '../Presentation/MainTitle';
 import { ratings } from '../../data/ratingsData';
 import RatingComponent from './RatingComponent';
+import ContainerSectionHome from '../ui/ContainerSectionHome';
 
 export default function RatingsContainer(props: {
      className: string;
 }): ReactElement {
      return (
-          <Box
-               className={props.className}
-               sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    width: '100%',
-                    padding: (theme) => theme.spacing(8),
-                    rowGap: (theme) => theme.spacing(15),
-               }}
-          >
+          <ContainerSectionHome className={props.className}>
                <Box
                     sx={{
                          width: '100%',
                          display: 'flex',
                          flexDirection: 'column',
                          alignItems: 'center',
-                    }}
-               >
+                    }}>
                     <MainTitle
                          string="Experiências Reais"
                          align="center"
@@ -48,6 +37,6 @@ export default function RatingsContainer(props: {
                          />
                     ))}
                </Stack>
-          </Box>
+          </ContainerSectionHome>
      );
 }

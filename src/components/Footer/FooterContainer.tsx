@@ -4,15 +4,14 @@ import { footerContainerData, footerNavList } from '../../data/footerData';
 import FooterNavList from './FooterNavList';
 import Logo from '../Logo';
 import IconSocial from './IconSocial';
+import ContainerSectionHome from '../ui/ContainerSectionHome';
 
 export default function FooterContainer(): ReactElement {
      return (
-          <Box
+          <ContainerSectionHome
                sx={{
-                    height: '50vh',
-                    width: '100%',
+                    height: '60vh',
                     backgroundColor: (theme) => theme.palette.secondary.main,
-                    padding: (theme) => theme.spacing(8),
                }}>
                <Box
                     sx={{
@@ -20,7 +19,8 @@ export default function FooterContainer(): ReactElement {
                          flexDirection: 'row',
                          justifyContent: 'space-between',
                          alignItems: 'center',
-                         height: '80%',
+                         height: '70%',
+                         padding: (theme) => theme.spacing(8),
                     }}>
                     <Box
                          sx={{
@@ -65,8 +65,11 @@ export default function FooterContainer(): ReactElement {
                     direction="row"
                     spacing={4}
                     sx={{
-                         alignItems: 'flex-end',
+                         justifyContent: 'space-between',
+                         alignItems: 'center',
                          height: '20%',
+                         width: '100%',
+                         paddingX: (theme) => theme.spacing(8),
                     }}>
                     <Typography>
                          2025 ExperiStay. Todos os direitos reservados.
@@ -79,6 +82,6 @@ export default function FooterContainer(): ReactElement {
                          <Typography>Cookies</Typography>
                     </Stack>
                </Stack>
-          </Box>
+          </ContainerSectionHome>
      );
 }

@@ -8,6 +8,7 @@ import {
 } from '../../data/PropertyHighlightsData';
 import HighlightComponent from './HightlightComponent';
 import MainTitle from '../Presentation/MainTitle';
+import ContainerSectionHome from '../ui/ContainerSectionHome';
 
 export default function PropertyHighlights(props: {
      className: string;
@@ -15,27 +16,14 @@ export default function PropertyHighlights(props: {
      const data: PropertyHighlightsType = propertyHighlightsData;
 
      return (
-          <Box
-               className={props.className}
-               sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    width: '100%',
-                    rowGap: (theme) => theme.spacing(20),
-                    paddingY: (theme) => theme.spacing(15),
-                    paddingX: (theme) => theme.spacing(8),
-               }}
-          >
+          <ContainerSectionHome className={props.className}>
                <Box
                     sx={{
                          width: '100%',
                          display: 'flex',
                          flexDirection: 'column',
                          alignItems: 'center',
-                    }}
-               >
+                    }}>
                     <MainTitle
                          align="center"
                          string={data.title}
@@ -51,8 +39,7 @@ export default function PropertyHighlights(props: {
                          justifyContent: 'space-evenly',
                          alignItems: 'center',
                          columnGap: (theme) => theme.spacing(6),
-                    }}
-               >
+                    }}>
                     {allProperties.map((el) => (
                          <HighlightComponent
                               key={el.index}
@@ -69,6 +56,6 @@ export default function PropertyHighlights(props: {
                     ))}
                </Box>
                <Button buttonName={data.buttonName} />
-          </Box>
+          </ContainerSectionHome>
      );
 }
