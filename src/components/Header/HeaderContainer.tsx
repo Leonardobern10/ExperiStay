@@ -25,12 +25,11 @@ export default function HeaderContainer(props: {
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    height: '3rem',
+                    height: '4rem',
                     width: '100%',
                     backgroundColor: (theme) =>
                          theme.palette.background.default,
-               }}
-          >
+               }}>
                {width ? (
                     <HeaderDesktop
                          refLogo={elem1}

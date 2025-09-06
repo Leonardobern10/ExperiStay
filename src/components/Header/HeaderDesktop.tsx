@@ -15,22 +15,18 @@ export default function HeaderDesktop({
      return (
           <Stack
                direction="row"
-               width="100%"
-               height="fit-content"
                sx={{
-                    padding: (theme) => theme.spacing(4),
-               }}
-          >
+                    width: '100%',
+                    padding: (theme) => theme.spacing(7),
+               }}>
                <Box
                     ref={refLogo}
-                    sx={{ width: 'fit-content' }}
-               >
+                    sx={{ width: 'fit-content' }}>
                     ExperiStay
                </Box>
                <Box
                     ref={refNav}
-                    component="nav"
-               >
+                    component="nav">
                     <NavList>
                          {headerItemsNav.map((el) => (
                               <NavItem

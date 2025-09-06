@@ -9,10 +9,10 @@ export default function Logo(props: {
                ref={props.ref}
                sx={{
                     width: 'fit-content',
-                    fontWeight: 200,
+                    fontWeight: 800,
+                    fontSize: '2rem',
                     color: (theme) => theme.palette.text.primary,
-               }}
-          >
+               }}>
                ExperiStay
           </Box>
      );

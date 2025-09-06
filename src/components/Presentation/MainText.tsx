@@ -3,6 +3,7 @@ import { forwardRef, type ReactElement } from 'react';
 import type { MainTextProps } from '../../types/MainTextProps';
 import useWidth from '../../hooks/useWidth';
 import MainTitle from './MainTitle';
+import BannerTitle from './BannerTitle';
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
      ({ title, desc }, ref): ReactElement => {
@@ -18,22 +19,22 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                          rowGap: (theme) => theme.spacing(2),
                          padding: (theme) => theme.spacing(4),
                          borderRadius: (theme) => theme.shape.borderRadius,
-                    }}
-               >
+                    }}>
                     <Box
                          sx={{
                               display: 'flex',
                               flexDirection: 'column',
                               rowGap: (theme) => theme.spacing(2),
-                         }}
-                    >
-                         <MainTitle string={title} />
+                         }}>
+                         <BannerTitle title={title} />
                          {width && (
                               <Typography
                                    variant="subtitle1"
-                                   sx={{ textShadow: '1px 1px 1px black' }}
-                                   color="textPrimary"
-                              >
+                                   sx={{
+                                        textShadow: '1px 1px 1px black',
+                                        letterSpacing: 0.7,
+                                   }}
+                                   color="primary">
                                    {desc}
                               </Typography>
                          )}

@@ -15,19 +15,17 @@ export default function MainTitle(props: {
      return (
           <Typography
                color={'textPrimary'}
-               variant="h1"
+               variant="h2"
                sx={{
                     width: '100%',
                     textShadow: '2px 2px 2px black',
                     textAlign: `${props.align && props.align}`,
-               }}
-          >
+               }}>
                {strings[0]}
                <Typography
-                    variant="h1"
+                    variant="h2"
                     component={'span'}
-                    color="#ab9f19ff"
-               >
+                    color="#ab9f19ff">
                     {` ${strings[1]}`}
                </Typography>
           </Typography>

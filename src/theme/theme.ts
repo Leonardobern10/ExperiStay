@@ -35,12 +35,13 @@ let theme = createTheme({
           fontFamily: "'Lexend', sans-serif",
           h1: {
                fontSize: '4rem',
-               fontWeight: 400,
-               fontFamily: 'Poppins, sans-serif;',
+               fontWeight: 600,
+               fontFamily: '"Poppins", sans-serif',
           },
           h2: {
-               fontSize: '2.5rem',
+               fontSize: '3rem',
                fontWeight: 400,
+               fontFamily: '"Playfair Display", serif',
           },
           h3: {
                fontSize: '2rem',

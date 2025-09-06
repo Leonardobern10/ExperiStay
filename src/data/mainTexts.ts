@@ -1,8 +1,8 @@
 import type { MainTextProps } from '../types/MainTextProps';
 
 export const mainTexts: MainTextProps = {
-     title: 'Cada casa uma experiência',
-     desc: 'A ExperiStay é a sua plataforma de acesso a um universo de imóveis por temporada, situados em pontos estratégicos e vibrantes.',
+     title: 'Sua próxima experiência começa aqui.',
+     desc: 'Mais do que um lugar para ficar, oferecemos o cenário perfeito para as suas melhores experiências.',
 };
 
 let text1 =

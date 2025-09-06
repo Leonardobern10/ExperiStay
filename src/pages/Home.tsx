@@ -7,6 +7,7 @@ import UnbelivableExperiences from '../components/UnbelivableExperiences/Unbeliv
 import ExclusiveDestinyContainer from '../components/ExclusiveDestinys/ExclusiveDestinyContainer';
 import RatingsContainer from '../components/Ratings/RatingsContainer';
 import SpecialPropertiesAdContainer from '../components/SpecialPropertiesAd/SpecialPropertiesAdContainer';
+import FooterContainer from '../components/Footer/FooterContainer';
 
 export default function Home(): ReactElement {
      return (
@@ -29,6 +30,7 @@ export default function Home(): ReactElement {
                <ExclusiveDestinyContainer className="section" />
                <RatingsContainer className="section" />
                <SpecialPropertiesAdContainer className="section" />
+               <FooterContainer />
           </Grid>
      );
 }
