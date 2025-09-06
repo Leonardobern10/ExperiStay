@@ -4,7 +4,6 @@ import { advantages, dataContainer } from '../../data/specialPropertiesAdData';
 import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';
 import ButtonCustom from '../ButtonWithIcon';
 import MainTitle from '../Presentation/MainTitle';
-import { paddingYContainer } from '../../constants';
 import ContainerSectionHome from '../ui/ContainerSectionHome';
 
 export default function SpecialPropertiesAdContainer(props: {
