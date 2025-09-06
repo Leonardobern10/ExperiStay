@@ -21,9 +21,9 @@ export default function PresentationContainer(props: {
                sx={{
                     width: '100%',
                     height: '100%',
-                    marginTop: (theme) => theme.spacing(12),
-               }}
-          >
+                    marginTop: (theme) => theme.spacing(8),
+                    paddingY: (theme) => theme.spacing(4),
+               }}>
                <Box
                     sx={{
                          backgroundImage: `url(${backgroundImage})`,
@@ -37,9 +37,8 @@ export default function PresentationContainer(props: {
                          justifyContent: 'center',
                          alignItems: 'center',
                          rowGap: (theme) => theme.spacing(5),
-                         padding: { xs: 1, md: 2 },
-                    }}
-               >
+                         padding: { xs: 1, md: (theme) => theme.spacing(4) },
+                    }}>
                     <GridMainText
                          children={
                               <MainText
@@ -52,16 +51,16 @@ export default function PresentationContainer(props: {
                     <Grid
                          sx={{
                               width: '80%',
-                              height: '20%',
+                              height: '15%',
                               display: 'flex',
                               flexDirection: 'row',
                               justifyContent: 'space-between',
                               alignItems: 'center',
+                              padding: (theme) => theme.spacing(1),
                               backgroundColor: (theme) =>
                                    theme.palette.primary.dark,
                               borderRadius: (theme) => theme.shape.borderRadius,
-                         }}
-                    >
+                         }}>
                          <ContainerMainDestination />
                     </Grid>
                </Box>
