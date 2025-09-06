@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Card, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { HighlightType } from '../../types/HighlightType';
 import ImageComponent from '../ImageComponent';
@@ -12,7 +12,7 @@ export default function HighlightComponent(
      hightLightData: HighlightType,
 ): ReactElement {
      return (
-          <Box
+          <Card
                sx={{
                     backgroundColor: (theme) => theme.palette.secondary.main,
                     borderRadius: (theme) => theme.shape.borderRadius,
@@ -66,6 +66,6 @@ export default function HighlightComponent(
                          <LikedComponent liked={hightLightData.liked} />
                     </Box>
                </Box>
-          </Box>
+          </Card>
      );
 }

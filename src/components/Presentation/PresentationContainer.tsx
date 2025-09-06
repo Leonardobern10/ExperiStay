@@ -37,7 +37,7 @@ export default function PresentationContainer(props: {
                          justifyContent: 'center',
                          alignItems: 'center',
                          rowGap: (theme) => theme.spacing(5),
-                         padding: { xs: 1, md: (theme) => theme.spacing(4) },
+                         padding: { xs: 4, md: (theme) => theme.spacing(4) },
                     }}>
                     <GridMainText
                          children={
@@ -51,7 +51,10 @@ export default function PresentationContainer(props: {
                     <Grid
                          sx={{
                               width: '80%',
-                              height: '15%',
+                              height: {
+                                   xs: '100%',
+                                   md: 'fit-content',
+                              },
                               display: 'flex',
                               flexDirection: 'row',
                               justifyContent: 'space-between',

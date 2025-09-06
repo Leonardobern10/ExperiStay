@@ -4,10 +4,14 @@ import MainTitle from '../Presentation/MainTitle';
 import { ratings } from '../../data/ratingsData';
 import RatingComponent from './RatingComponent';
 import ContainerSectionHome from '../ui/ContainerSectionHome';
+import useWidth from '../../hooks/useWidth';
+import Carousel from '../Carousel';
 
 export default function RatingsContainer(props: {
      className: string;
 }): ReactElement {
+     const currentWidth = useWidth('md');
+
      return (
           <ContainerSectionHome className={props.className}>
                <Box
@@ -26,17 +30,40 @@ export default function RatingsContainer(props: {
                          experiências inesquecíveis
                     </Typography>
                </Box>
-               <Stack direction="row">
-                    {ratings.map((el) => (
-                         <RatingComponent
-                              key={el.index}
-                              rating={el.rating}
-                              textRating={el.textRating}
-                              name={el.name}
-                              location={el.location}
+               {currentWidth ? (
+                    <Stack
+                         direction="row"
+                         spacing={8}
+                         paddingX={8}>
+                         {ratings.map((el) => (
+                              <RatingComponent
+                                   key={el.index}
+                                   rating={el.rating}
+                                   textRating={el.textRating}
+                                   name={el.name}
+                                   location={el.location}
+                              />
+                         ))}
+                    </Stack>
+               ) : (
+                    <Box
+                         sx={{
+                              width: '100%',
+                              paddingX: (theme) => theme.spacing(4),
+                         }}>
+                         <Carousel
+                              children={ratings.map((el) => (
+                                   <RatingComponent
+                                        key={el.index}
+                                        rating={el.rating}
+                                        textRating={el.textRating}
+                                        name={el.name}
+                                        location={el.location}
+                                   />
+                              ))}
                          />
-                    ))}
-               </Stack>
+                    </Box>
+               )}
           </ContainerSectionHome>
      );
 }

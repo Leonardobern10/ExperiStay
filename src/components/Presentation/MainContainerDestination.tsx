@@ -23,7 +23,10 @@ export default function ContainerMainDestination(): ReactElement {
                     sx={{
                          width: '100%',
                          display: 'flex',
-                         flexDirection: 'row',
+                         flexDirection: {
+                              xs: 'column',
+                              md: 'row',
+                         },
                          justifyContent: 'space-evenly', // centraliza
                          alignItems: 'center',
                          columnGap: 4,

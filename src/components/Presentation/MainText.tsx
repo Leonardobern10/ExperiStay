@@ -2,7 +2,6 @@ import { Box, Typography } from '@mui/material';
 import { forwardRef, type ReactElement } from 'react';
 import type { MainTextProps } from '../../types/MainTextProps';
 import useWidth from '../../hooks/useWidth';
-import MainTitle from './MainTitle';
 import BannerTitle from './BannerTitle';
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
@@ -17,13 +16,14 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                          display: 'flex',
                          flexDirection: 'column',
                          rowGap: (theme) => theme.spacing(2),
-                         padding: (theme) => theme.spacing(4),
                          borderRadius: (theme) => theme.shape.borderRadius,
+                         border: 2,
                     }}>
                     <Box
                          sx={{
                               display: 'flex',
                               flexDirection: 'column',
+                              width: '100%',
                               rowGap: (theme) => theme.spacing(2),
                          }}>
                          <BannerTitle title={title} />

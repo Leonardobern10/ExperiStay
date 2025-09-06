@@ -10,7 +10,7 @@ export default function RatingComponent(data: RatingProps): ReactElement {
                sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    width: '30%',
+                    minWidth: '30%',
                     padding: (theme) => theme.spacing(6),
                     rowGap: (theme) => theme.spacing(4),
                     borderRadius: (theme) => theme.shape.borderRadius,

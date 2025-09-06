@@ -11,9 +11,8 @@ export default function ExclusiveComponent(
                variant="elevation"
                sx={{
                     height: '25rem',
-                    width: '20rem',
+                    minWidth: '20rem',
                     position: 'relative',
-                    overflow: 'hidden',
                     borderRadius: (theme) => theme.shape.borderRadius,
                }}>
                {/* Imagem */}

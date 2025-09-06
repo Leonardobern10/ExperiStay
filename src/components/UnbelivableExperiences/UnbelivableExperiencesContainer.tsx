@@ -4,10 +4,15 @@ import MainTitle from '../Presentation/MainTitle';
 import ExperienceComponent from './ExperienceComponent';
 import { experienceComponents } from '../../data/unbelivableExperiences';
 import ContainerSectionHome from '../ui/ContainerSectionHome';
+import { BoxGridCustomUI } from '../ui/BoxGridCustomUI';
+import useWidth from '../../hooks/useWidth';
+import Carousel from '../Carousel';
 
 export default function UnbelivableExperiences(props: {
      className: string;
 }): ReactElement {
+     const currentWidth = useWidth('md');
+
      return (
           <ContainerSectionHome className={props.className}>
                <Box
@@ -26,23 +31,39 @@ export default function UnbelivableExperiences(props: {
                          conectam você aos tesouros escondidos do Brasil
                     </Typography>
                </Box>
-               <Box
-                    sx={{
-                         display: 'grid',
-                         gridTemplateColumns: 'repeat(2, 1fr)',
-                         gap: (theme) => theme.spacing(2),
-                         padding: (theme) => theme.spacing(6),
-                    }}>
-                    {experienceComponents.map((el) => (
-                         <ExperienceComponent
-                              key={el.index}
-                              title={el.title}
-                              description={el.description}
-                              icon={el.icon}
-                              alert={el.alert}
+               {currentWidth ? (
+                    <BoxGridCustomUI>
+                         {experienceComponents.map((el) => (
+                              <ExperienceComponent
+                                   key={el.index}
+                                   title={el.title}
+                                   description={el.description}
+                                   icon={el.icon}
+                                   alert={el.alert}
+                              />
+                         ))}
+                    </BoxGridCustomUI>
+               ) : (
+                    <Box
+                         sx={{
+                              width: '100%',
+                              height: '100%',
+                              paddingX: (theme) => theme.spacing(4),
+                         }}>
+                         <Carousel
+                              arrow={true}
+                              children={experienceComponents.map((el) => (
+                                   <ExperienceComponent
+                                        key={el.index}
+                                        title={el.title}
+                                        description={el.description}
+                                        icon={el.icon}
+                                        alert={el.alert}
+                                   />
+                              ))}
                          />
-                    ))}
-               </Box>
+                    </Box>
+               )}
           </ContainerSectionHome>
      );
 }

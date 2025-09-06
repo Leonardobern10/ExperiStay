@@ -22,12 +22,13 @@ export default function HeaderContainer(props: {
                className={props.className}
                sx={{
                     position: 'fixed',
+                    border: 2,
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     height: '4rem',
-                    width: '100%',
+                    width: '100vw',
                     backgroundColor: (theme) =>
                          theme.palette.background.default,
                }}>
