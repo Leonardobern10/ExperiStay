@@ -19,12 +19,13 @@ export default function Home(): ReactElement {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    rowGap: (theme) => theme.spacing(8),
+                    rowGap: (theme) => theme.spacing(20),
                     backgroundColor: (theme) =>
                          theme.palette.background.default,
                }}>
                <HeaderContainer />
                <PresentationContainer className="section" />
+               {/* Todas as sections abaixo utilizam ContainerSectionHome */}
                <PropertyHighlights className="section" />
                <UnbelivableExperiences className="section" />
                <ExclusiveDestinyContainer className="section" />
