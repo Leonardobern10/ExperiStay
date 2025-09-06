@@ -12,7 +12,7 @@ export default function GridMainText(props: {
                     display: 'flex',
                     flexDirection: 'row',
                     width: '100%',
-                    padding: (theme) => theme.spacing(2),
+                    padding: (theme) => theme.spacing(20),
                     justifySelf: 'flex-start',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -20,8 +20,7 @@ export default function GridMainText(props: {
                     position: 'relative',
                     left: 0,
                     top: 0,
-               }}
-          >
+               }}>
                {props.children}
           </Grid>
      );
