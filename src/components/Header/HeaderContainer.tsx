@@ -18,6 +18,7 @@ export default function HeaderContainer(props: {
 
      return (
           <Box
+               zIndex={1000}
                className={props.className}
                sx={{
                     position: 'fixed',
