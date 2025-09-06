@@ -13,8 +13,7 @@ export default function InputSelect(): ReactElement {
           <FormControl>
                <InputLabel
                     color="secondary"
-                    id="demo-simple-select-label"
-               >
+                    id="demo-simple-select-label">
                     Location
                </InputLabel>
                <SelectCustomUI
@@ -22,8 +21,7 @@ export default function InputSelect(): ReactElement {
                     id="demo-simple-select"
                     value={location}
                     label="Age"
-                    onChange={handleChange}
-               >
+                    onChange={handleChange}>
                     <MenuItem value={'Rio de Janeiro'}>Rio de Janeiro</MenuItem>
                     <MenuItem value={'São Paulo'}>São Paulo</MenuItem>
                     <MenuItem value={'Curitiba'}>Curitiba</MenuItem>

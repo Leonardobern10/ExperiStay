@@ -12,8 +12,7 @@ export default function ButtonCustom({
           <Button
                variant={main ? 'main' : 'default'}
                onClick={onClick}
-               startIcon={Icon ? <Icon /> : undefined}
-          >
+               startIcon={Icon ? <Icon /> : undefined}>
                {buttonName}
           </Button>
      );

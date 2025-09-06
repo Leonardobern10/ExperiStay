@@ -27,8 +27,7 @@ export default function ContainerMainDestination(): ReactElement {
                          justifyContent: 'space-evenly', // centraliza
                          alignItems: 'center',
                          columnGap: 4,
-                    }}
-               >
+                    }}>
                     <DatePickerCustom
                          label="Chegada"
                          value={arrival}

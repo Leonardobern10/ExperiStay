@@ -22,8 +22,7 @@ function App() {
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     width: '100%',
-               }}
-          >
+               }}>
                {loading ? (
                     <Box
                          sx={{
@@ -32,8 +31,7 @@ function App() {
                               display: 'flex',
                               justifyContent: 'center',
                               alignItems: 'center',
-                         }}
-                    >
+                         }}>
                          <CircularProgress color="secondary" />
                     </Box>
                ) : (

@@ -14,8 +14,7 @@ export default function RatingComponent(data: RatingProps): ReactElement {
                     padding: (theme) => theme.spacing(6),
                     rowGap: (theme) => theme.spacing(4),
                     borderRadius: (theme) => theme.shape.borderRadius,
-               }}
-          >
+               }}>
                <Rating
                     sx={{
                          opacity: '70%',
@@ -30,27 +29,23 @@ export default function RatingComponent(data: RatingProps): ReactElement {
                          fontWeight: 200,
                          fontStyle: 'italic',
                     }}
-                    variant="body2"
-               >
+                    variant="body2">
                     "{data.textRating}"
                </Typography>
                <Stack
                     direction="row"
                     justifyContent="flex-start"
-                    spacing={3}
-               >
+                    spacing={3}>
                     <AvatarUserRating userName={data.name} />
                     <Stack
                          direction="column"
-                         alignItems="flex-start"
-                    >
+                         alignItems="flex-start">
                          <Typography>{data.name}</Typography>
                          <Typography
                               sx={{
                                    opacity: '70%',
                                    fontWeight: 200,
-                              }}
-                         >
+                              }}>
                               {data.location}
                          </Typography>
                     </Stack>

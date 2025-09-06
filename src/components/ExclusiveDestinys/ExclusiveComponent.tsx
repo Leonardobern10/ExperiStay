@@ -15,8 +15,7 @@ export default function ExclusiveComponent(
                     position: 'relative',
                     overflow: 'hidden',
                     borderRadius: (theme) => theme.shape.borderRadius,
-               }}
-          >
+               }}>
                {/* Imagem */}
                <Box sx={{ position: 'relative', height: '70%' }}>
                     <ImageCustom
@@ -34,15 +33,13 @@ export default function ExclusiveComponent(
                          color: 'white',
                          width: '100%',
                          padding: (theme) => theme.spacing(4),
-                    }}
-               >
+                    }}>
                     <Typography variant="h5">{data.name}</Typography>
                     <Typography
                          sx={{
                               color: (theme) => theme.palette.text.secondary,
                          }}
-                         variant="body2"
-                    >
+                         variant="body2">
                          {data.available} propriedades disponíveis
                     </Typography>
                </Box>

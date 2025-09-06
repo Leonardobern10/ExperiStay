@@ -20,8 +20,7 @@ export default function ExperienceComponent(
                     alignItems: 'flex-start',
                     rowGap: (theme) => theme.spacing(4),
                     borderRadius: (theme) => theme.shape.borderRadius,
-               }}
-          >
+               }}>
                <Box
                     sx={{
                          display: 'flex',
@@ -29,8 +28,7 @@ export default function ExperienceComponent(
                          justifyContent: 'center',
                          alignItems: 'center',
                          columnGap: (theme) => theme.spacing(4),
-                    }}
-               >
+                    }}>
                     <Icon />
                     <Typography variant="h4">{data.title}</Typography>
                </Box>
@@ -41,8 +39,7 @@ export default function ExperienceComponent(
                          flexDirection: 'row',
                          alignItems: 'center',
                          columnGap: (theme) => theme.spacing(),
-                    }}
-               >
+                    }}>
                     <InfoIcon />
                     <Typography color="textSecondary">{data.alert}</Typography>
                </Box>

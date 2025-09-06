@@ -8,8 +8,7 @@ export default function Services(): ReactElement {
                     backgroundColor: 'yellow',
                     height: '100vh',
                     width: '100vw',
-               }}
-          >
+               }}>
                a
           </Box>
      );

@@ -15,14 +15,12 @@ export default function LabelHighlight(props: {
                     color: (theme) => theme.palette.primary.main,
                     paddingX: (theme) => theme.spacing(2),
                     borderRadius: (theme) => theme.shape.borderRadius,
-               }}
-          >
+               }}>
                <Typography
                     sx={{
                          fontSize: '.8rem',
                          fontWeight: '400',
-                    }}
-               >
+                    }}>
                     {props.labelName}
                </Typography>
           </Paper>

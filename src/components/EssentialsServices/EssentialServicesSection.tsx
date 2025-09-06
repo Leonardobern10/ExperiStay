@@ -6,8 +6,7 @@ export default function EssentialServicesSection(props: {
      return (
           <div
                className={props.className}
-               style={{ width: '100%', height: '100vw' }}
-          >
+               style={{ width: '100%', height: '100vw' }}>
                a asdasd
           </div>
      );

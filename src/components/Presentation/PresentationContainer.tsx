@@ -6,7 +6,6 @@ import { mainTexts } from '../../data/mainTexts';
 import { useMainContentAnimation } from '../../hooks/useAnimation';
 import GridMainText from './GridMainText';
 import ContainerMainDestination from './MainContainerDestination';
-import { paddingYContainer } from '../../constants';
 
 export default function PresentationContainer(props: {
      className?: string;
@@ -23,7 +22,7 @@ export default function PresentationContainer(props: {
                     width: '100%',
                     height: '100%',
                     marginTop: (theme) => theme.spacing(5),
-                    paddingY: (theme) => theme.spacing(paddingYContainer),
+                    paddingY: (theme) => theme.spacing(8),
                }}>
                <Box
                     sx={{

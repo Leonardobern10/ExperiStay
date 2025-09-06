@@ -7,7 +7,6 @@ export default function Properties(): ReactElement {
                sx={{
                     width: '100vw',
                     height: '100vh',
-               }}
-          ></Box>
+               }}></Box>
      );
 }

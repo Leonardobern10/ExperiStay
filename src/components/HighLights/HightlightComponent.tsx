@@ -18,15 +18,13 @@ export default function HighlightComponent(
                     borderRadius: (theme) => theme.shape.borderRadius,
                     height: '33rem',
                     overflow: 'hidden',
-               }}
-          >
+               }}>
                <Box
                     sx={{
                          height: '50%',
                          width: '100%',
                          position: 'relative',
-                    }}
-               >
+                    }}>
                     <ImageComponent
                          src={hightLightData.img}
                          alt={`imagem do imovel em destaque ${hightLightData.name} no(a) ${hightLightData.location}`}
@@ -41,19 +39,16 @@ export default function HighlightComponent(
                          display: 'flex',
                          flexDirection: 'column',
                          rowGap: (theme) => theme.spacing(3),
-                    }}
-               >
+                    }}>
                     <Box>
                          <Typography
                               variant="h5"
-                              color="textPrimary"
-                         >
+                              color="textPrimary">
                               {hightLightData.name}
                          </Typography>
                          <Typography
                               variant="body2"
-                              color="textSecondary"
-                         >
+                              color="textSecondary">
                               {hightLightData.location}
                          </Typography>
                     </Box>
@@ -66,8 +61,7 @@ export default function HighlightComponent(
                               flexDirection: 'row',
                               justifyContent: 'space-between',
                               alignItems: 'center',
-                         }}
-                    >
+                         }}>
                          <PriceHighlight value={hightLightData.price} />
                          <LikedComponent liked={hightLightData.liked} />
                     </Box>

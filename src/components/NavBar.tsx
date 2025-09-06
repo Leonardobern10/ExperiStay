@@ -10,8 +10,7 @@ export default function NavBar(props: {
      return (
           <Box
                ref={props.refNav}
-               component="nav"
-          >
+               component="nav">
                <List
                     component="ul"
                     sx={{
@@ -23,8 +22,7 @@ export default function NavBar(props: {
                               flexDirection: 'row',
                               width: '100%',
                          },
-                    }}
-               >
+                    }}>
                     {props.headerItemsNav.map((el) => (
                          <NavItem
                               key={el.index}

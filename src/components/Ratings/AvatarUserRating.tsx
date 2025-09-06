@@ -18,8 +18,7 @@ export default function AvatarUserRating(props: {
                sx={{
                     backgroundColor: (theme) => theme.palette.primary.main,
                     fontSize: '16px',
-               }}
-          >
+               }}>
                {getInitials()}
           </Avatar>
      );

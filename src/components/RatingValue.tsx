@@ -20,8 +20,7 @@ export default function RatingValue(props: { value: number }): ReactElement {
                     alignItems: 'center',
                     columnGap: (theme) => theme.spacing(1),
                     borderRadius: (theme) => theme.shape.borderRadius,
-               }}
-          >
+               }}>
                <StarIcon
                     sx={{
                          height: '1.2rem',
