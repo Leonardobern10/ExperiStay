@@ -7,9 +7,11 @@ export default function ButtonCustom({
      buttonIcon: Icon,
      onClick,
      main,
+     ref,
 }: ButtonWithIconProps): ReactElement {
      return (
           <Button
+               ref={ref}
                variant={main ? 'main' : 'default'}
                onClick={onClick}
                startIcon={Icon ? <Icon /> : undefined}>

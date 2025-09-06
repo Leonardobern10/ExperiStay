@@ -4,6 +4,6 @@ export type ButtonWithIconProps = {
      buttonName: string;
      buttonIcon?: ElementType;
      main?: boolean;
-     ref?: RefObject<HTMLElement | null>;
+     ref?: RefObject<HTMLButtonElement | null>;
      onClick?: () => void;
 };
