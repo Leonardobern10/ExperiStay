@@ -17,7 +17,6 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                          flexDirection: 'column',
                          rowGap: (theme) => theme.spacing(2),
                          borderRadius: (theme) => theme.shape.borderRadius,
-                         border: 2,
                     }}>
                     <Box
                          sx={{

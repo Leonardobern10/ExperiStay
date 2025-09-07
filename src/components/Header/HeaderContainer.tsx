@@ -22,7 +22,6 @@ export default function HeaderContainer(props: {
                className={props.className}
                sx={{
                     position: 'fixed',
-                    border: 2,
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
