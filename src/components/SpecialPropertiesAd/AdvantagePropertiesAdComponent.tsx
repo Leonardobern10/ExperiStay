@@ -13,8 +13,9 @@ export default function AdvantagePropertiesAdComponent(
                     alignItems: 'center',
                     paddingY: (theme) => theme.spacing(10),
                }}>
-               <Typography variant="h5">{data.title}</Typography>
+               <Typography variant="h3">{data.title}</Typography>
                <Typography
+                    variant="body1"
                     sx={{
                          width: '70%',
                          textAlign: 'center',

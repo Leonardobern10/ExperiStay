@@ -35,19 +35,18 @@ export default function HighlightComponent(
                <Box
                     sx={{
                          height: '100%',
-                         padding: (theme) => theme.spacing(8),
+                         paddingY: (theme) => theme.spacing(4),
+                         paddingX: (theme) => theme.spacing(6),
                          display: 'flex',
                          flexDirection: 'column',
                          rowGap: (theme) => theme.spacing(3),
                     }}>
                     <Box>
-                         <Typography
-                              variant="h5"
-                              color="textPrimary">
+                         <Typography variant="h3">
                               {hightLightData.name}
                          </Typography>
                          <Typography
-                              variant="body2"
+                              variant="body1"
                               color="textSecondary">
                               {hightLightData.location}
                          </Typography>

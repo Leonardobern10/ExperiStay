@@ -10,5 +10,5 @@ export default function DescriptionHighlight(props: {
           return props.description;
      };
 
-     return <Typography color="textSecondary">{limitString(100)}</Typography>;
+     return <Typography variant="body1">{limitString(100)}</Typography>;
 }

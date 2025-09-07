@@ -1,9 +1,9 @@
-import { createTheme, responsiveFontSizes } from '@mui/material';
+import { createTheme, responsiveFontSizes, type Theme } from '@mui/material';
 import type {} from '@mui/x-date-pickers/themeAugmentation';
 
-let theme = createTheme();
+let theme: Theme = createTheme();
 
-theme = createTheme({
+theme = createTheme(theme, {
      palette: {
           primary: {
                main: '#ab9f19ff',
@@ -32,14 +32,23 @@ theme = createTheme({
                disabled: '#02020295',
           },
      },
+     shape: { borderRadius: 5 },
+     spacing: 5,
      typography: {
           fontSize: 16,
-          fontFamily: "'Lexend', sans-serif",
+          fontFamily: 'Lexend, sans-serif',
+     },
+});
+
+theme = createTheme(theme, {
+     typography: {
+          fontSize: 16,
+          fontFamily: 'Lexend, sans-serif',
           /** Titulo de apresentação */
           h1: {
                fontSize: '3rem',
                fontWeight: 600,
-               fontFamily: '"Poppins", sans-serif',
+               fontFamily: 'Poppins, sans-serif',
                textShadow: '2px 2px 2px black',
                [theme.breakpoints.up('md')]: {
                     fontSize: '4rem',
@@ -49,42 +58,54 @@ theme = createTheme({
           h2: {
                fontSize: '2rem',
                fontWeight: 400,
-               fontFamily: '"Poppins", sans-serif',
+               fontFamily: 'Poppins, sans-serif',
                [theme.breakpoints.up('md')]: {
                     fontSize: '3rem',
                },
           },
           h3: {
-               fontSize: '2rem',
+               fontFamily: 'Lexend, sans-serif',
+               fontSize: '1.5rem',
                fontWeight: 500,
+               color: theme.palette.text.primary,
+               [theme.breakpoints.up('md')]: {
+                    fontSize: '1.5rem',
+               },
           },
           h4: {
                fontSize: '1.8rem',
                fontWeight: 400,
           },
+          /** Textos extensos */
           body1: {
                fontSize: '1rem',
-               fontWeight: 400,
+               fontWeight: 200,
+               color: theme.palette.text.primary,
+               fontFamily: 'Lexend, sans-serif',
           },
+          /** Textos curtos */
+          body2: {},
           /** Subtitulo do titulo de apresentação */
           subtitle1: {
                fontSize: '1.2rem',
                fontWeight: 600,
                letterSpacing: 1.2,
+               fontFamily: 'Poppins, sans-serif',
           },
           /** Subtitulo dos titulos de seção */
           subtitle2: {
-               fontSize: '1.1rem',
-               fontWeight: 400,
-               width: '60%',
+               fontFamily: 'Lexend, sans-serif',
+               fontSize: '.9rem',
+               fontWeight: 300,
+               minWidth: '60%',
+               maxWidth: '70%',
                textAlign: 'center',
                color: '#828080ff',
+               [theme.breakpoints.up('md')]: {
+                    fontSize: '1.1rem',
+               },
           },
      },
-     shape: {
-          borderRadius: 5,
-     },
-     spacing: 5,
      components: {
           MuiStack: {
                styleOverrides: {
@@ -106,7 +127,7 @@ theme = createTheme({
           },
           MuiListItem: {
                styleOverrides: {
-                    root: ({ theme }) => ({
+                    root: ({ theme }: { theme: Theme }) => ({
                          fontWeight: 300,
                          color: theme.palette.text.primary,
                          textShadow: '1px 1px 2px black',
@@ -130,9 +151,11 @@ theme = createTheme({
           },
           MuiButton: {
                styleOverrides: {
-                    root: ({ theme }) => ({
+                    root: ({ theme }: { theme: Theme }) => ({
+                         fontFamily: 'Poppins, sans-serif',
                          textTransform: 'none',
                          fontWeight: 500,
+                         fontSize: '.8rem',
                          display: 'flex',
                          alignItems: 'center',
                          gap: theme.spacing(1),
@@ -142,6 +165,7 @@ theme = createTheme({
                          [theme.breakpoints.up('md')]: {
                               paddingX: theme.spacing(4),
                               paddingY: theme.spacing(2),
+                              fontSize: '1rem',
                          },
                     }),
                },
@@ -149,7 +173,7 @@ theme = createTheme({
                     {
                          props: { variant: 'main' },
                          /** Acessa o arquivo theme para manter consistência */
-                         style: ({ theme }) => ({
+                         style: ({ theme }: { theme: Theme }) => ({
                               backgroundColor: theme.palette.primary.main,
                               color: theme.palette.primary.dark,
                               /** Cria uma transição com as propriedades passadas na lista */
@@ -171,7 +195,7 @@ theme = createTheme({
                     },
                     {
                          props: { variant: 'default' },
-                         style: ({ theme }) => ({
+                         style: ({ theme }: { theme: Theme }) => ({
                               backgroundColor: theme.palette.background.default,
                               color: theme.palette.secondary.light,
                               transition: theme.transitions.create(

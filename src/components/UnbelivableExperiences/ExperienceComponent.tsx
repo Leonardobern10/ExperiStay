@@ -30,7 +30,7 @@ export default function ExperienceComponent(
                          columnGap: (theme) => theme.spacing(4),
                     }}>
                     <Icon />
-                    <Typography variant="h4">{data.title}</Typography>
+                    <Typography variant="h3">{data.title}</Typography>
                </Box>
                <Typography variant="body1">{data.description}</Typography>
                <Box

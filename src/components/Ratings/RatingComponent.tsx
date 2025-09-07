@@ -26,10 +26,9 @@ export default function RatingComponent(data: RatingProps): ReactElement {
                <Typography
                     sx={{
                          opacity: '80%',
-                         fontWeight: 200,
                          fontStyle: 'italic',
                     }}
-                    variant="body2">
+                    variant="body1">
                     "{data.textRating}"
                </Typography>
                <Stack
