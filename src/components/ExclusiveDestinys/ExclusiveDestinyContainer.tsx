@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 import useWidth from '@hooks/useWidth';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import Carousel from '@components/Carousel';
-import MainTitle from '@components/Presentation/MainTitle';
+import MainTitle from '@components/MainTitle';
 import ExclusiveComponent from './ExclusiveComponent';
 import { exclusiveDestines } from '@data/exclusiveDestinyData';
 

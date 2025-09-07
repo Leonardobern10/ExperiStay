@@ -6,7 +6,7 @@ import {
      propertyHighlightsData,
 } from '@data/PropertyHighlightsData';
 import HighlightComponent from './HightlightComponent';
-import MainTitle from '../Presentation/MainTitle';
+import MainTitle from '../MainTitle';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import useWidth from '@hooks/useWidth';
 import Carousel from '../Carousel';

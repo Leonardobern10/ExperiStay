@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import MainTitle from '@components/Presentation/MainTitle';
+import MainTitle from '@components/MainTitle';
 import { experienceComponents } from '@data/unbelivableExperiences';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import { BoxGridCustomUI } from '@components/ui/BoxGridCustomUI';

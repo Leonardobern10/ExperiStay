@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import MainTitle from '../Presentation/MainTitle';
+import MainTitle from '../MainTitle';
 import { ratings } from '../../data/ratingsData';
 import RatingComponent from './RatingComponent';
 import ContainerSectionHome from '../ui/ContainerSectionHome';
