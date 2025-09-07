@@ -2,8 +2,8 @@ import { Box, ListItem, Stack } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import NavList from '../ui/NavList';
-import ButtonCustom from '../ButtonWithIcon';
+import NavList from '@components/ui/NavList';
+import ButtonCustom from '@components/ButtonCustom';
 
 export default function HeaderDesktop({
      refLogo,

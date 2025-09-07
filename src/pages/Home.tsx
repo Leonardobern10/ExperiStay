@@ -2,12 +2,12 @@ import { type ReactElement } from 'react';
 import { Grid } from '@mui/material';
 import HeaderContainer from '@components/Header/HeaderContainer';
 import UnbelivableExperiences from '@components/UnbelivableExperiences/UnbelivableExperiencesContainer';
-import ExclusiveDestinyContainer from '../components/ExclusiveDestinys/ExclusiveDestinyContainer';
-import RatingsContainer from '../components/Ratings/RatingsContainer';
-import SpecialPropertiesAdContainer from '../components/SpecialPropertiesAd/SpecialPropertiesAdContainer';
-import FooterContainer from '../components/Footer/FooterContainer';
-import PresentationContainer from '../components/Presentation/PresentationContainer';
-import PropertyHighlights from '../components/HighLights/PropertyHighlights';
+import ExclusiveDestinyContainer from '@components/ExclusiveDestinys/ExclusiveDestinyContainer';
+import RatingsContainer from '@components/Ratings/RatingsContainer';
+import SpecialPropertiesAdContainer from '@components/SpecialPropertiesAd/SpecialPropertiesAdContainer';
+import FooterContainer from '@components/Footer/FooterContainer';
+import PresentationContainer from '@components/Presentation/PresentationContainer';
+import PropertyHighlights from '@components/HighLights/PropertyHighlights';
 
 export default function Home(): ReactElement {
      return (

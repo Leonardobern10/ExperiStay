@@ -1,9 +1,9 @@
 import { Box, Grid } from '@mui/material';
 import { useRef, type ReactElement } from 'react';
-import backgroundImage from '../../assets/images/downloadedImage_1.png';
+import backgroundImage from '@images/downloadedImage_1.png';
 import MainText from './MainText';
-import { mainTexts } from '../../data/mainTexts';
-import { useMainContentAnimation } from '../../hooks/useAnimation';
+import { mainTexts } from '@data/mainTexts';
+import { useMainContentAnimation } from '@hooks/useAnimation';
 import GridMainText from './GridMainText';
 import ContainerMainDestination from './MainContainerDestination';
 

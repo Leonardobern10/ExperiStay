@@ -1,12 +1,12 @@
 import { Box, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import MainTitle from '../Presentation/MainTitle';
+import MainTitle from '@components/Presentation/MainTitle';
+import { experienceComponents } from '@data/unbelivableExperiences';
+import ContainerSectionHome from '@components/ui/ContainerSectionHome';
+import { BoxGridCustomUI } from '@components/ui/BoxGridCustomUI';
+import useWidth from '@hooks/useWidth';
+import Carousel from '@components/Carousel';
 import ExperienceComponent from './ExperienceComponent';
-import { experienceComponents } from '../../data/unbelivableExperiences';
-import ContainerSectionHome from '../ui/ContainerSectionHome';
-import { BoxGridCustomUI } from '../ui/BoxGridCustomUI';
-import useWidth from '../../hooks/useWidth';
-import Carousel from '../Carousel';
 
 export default function UnbelivableExperiences(props: {
      className: string;

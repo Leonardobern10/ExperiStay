@@ -1,9 +1,8 @@
 import type { ReactElement } from 'react';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import type { ExclusiveDestinyProps } from '../types/ExcluviseDestinyProps';
-import ExclusiveComponent from './ExclusiveDestinys/ExclusiveComponent';
+import ExclusiveComponent from '@components/ExclusiveDestinys/ExclusiveComponent';
 
 export default function SwiperCustom(
      data: ExclusiveDestinyProps[],

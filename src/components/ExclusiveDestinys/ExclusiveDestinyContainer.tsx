@@ -1,11 +1,11 @@
 import { Box, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import MainTitle from '../Presentation/MainTitle';
-import { exclusiveDestines } from '../../data/exclusiveDestinyData';
+import useWidth from '@hooks/useWidth';
+import ContainerSectionHome from '@components/ui/ContainerSectionHome';
+import Carousel from '@components/Carousel';
+import MainTitle from '@components/Presentation/MainTitle';
 import ExclusiveComponent from './ExclusiveComponent';
-import ContainerSectionHome from '../ui/ContainerSectionHome';
-import useWidth from '../../hooks/useWidth';
-import Carousel from '../Carousel';
+import { exclusiveDestines } from '@data/exclusiveDestinyData';
 
 export default function ExclusiveDestinyContainer(props: {
      className: string;

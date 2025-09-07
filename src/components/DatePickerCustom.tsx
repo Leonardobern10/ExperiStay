@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import type { DatePickerProps } from '../types/DatePickerProps';
-import DatePickerUI from './ui/DatePickerUI';
+import DatePickerUI from '@components/ui/DatePickerUI';
 
 export default function DatePickerCustom({
      label,

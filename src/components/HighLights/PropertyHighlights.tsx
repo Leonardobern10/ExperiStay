@@ -1,16 +1,16 @@
 import { Box, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import Button from '../ButtonWithIcon';
 import type { PropertyHighlightsType } from '../../types/PropertyHighlightsType';
 import {
      allProperties,
      propertyHighlightsData,
-} from '../../data/PropertyHighlightsData';
+} from '@data/PropertyHighlightsData';
 import HighlightComponent from './HightlightComponent';
 import MainTitle from '../Presentation/MainTitle';
-import ContainerSectionHome from '../ui/ContainerSectionHome';
-import useWidth from '../../hooks/useWidth';
+import ContainerSectionHome from '@components/ui/ContainerSectionHome';
+import useWidth from '@hooks/useWidth';
 import Carousel from '../Carousel';
+import ButtonCustom from '@components/ButtonCustom';
 
 export default function PropertyHighlights(props: {
      className: string;
@@ -84,7 +84,7 @@ export default function PropertyHighlights(props: {
                          />
                     </Box>
                )}
-               <Button buttonName={data.buttonName} />
+               <ButtonCustom buttonName={data.buttonName} />
           </ContainerSectionHome>
      );
 }

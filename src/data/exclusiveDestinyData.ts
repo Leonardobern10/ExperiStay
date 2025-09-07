@@ -1,8 +1,8 @@
 import type { ExclusiveDestinyProps } from '../types/ExcluviseDestinyProps';
-import lencoisMaranhenses from '../assets/images/highlights/lencois_maranhenses.png';
-import pelourinhoBahia from '../assets/images/highlights/pelourinho_BA.png';
-import jericoacoara from '../assets/images/highlights/jericoacoara_RE.png';
-import rioAmazonas from '../assets/images/highlights/rio_amazonas.png';
+import lencoisMaranhenses from '@images/highlights/lencois_maranhenses.png';
+import pelourinhoBahia from '@images/highlights/pelourinho_BA.png';
+import jericoacoara from '@images/highlights/jericoacoara_RE.png';
+import rioAmazonas from '@images/highlights/rio_amazonas.png';
 
 export const exclusiveDestines: Array<ExclusiveDestinyProps> = [
      {

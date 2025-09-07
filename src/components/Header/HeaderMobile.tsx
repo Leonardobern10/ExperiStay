@@ -1,10 +1,10 @@
 import { Drawer, ListItem, Stack } from '@mui/material';
 import { useState, type ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
-import Logo from '../Logo';
-import NavList from '../ui/NavList';
-import Button from '../ButtonWithIcon';
 import MenuIcon from '@mui/icons-material/Menu';
+import Logo from '@components/Logo';
+import ButtonCustom from '@components/ButtonCustom';
+import NavList from '@components/ui/NavList';
 
 export default function HeaderMobile({
      refLogo,
@@ -22,7 +22,7 @@ export default function HeaderMobile({
                height="100%"
                sx={{ width: '100vw', paddingY: (theme) => theme.spacing(4) }}>
                <Logo ref={refLogo} />
-               <Button
+               <ButtonCustom
                     ref={refButton}
                     onClick={() => toggleMenu(true)}
                     buttonName="Menu"

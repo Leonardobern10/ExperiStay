@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import ImageCustom from './ui/ImageCustom';
+import ImageCustom from '@components/ui/ImageCustom';
 
 export default function ImageComponent(props: {
      alt: string;

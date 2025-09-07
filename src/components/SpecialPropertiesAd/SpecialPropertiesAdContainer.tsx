@@ -1,10 +1,10 @@
 import { Box, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import { advantages, dataContainer } from '../../data/specialPropertiesAdData';
+import { advantages, dataContainer } from '@data/specialPropertiesAdData';
 import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';
-import ButtonCustom from '../ButtonWithIcon';
 import MainTitle from '../Presentation/MainTitle';
-import ContainerSectionHome from '../ui/ContainerSectionHome';
+import ContainerSectionHome from '@components/ui/ContainerSectionHome';
+import ButtonCustom from '@components/ButtonCustom';
 
 export default function SpecialPropertiesAdContainer(props: {
      className: string;

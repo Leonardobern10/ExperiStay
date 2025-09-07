@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { ExclusiveDestinyProps } from '../../types/ExcluviseDestinyProps';
-import ImageCustom from '../ui/ImageCustom';
+import ImageCustom from '@components/ui/ImageCustom';
 
 export default function ExclusiveComponent(
      data: ExclusiveDestinyProps,

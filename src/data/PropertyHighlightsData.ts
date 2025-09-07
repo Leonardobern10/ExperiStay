@@ -1,8 +1,8 @@
 import type { HighlightType } from '../types/HighlightType';
 import type { PropertyHighlightsType } from '../types/PropertyHighlightsType';
-import imageExample from '../assets/images/Gemini_Generated_Image_vzc38svzc38svzc3.png';
-import bahia from '../assets/images/highlights/bahia_highlight.png';
-import manaus from '../assets/images/highlights/amazonas_highlight.png';
+import imageExample from '@images/Gemini_Generated_Image_vzc38svzc38svzc3.png';
+import bahia from '@images/highlights/bahia_highlight.png';
+import manaus from '@images/highlights/amazonas_highlight.png';
 
 export const propertyHighlightsData: PropertyHighlightsType = {
      title: 'Imóveis em destaque',

@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
 import { useRef, type ReactElement, type RefObject } from 'react';
-import { headerItemsNav } from '../../data/headerItemsNav';
-import useWidth from '../../hooks/useWidth';
+import { headerItemsNav } from '@data/headerItemsNav';
+import useWidth from '@hooks/useWidth';
 import HeaderDesktop from './HeaderDesktop';
 import HeaderMobile from './HeaderMobile';
-import { useHeaderAnimation } from '../../hooks/useAnimation';
+import { useHeaderAnimation } from '@hooks/useAnimation';
 
 export default function HeaderContainer(props: {
      className?: string;

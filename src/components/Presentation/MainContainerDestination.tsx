@@ -5,8 +5,8 @@ import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import type { Moment } from 'moment';
 import InputSelect from '../InputSelect';
 import DatePickerCustom from '../DatePickerCustom';
-import Button from '../ButtonWithIcon';
 import SearchIcon from '@mui/icons-material/Search';
+import ButtonCustom from '@components/ButtonCustom';
 
 export default function ContainerMainDestination(): ReactElement {
      const [arrival, setArrival] = useState<Moment | null>(null);
@@ -42,7 +42,7 @@ export default function ContainerMainDestination(): ReactElement {
                          onChange={(newExit) => setExit(newExit)}
                     />
                     <InputSelect />
-                    <Button
+                    <ButtonCustom
                          main={true}
                          buttonIcon={SearchIcon}
                          buttonName="Buscar"

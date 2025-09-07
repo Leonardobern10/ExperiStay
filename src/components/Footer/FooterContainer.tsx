@@ -1,10 +1,10 @@
+import Logo from '@components/Logo';
+import ContainerSectionHome from '@components/ui/ContainerSectionHome';
+import { footerContainerData, footerNavList } from '@data/footerData';
 import { Box, Divider, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import { footerContainerData, footerNavList } from '../../data/footerData';
-import FooterNavList from './FooterNavList';
-import Logo from '../Logo';
 import IconSocial from './IconSocial';
-import ContainerSectionHome from '../ui/ContainerSectionHome';
+import FooterNavList from './FooterNavList';
 
 export default function FooterContainer(): ReactElement {
      return (
