@@ -10,25 +10,33 @@ export default function FooterContainer(): ReactElement {
      return (
           <ContainerSectionHome
                sx={{
-                    height: '60vh',
+                    height: { xs: '100%', md: '60vh' },
+                    width: '100vw',
                     backgroundColor: (theme) => theme.palette.secondary.main,
                }}>
                <Box
                     sx={{
                          display: 'flex',
-                         flexDirection: 'row',
+                         flexDirection: { xs: 'column', md: 'row' },
                          justifyContent: 'space-between',
                          alignItems: 'center',
                          height: '70%',
+                         width: '100%',
                          padding: (theme) => theme.spacing(8),
                     }}>
                     <Box
                          sx={{
                               display: 'flex',
-                              flexDirection: 'column',
+                              flexDirection: {
+                                   xs: 'column',
+                                   md: 'row',
+                              },
                               justifyContent: 'space-between',
-                              alignItems: 'flex-start',
-                              width: '30%',
+                              alignItems: {
+                                   xs: 'center',
+                                   md: 'flex-start',
+                              },
+                              width: { xs: '100%', md: '30%' },
                               rowGap: (theme) => theme.spacing(4),
                          }}>
                          <Logo />
@@ -47,12 +55,20 @@ export default function FooterContainer(): ReactElement {
                               ))}
                          </Stack>
                     </Box>
-                    {footerNavList.map((el) => (
-                         <FooterNavList
-                              title={el.title}
-                              items={el.items}
-                         />
-                    ))}
+                    <Box
+                         sx={{
+                              display: 'flex',
+                              flexDirection: 'row',
+                              paddingY: (theme) => theme.spacing(4),
+                              columnGap: (theme) => theme.spacing(2),
+                         }}>
+                         {footerNavList.map((el) => (
+                              <FooterNavList
+                                   title={el.title}
+                                   items={el.items}
+                              />
+                         ))}
+                    </Box>
                </Box>
                <Divider
                     sx={{
@@ -62,9 +78,12 @@ export default function FooterContainer(): ReactElement {
                     variant="middle"
                />
                <Stack
-                    direction="row"
                     spacing={4}
                     sx={{
+                         flexDirection: {
+                              xs: 'column-reverse',
+                              md: 'row',
+                         },
                          justifyContent: 'space-between',
                          alignItems: 'center',
                          height: '20%',
