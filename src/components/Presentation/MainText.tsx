@@ -2,7 +2,6 @@ import { Box, Typography } from '@mui/material';
 import { forwardRef, type ReactElement } from 'react';
 import type { MainTextProps } from '../../types/MainTextProps';
 import useWidth from '@hooks/useWidth';
-import BannerTitle from './BannerTitle';
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
      ({ title, desc }, ref): ReactElement => {
