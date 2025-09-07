@@ -1,25 +1,25 @@
 /* Cor das setas */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #000000; /* azul, pode trocar */
-   top: 30%; /* sobe */
+     color: #000000; /* azul, pode trocar */
+     top: 30%; /* sobe */
 }
 
 /* Tamanho das setas */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 20px; /* diminui tamanho (padrão é 20-25px) */;
+     font-size: 20px; /* diminui tamanho (padrão é 20-25px) */
 }
 
-.swiper-pagination{
-  transform: translateY(50%);
+.swiper-pagination {
+     transform: translateY(50%);
 }
 
 .swiper-pagination-bullet {
-  background: #6a6969;
+     background: #6a6969;
 }
 
 /* Cor quando está ativa */
 .swiper-pagination-bullet-active {
-  background: #a47c01;
+     background: #a47c01;
 }
