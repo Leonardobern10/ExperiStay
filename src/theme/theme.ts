@@ -95,7 +95,7 @@ let theme = createTheme({
                styleOverrides: {
                     root: ({ theme }) => ({
                          textTransform: 'none',
-                         fontWeight: 300,
+                         fontWeight: 500,
                          display: 'flex',
                          alignItems: 'center',
                          gap: theme.spacing(2),
@@ -105,9 +105,25 @@ let theme = createTheme({
                variants: [
                     {
                          props: { variant: 'main' },
+                         /** Acessa o arquivo theme para manter consistência */
                          style: ({ theme }) => ({
                               backgroundColor: theme.palette.primary.main,
                               color: theme.palette.primary.dark,
+                              /** Cria uma transição com as propriedades passadas na lista */
+                              transition: theme.transitions.create(
+                                   ['background-color', 'color'],
+                                   {
+                                        duration:
+                                             theme.transitions.duration.short,
+                                        easing: theme.transitions.easing
+                                             .easeInOut,
+                                   },
+                              ),
+                              '&:hover': {
+                                   backgroundColor:
+                                        theme.palette.secondary.main,
+                                   color: theme.palette.primary.main,
+                              },
                          }),
                     },
                     {
@@ -115,6 +131,19 @@ let theme = createTheme({
                          style: ({ theme }) => ({
                               backgroundColor: theme.palette.background.default,
                               color: theme.palette.secondary.light,
+                              transition: theme.transitions.create(
+                                   ['background-color', 'color'],
+                                   {
+                                        duration:
+                                             theme.transitions.duration.short,
+                                        easing: theme.transitions.easing
+                                             .easeInOut,
+                                   },
+                              ),
+                              '&:hover': {
+                                   backgroundColor: theme.palette.primary.main,
+                                   color: theme.palette.secondary.main,
+                              },
                          }),
                     },
                ],

@@ -47,7 +47,10 @@ export default function SpecialPropertiesAdContainer(props: {
                <Stack
                     direction="row"
                     spacing={8}>
-                    <ButtonCustom buttonName={dataContainer.buttonRegister} />
+                    <ButtonCustom
+                         main
+                         buttonName={dataContainer.buttonRegister}
+                    />
                     <ButtonCustom buttonName={dataContainer.buttonMore} />
                </Stack>
           </ContainerSectionHome>
