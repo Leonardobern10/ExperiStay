@@ -1,7 +1,7 @@
 import Logo from '@components/Logo';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import { footerContainerData, footerNavList } from '@data/footerData';
-import { Box, Divider, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import IconSocial from './IconSocial';
 import FooterNavList from './FooterNavList';
@@ -11,9 +11,11 @@ export default function FooterContainer(): ReactElement {
           <ContainerSectionHome
                sx={{
                     height: { xs: '100%', md: '60vh' },
-                    width: '100vw',
                     backgroundColor: (theme) => theme.palette.secondary.main,
-                    rowGap: 4,
+                    rowGap: {
+                         xs: 1,
+                         md: 4,
+                    },
                }}>
                <Box
                     sx={{
@@ -60,7 +62,8 @@ export default function FooterContainer(): ReactElement {
                          sx={{
                               display: 'flex',
                               flexDirection: 'row',
-                              paddingY: (theme) => theme.spacing(4),
+                              paddingY: 4,
+                              paddingX: (theme) => theme.spacing(8),
                               columnGap: (theme) => theme.spacing(2),
                          }}>
                          {footerNavList.map((el) => (
@@ -72,15 +75,7 @@ export default function FooterContainer(): ReactElement {
                          ))}
                     </Box>
                </Box>
-               <Divider
-                    sx={{
-                         backgroundColor: (theme) =>
-                              theme.palette.primary.contrastText,
-                    }}
-                    variant="middle"
-               />
                <Stack
-                    spacing={4}
                     sx={{
                          flexDirection: {
                               xs: 'column-reverse',
@@ -90,17 +85,22 @@ export default function FooterContainer(): ReactElement {
                          alignItems: 'center',
                          height: '20%',
                          width: '100%',
-                         paddingX: (theme) => theme.spacing(8),
+                         paddingX: {
+                              xs: 0,
+                              md: 8,
+                         },
                     }}>
-                    <Typography>
+                    <Typography variant="body2">
                          2025 ExperiStay. Todos os direitos reservados.
                     </Typography>
                     <Stack
                          direction="row"
                          spacing={4}>
-                         <Typography>Termos de uso</Typography>
-                         <Typography>Política de privacidade</Typography>
-                         <Typography>Cookies</Typography>
+                         <Typography variant="body2">Termos de uso</Typography>
+                         <Typography variant="body2">
+                              Política de privacidade
+                         </Typography>
+                         <Typography variant="body2">Cookies</Typography>
                     </Stack>
                </Stack>
           </ContainerSectionHome>

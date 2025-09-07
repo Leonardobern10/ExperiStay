@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { AdvantageAdProps } from '../../types/AdvantagesAdProps';
+import theme from '@theme/theme';
 
 export default function AdvantagePropertiesAdComponent(
      data: AdvantageAdProps,
@@ -9,13 +10,14 @@ export default function AdvantagePropertiesAdComponent(
           <Box
                sx={{
                     display: 'flex',
-                    flexDirection: 'column',
                     alignItems: 'center',
+                    flexDirection: 'column',
                     paddingY: (theme) => theme.spacing(10),
+                    [theme.breakpoints.up('md')]: {},
                }}>
                <Typography variant="h3">{data.title}</Typography>
                <Typography
-                    variant="body1"
+                    variant="body2"
                     sx={{
                          width: '70%',
                          textAlign: 'center',

@@ -114,6 +114,9 @@ theme = createTheme(theme, {
                fontSize: '.8rem',
                fontWeight: '400',
           },
+          overline: {
+               fontWeight: 200,
+          },
      },
      components: {
           MuiStack: {

@@ -35,8 +35,14 @@ export default function SpecialPropertiesAdContainer(props: {
                     </Typography>
                </Box>
                <Stack
-                    direction="row"
-                    spacing={4}>
+                    spacing={4}
+                    sx={{
+                         flexDirection: {
+                              sx: 'column',
+                              md: 'row',
+                         },
+                         paddingX: 4,
+                    }}>
                     {advantages.map((el) => (
                          <AdvantagePropertiesAdComponent
                               key={el.index}

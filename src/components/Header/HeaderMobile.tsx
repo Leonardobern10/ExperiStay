@@ -22,7 +22,7 @@ export default function HeaderMobile({
                sx={{
                     height: '100%',
                     width: '100vw',
-                    paddingY: (theme) => theme.spacing(3),
+                    paddingY: 3,
                     marginY: 0.5,
                }}>
                <Logo ref={refLogo} />
@@ -33,9 +33,13 @@ export default function HeaderMobile({
                     buttonIcon={MenuIcon}
                />
                <Drawer
+                    anchor="top"
                     open={open}
                     onClose={() => toggleMenu(false)}>
-                    <NavList>
+                    <NavList
+                         sx={{
+                              width: '50vw',
+                         }}>
                          {headerItemsNav.map((el) => (
                               <ListItem key={el.index}>{el.nameItem}</ListItem>
                          ))}

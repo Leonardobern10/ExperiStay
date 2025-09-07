@@ -14,6 +14,7 @@ export default function FooterNavList(
                     alignItems: 'flex-start',
                }}>
                <Typography
+                    variant="body1"
                     sx={{
                          fontWeight: 500,
                          paddingBottom: (theme) => theme.spacing(3),
@@ -22,6 +23,7 @@ export default function FooterNavList(
                </Typography>
                {footerData.items.map((el, index) => (
                     <Typography
+                         variant="body2"
                          key={index}
                          sx={{
                               opacity: '70%',
