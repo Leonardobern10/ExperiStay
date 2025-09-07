@@ -32,7 +32,7 @@ export default function ExperienceComponent(
                     <Icon />
                     <Typography variant="h4">{data.title}</Typography>
                </Box>
-               <Typography color="textSecondary">{data.description}</Typography>
+               <Typography variant="body1">{data.description}</Typography>
                <Box
                     sx={{
                          display: 'flex',

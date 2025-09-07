@@ -33,12 +33,13 @@ export default function ExclusiveComponent(
                          width: '100%',
                          padding: (theme) => theme.spacing(4),
                     }}>
+                    {/** Mudar para h3 */}
                     <Typography variant="h5">{data.name}</Typography>
                     <Typography
                          sx={{
                               color: (theme) => theme.palette.text.secondary,
                          }}
-                         variant="body2">
+                         variant="body1">
                          {data.available} propriedades disponíveis
                     </Typography>
                </Box>

@@ -29,6 +29,7 @@ export default function SpecialPropertiesAdContainer(props: {
                          string={dataContainer.title + '?'}
                          align="center"
                     />
+                    {/** Subtitulo da seção */}
                     <Typography variant="subtitle2">
                          {dataContainer.subtitle}
                     </Typography>

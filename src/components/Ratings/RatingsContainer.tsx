@@ -25,6 +25,7 @@ export default function RatingsContainer(props: {
                          string="Experiências Reais"
                          align="center"
                     />
+                    {/** Subtitulo da seção */}
                     <Typography variant="subtitle2">
                          Veja o que nosso hóspedes dizem sobre nossas
                          experiências inesquecíveis

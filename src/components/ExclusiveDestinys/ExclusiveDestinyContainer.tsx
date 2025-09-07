@@ -26,6 +26,7 @@ export default function ExclusiveDestinyContainer(props: {
                          align="center"
                          string="Destinos exclusivos"
                     />
+                    {/** Subtitulo da seção */}
                     <Typography variant="subtitle2">
                          Explore as maravilhas naturais e culturais do Brasil
                          através de acomodações únicas.

@@ -31,6 +31,7 @@ export default function PropertyHighlights(props: {
                          align="center"
                          string={data.title}
                     />
+                    {/** Subtitulo da seção */}
                     <Typography variant="subtitle2">{data.subtitle}</Typography>
                </Box>
                {currentWidth ? (
