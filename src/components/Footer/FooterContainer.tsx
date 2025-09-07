@@ -13,6 +13,7 @@ export default function FooterContainer(): ReactElement {
                     height: { xs: '100%', md: '60vh' },
                     width: '100vw',
                     backgroundColor: (theme) => theme.palette.secondary.main,
+                    rowGap: (theme) => theme.spacing(4),
                }}>
                <Box
                     sx={{
@@ -27,10 +28,7 @@ export default function FooterContainer(): ReactElement {
                     <Box
                          sx={{
                               display: 'flex',
-                              flexDirection: {
-                                   xs: 'column',
-                                   md: 'row',
-                              },
+                              flexDirection: 'column',
                               justifyContent: 'space-between',
                               alignItems: {
                                    xs: 'center',
@@ -50,8 +48,11 @@ export default function FooterContainer(): ReactElement {
                          <Stack
                               direction="row"
                               spacing={4}>
-                              {footerContainerData.socials.map((el) => (
-                                   <IconSocial icon={el} />
+                              {footerContainerData.socials.map((el, index) => (
+                                   <IconSocial
+                                        key={index}
+                                        icon={el}
+                                   />
                               ))}
                          </Stack>
                     </Box>

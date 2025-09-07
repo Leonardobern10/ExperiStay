@@ -25,7 +25,11 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                               width: '100%',
                               rowGap: (theme) => theme.spacing(2),
                          }}>
-                         <BannerTitle title={title} />
+                         <Typography
+                              color="primary"
+                              variant="h1">
+                              {title}
+                         </Typography>
                          {width && (
                               <Typography
                                    variant="subtitle1"

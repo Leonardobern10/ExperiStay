@@ -16,12 +16,13 @@ export const advantages: Array<AdvantageAdProps> = [
      },
      {
           index: 1,
-          title: 'Renda extra',
-          description: 'Monetize seu imóvel com nossa plataforma premmium',
+          title: 'Proteção Total',
+          description: 'Seguro completo e suporte 24/7 para anfitrões',
      },
      {
           index: 2,
-          title: 'Renda extra',
-          description: 'Monetize seu imóvel com nossa plataforma premmium',
+          title: 'Comunidade',
+          description:
+               'Conecte-se com viajantes que buscam experiências únicas',
      },
 ];

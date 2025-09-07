@@ -22,23 +22,18 @@ export const footerNavList: Array<FooterNavListProps> = [
           ],
      },
      {
-          index: 0,
-          title: 'Explorar',
-          items: [
-               'Todos os destinos',
-               'Experiências ùnicas',
-               'Imóveis de luxo',
-               'Útilma hora',
-          ],
+          index: 1,
+          title: 'Suporte',
+          items: ['Central de Ajuda', 'Segurança', 'Cancelamentos', 'Contato'],
      },
      {
-          index: 0,
-          title: 'Explorar',
+          index: 2,
+          title: 'Para anfitriões',
           items: [
-               'Todos os destinos',
-               'Experiências ùnicas',
-               'Imóveis de luxo',
-               'Útilma hora',
+               'Anuncie seu imóvel',
+               'Recursos para anfitriões',
+               'Fórum da Comunidade',
+               'Responsabilidade',
           ],
      },
 ];
