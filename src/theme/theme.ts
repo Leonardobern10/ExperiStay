@@ -1,7 +1,9 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
 import type {} from '@mui/x-date-pickers/themeAugmentation';
 
-let theme = createTheme({
+let theme = createTheme();
+
+theme = createTheme({
      palette: {
           primary: {
                main: '#ab9f19ff',
@@ -33,15 +35,24 @@ let theme = createTheme({
      typography: {
           fontSize: 16,
           fontFamily: "'Lexend', sans-serif",
+          /** Titulo de apresentação */
           h1: {
-               fontSize: '4rem',
+               fontSize: '3rem',
                fontWeight: 600,
                fontFamily: '"Poppins", sans-serif',
+               textShadow: '2px 2px 2px black',
+               [theme.breakpoints.up('md')]: {
+                    fontSize: '4rem',
+               },
           },
+          /** Titulos de seções da Home */
           h2: {
-               fontSize: '3rem',
+               fontSize: '2rem',
                fontWeight: 400,
                fontFamily: '"Poppins", sans-serif',
+               [theme.breakpoints.up('md')]: {
+                    fontSize: '3rem',
+               },
           },
           h3: {
                fontSize: '2rem',
@@ -55,11 +66,13 @@ let theme = createTheme({
                fontSize: '1rem',
                fontWeight: 400,
           },
+          /** Subtitulo do titulo de apresentação */
           subtitle1: {
                fontSize: '1.2rem',
                fontWeight: 600,
                letterSpacing: 1.2,
           },
+          /** Subtitulo dos titulos de seção */
           subtitle2: {
                fontSize: '1.1rem',
                fontWeight: 400,
@@ -115,7 +128,6 @@ let theme = createTheme({
                     }),
                },
           },
-
           MuiButton: {
                styleOverrides: {
                     root: ({ theme }) => ({
@@ -123,8 +135,14 @@ let theme = createTheme({
                          fontWeight: 500,
                          display: 'flex',
                          alignItems: 'center',
-                         gap: theme.spacing(2),
+                         gap: theme.spacing(1),
                          width: 'fit-content',
+                         paddingX: theme.spacing(2),
+                         paddingY: theme.spacing(2),
+                         [theme.breakpoints.up('md')]: {
+                              paddingX: theme.spacing(4),
+                              paddingY: theme.spacing(2),
+                         },
                     }),
                },
                variants: [
@@ -173,7 +191,6 @@ let theme = createTheme({
                     },
                ],
           },
-
           MuiDatePicker: {
                defaultProps: {
                     displayWeekNumber: true,
