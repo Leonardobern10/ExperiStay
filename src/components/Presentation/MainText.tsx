@@ -12,8 +12,10 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                     ref={ref}
                     sx={{
                          width: `${width ? '80%' : '100%'}`,
+                         height: '100%',
                          display: 'flex',
                          flexDirection: 'column',
+                         justifyContent: 'space-between',
                          rowGap: (theme) => theme.spacing(2),
                          borderRadius: (theme) => theme.shape.borderRadius,
                     }}>
@@ -21,22 +23,18 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                          sx={{
                               display: 'flex',
                               flexDirection: 'column',
+                              justifyContent: 'center',
                               width: '100%',
                               rowGap: (theme) => theme.spacing(2),
                          }}>
-                         <Typography
-                              color="primary"
-                              variant="h1">
-                              {title}
-                         </Typography>
+                         <Typography variant="h1"> {title} </Typography>
                          {width && (
                               <Typography
                                    variant="subtitle1"
                                    sx={{
                                         textShadow: '1px 1px 1px black',
                                         letterSpacing: 0.7,
-                                   }}
-                                   color="primary">
+                                   }}>
                                    {desc}
                               </Typography>
                          )}

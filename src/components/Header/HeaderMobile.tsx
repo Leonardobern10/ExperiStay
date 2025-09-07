@@ -19,8 +19,12 @@ export default function HeaderMobile({
                direction="row"
                justifyContent="space-between"
                alignItems="center"
-               height="100%"
-               sx={{ width: '100vw', paddingY: (theme) => theme.spacing(4) }}>
+               sx={{
+                    height: '100%',
+                    width: '100vw',
+                    paddingY: (theme) => theme.spacing(3),
+                    marginY: 0.5,
+               }}>
                <Logo ref={refLogo} />
                <ButtonCustom
                     ref={refButton}

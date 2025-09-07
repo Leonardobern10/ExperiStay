@@ -16,13 +16,7 @@ export default function LabelHighlight(props: {
                     paddingX: (theme) => theme.spacing(2),
                     borderRadius: (theme) => theme.shape.borderRadius,
                }}>
-               <Typography
-                    sx={{
-                         fontSize: '.8rem',
-                         fontWeight: '400',
-                    }}>
-                    {props.labelName}
-               </Typography>
+               <Typography variant="caption"> {props.labelName} </Typography>
           </Paper>
      );
 }

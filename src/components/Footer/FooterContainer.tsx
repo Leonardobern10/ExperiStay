@@ -13,7 +13,7 @@ export default function FooterContainer(): ReactElement {
                     height: { xs: '100%', md: '60vh' },
                     width: '100vw',
                     backgroundColor: (theme) => theme.palette.secondary.main,
-                    rowGap: (theme) => theme.spacing(4),
+                    rowGap: 4,
                }}>
                <Box
                     sx={{
@@ -23,7 +23,7 @@ export default function FooterContainer(): ReactElement {
                          alignItems: 'center',
                          height: '70%',
                          width: '100%',
-                         padding: (theme) => theme.spacing(8),
+                         padding: 8,
                     }}>
                     <Box
                          sx={{
@@ -35,7 +35,7 @@ export default function FooterContainer(): ReactElement {
                                    md: 'flex-start',
                               },
                               width: { xs: '100%', md: '30%' },
-                              rowGap: (theme) => theme.spacing(4),
+                              rowGap: 4,
                          }}>
                          <Logo />
                          <Typography
@@ -65,6 +65,7 @@ export default function FooterContainer(): ReactElement {
                          }}>
                          {footerNavList.map((el) => (
                               <FooterNavList
+                                   key={el.index}
                                    title={el.title}
                                    items={el.items}
                               />

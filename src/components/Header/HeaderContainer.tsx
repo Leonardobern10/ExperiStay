@@ -26,7 +26,8 @@ export default function HeaderContainer(props: {
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    height: '4rem',
+                    minHeight: 'fit-content',
+                    maxHeight: '4rem',
                     width: '100vw',
                     backgroundColor: (theme) =>
                          theme.palette.background.default,

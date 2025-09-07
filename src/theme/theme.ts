@@ -46,12 +46,16 @@ theme = createTheme(theme, {
           fontFamily: 'Lexend, sans-serif',
           /** Titulo de apresentação */
           h1: {
-               fontSize: '3rem',
+               fontSize: '2.5rem',
                fontWeight: 600,
                fontFamily: 'Poppins, sans-serif',
                textShadow: '2px 2px 2px black',
+               width: '100%',
+               color: theme.palette.primary.light,
                [theme.breakpoints.up('md')]: {
+                    textAlign: 'center',
                     fontSize: '4rem',
+                    color: theme.palette.text.primary,
                },
           },
           /** Titulos de seções da Home */
@@ -104,6 +108,11 @@ theme = createTheme(theme, {
                [theme.breakpoints.up('md')]: {
                     fontSize: '1.1rem',
                },
+          },
+          caption: {
+               color: theme.palette.primary.main,
+               fontSize: '.8rem',
+               fontWeight: '400',
           },
      },
      components: {

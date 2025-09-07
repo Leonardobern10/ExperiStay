@@ -10,7 +10,11 @@ export default function Logo(props: {
                sx={{
                     width: 'fit-content',
                     fontWeight: 800,
-                    fontSize: '2rem',
+                    fontSize: {
+                         xs: '1.2rem',
+                         md: '2rem',
+                    },
+                    paddingX: (theme) => theme.spacing(2),
                     color: (theme) => theme.palette.text.primary,
                }}>
                ExperiStay

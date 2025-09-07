@@ -27,9 +27,13 @@ export default function ContainerMainDestination(): ReactElement {
                               xs: 'column',
                               md: 'row',
                          },
+                         height: '100%',
+                         paddingY: (theme) => theme.spacing(2),
                          justifyContent: 'space-evenly', // centraliza
                          alignItems: 'center',
-                         columnGap: 4,
+                         rowGap: 2,
+                         backgroundColor: (theme) =>
+                              theme.palette.background.default,
                     }}>
                     <DatePickerCustom
                          label="Chegada"

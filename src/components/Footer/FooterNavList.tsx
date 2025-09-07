@@ -20,8 +20,9 @@ export default function FooterNavList(
                     }}>
                     {footerData.title}
                </Typography>
-               {footerData.items.map((el) => (
+               {footerData.items.map((el, index) => (
                     <Typography
+                         key={index}
                          sx={{
                               opacity: '70%',
                               fontWeight: 300,
