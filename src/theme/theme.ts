@@ -91,6 +91,31 @@ let theme = createTheme({
                     },
                },
           },
+          MuiListItem: {
+               styleOverrides: {
+                    root: ({ theme }) => ({
+                         fontWeight: 300,
+                         color: theme.palette.text.primary,
+                         textShadow: '1px 1px 2px black',
+                         fontSize: '1.1rem',
+                         transition: theme.transitions.create(
+                              ['color', 'transform'],
+                              {
+                                   duration: theme.transitions.duration.short,
+                                   easing: theme.transitions.easing.easeIn,
+                              },
+                         ),
+                         [theme.breakpoints.up('lg')]: {
+                              '&:hover': {
+                                   color: theme.palette.primary.main,
+                                   transform: 'translateY(-10px)',
+                                   cursor: 'pointer',
+                              },
+                         },
+                    }),
+               },
+          },
+
           MuiButton: {
                styleOverrides: {
                     root: ({ theme }) => ({

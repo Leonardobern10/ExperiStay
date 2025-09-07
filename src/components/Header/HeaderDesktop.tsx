@@ -1,7 +1,6 @@
-import { Box, Stack } from '@mui/material';
+import { Box, ListItem, Stack } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
-import NavItem from './NavItem';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NavList from '../ui/NavList';
 import ButtonCustom from '../ButtonWithIcon';
@@ -29,10 +28,7 @@ export default function HeaderDesktop({
                     component="nav">
                     <NavList>
                          {headerItemsNav.map((el) => (
-                              <NavItem
-                                   key={el.index}
-                                   nameItem={el.nameItem}
-                              />
+                              <ListItem key={el.index}>{el.nameItem}</ListItem>
                          ))}
                     </NavList>
                </Box>

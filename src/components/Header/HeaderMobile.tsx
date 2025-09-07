@@ -1,7 +1,6 @@
-import { Drawer, Stack } from '@mui/material';
+import { Drawer, ListItem, Stack } from '@mui/material';
 import { useState, type ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
-import NavItem from './NavItem';
 import Logo from '../Logo';
 import NavList from '../ui/NavList';
 import Button from '../ButtonWithIcon';
@@ -34,10 +33,7 @@ export default function HeaderMobile({
                     onClose={() => toggleMenu(false)}>
                     <NavList>
                          {headerItemsNav.map((el) => (
-                              <NavItem
-                                   key={el.index}
-                                   nameItem={el.nameItem}
-                              />
+                              <ListItem key={el.index}>{el.nameItem}</ListItem>
                          ))}
                     </NavList>
                </Drawer>
