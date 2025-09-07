@@ -5,8 +5,6 @@ import { exclusiveDestines } from '../../data/exclusiveDestinyData';
 import ExclusiveComponent from './ExclusiveComponent';
 import ContainerSectionHome from '../ui/ContainerSectionHome';
 import useWidth from '../../hooks/useWidth';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
 import Carousel from '../Carousel';
 
 export default function ExclusiveDestinyContainer(props: {

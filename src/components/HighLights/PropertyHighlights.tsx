@@ -11,7 +11,6 @@ import MainTitle from '../Presentation/MainTitle';
 import ContainerSectionHome from '../ui/ContainerSectionHome';
 import useWidth from '../../hooks/useWidth';
 import Carousel from '../Carousel';
-import { SwiperSlide } from 'swiper/react';
 
 export default function PropertyHighlights(props: {
      className: string;
