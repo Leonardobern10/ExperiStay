@@ -2,6 +2,8 @@
 
 ExperiStay é uma plataforma web para busca e anúncio de imóveis por temporada, focada em proporcionar experiências únicas aos viajantes em destinos especiais do Brasil.
 
+O projeto busca transmitir uma "vibe" de modernidade e conforto em seu design. Com padronização de cores, contraste de texto e feedback instantêneo visa seguir padrões de qualidade de usabilidade.
+
 Para visualizar o projeto 👉 [Deploy](https://experi-stay.vercel.app/)
 
 ## Funcionalidades disponibilizadas
