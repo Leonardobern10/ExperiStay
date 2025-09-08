@@ -113,6 +113,7 @@ theme = createTheme(theme, {
                color: theme.palette.primary.main,
                fontSize: '.8rem',
                fontWeight: '400',
+               fontFamily: 'Poppins, sans-serif',
           },
           overline: {
                fontWeight: 200,
