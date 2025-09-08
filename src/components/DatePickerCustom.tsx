@@ -9,6 +9,13 @@ export default function DatePickerCustom({
 }: DatePickerProps): ReactElement {
      return (
           <DatePickerUI
+               slotProps={{
+                    openPickerIcon: {
+                         sx: (theme) => ({
+                              color: theme.palette.primary.main,
+                         }),
+                    },
+               }}
                label={label}
                value={value}
                onChange={onChange}

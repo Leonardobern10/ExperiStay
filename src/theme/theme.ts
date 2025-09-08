@@ -230,6 +230,8 @@ theme = createTheme(theme, {
           MuiDatePicker: {
                defaultProps: {
                     displayWeekNumber: true,
+                    borderColor: theme.palette.primary.main,
+                    openPickerIcon: { color: theme.palette.primary.main },
                },
           },
           MuiDateCalendar: {
@@ -238,6 +240,28 @@ theme = createTheme(theme, {
                          color: '#000',
                          borderRadius: '20px',
                          borderColor: '#000000ff',
+                    },
+                    fixedWeekNumber: 6,
+               },
+          },
+          MuiCard: {
+               styleOverrides: {
+                    root: {
+                         backgroundColor: theme.palette.secondary.main,
+                         borderRadius: theme.shape.borderRadius,
+                         overflow: 'hidden',
+                         transition: theme.transitions.create(
+                              ['transform', 'box-shadow', 'border-color'],
+                              {
+                                   duration: theme.transitions.duration.short,
+                                   easing: theme.transitions.easing.easeIn,
+                              },
+                         ),
+                         '&:hover': {
+                              transform: 'translateY(-10px)',
+                              boxShadow: `0px 10px 10px #000`,
+                              borderColor: theme.palette.primary.main,
+                         },
                     },
                },
           },

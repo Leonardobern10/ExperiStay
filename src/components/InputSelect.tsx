@@ -12,6 +12,9 @@ export default function InputSelect(): ReactElement {
      return (
           <FormControl>
                <InputLabel
+                    sx={{
+                         color: (theme) => theme.palette.primary.main,
+                    }}
                     color="secondary"
                     id="demo-simple-select-label">
                     Location

@@ -1,19 +1,17 @@
-import { Paper, Rating, Stack, Typography } from '@mui/material';
+import { Rating, Stack, Typography, Card } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { RatingProps } from '../../types/RatingProps';
 import AvatarUserRating from './AvatarUserRating';
 
 export default function RatingComponent(data: RatingProps): ReactElement {
      return (
-          <Paper
-               elevation={4}
+          <Card
                sx={{
                     display: 'flex',
                     flexDirection: 'column',
                     minWidth: '30%',
                     padding: (theme) => theme.spacing(6),
                     rowGap: (theme) => theme.spacing(4),
-                    borderRadius: (theme) => theme.shape.borderRadius,
                }}>
                <Rating
                     sx={{
@@ -49,6 +47,6 @@ export default function RatingComponent(data: RatingProps): ReactElement {
                          </Typography>
                     </Stack>
                </Stack>
-          </Paper>
+          </Card>
      );
 }

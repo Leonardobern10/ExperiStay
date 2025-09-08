@@ -1,18 +1,7 @@
-import { Box, CircularProgress, Grid } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { Grid } from '@mui/material';
 import { Outlet } from 'react-router';
 
 function App() {
-     const [loading, setLoading] = useState(true);
-
-     useEffect(() => {
-          const timer = setTimeout(() => {
-               setLoading(false);
-          }, 1000);
-
-          return () => clearTimeout(timer);
-     }, []);
-
      return (
           <Grid
                component="div"
@@ -23,20 +12,7 @@ function App() {
                     alignItems: 'center',
                     width: '100%',
                }}>
-               {loading ? (
-                    <Box
-                         sx={{
-                              width: '100%',
-                              height: '100vh',
-                              display: 'flex',
-                              justifyContent: 'center',
-                              alignItems: 'center',
-                         }}>
-                         <CircularProgress color="secondary" />
-                    </Box>
-               ) : (
-                    <Outlet />
-               )}
+               <Outlet />
           </Grid>
      );
 }

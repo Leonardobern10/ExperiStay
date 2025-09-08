@@ -1,4 +1,4 @@
-import { Box, Paper, Typography } from '@mui/material';
+import { Box, Card, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { ExperienceComponentsProps } from '../../types/ExperienceComponentProps';
 import InfoIcon from '@mui/icons-material/Info';
@@ -9,7 +9,7 @@ export default function ExperienceComponent(
      const Icon = data.icon;
 
      return (
-          <Paper
+          <Card
                variant="elevation"
                sx={{
                     backgroundColor: (theme) => theme.palette.secondary.main,
@@ -41,8 +41,12 @@ export default function ExperienceComponent(
                          columnGap: (theme) => theme.spacing(),
                     }}>
                     <InfoIcon />
-                    <Typography color="textSecondary">{data.alert}</Typography>
+                    <Typography
+                         variant="body1"
+                         color="textSecondary">
+                         {data.alert}
+                    </Typography>
                </Box>
-          </Paper>
+          </Card>
      );
 }
