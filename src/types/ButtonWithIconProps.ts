@@ -1,10 +1,9 @@
-import type { ElementType, RefObject } from 'react';
+import type { ElementType } from 'react';
 
 export type ButtonWithIconProps = {
      buttonName: string;
      buttonIcon?: ElementType;
      main?: boolean;
-     ref?: RefObject<HTMLButtonElement | null>;
      onClick?: () => void;
      submit?: boolean;
 };

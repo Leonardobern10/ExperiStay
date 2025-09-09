@@ -2,10 +2,13 @@ import { Box, Typography } from '@mui/material';
 import { forwardRef, type ReactElement } from 'react';
 import type { MainTextProps } from '../../types/MainTextProps';
 import useWidth from '@hooks/useWidth';
+import { slideAnimation, textAnimation } from '@hooks/useAnimation';
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
      ({ title, desc }, ref): ReactElement => {
           let width: boolean = useWidth('md');
+          textAnimation('.textAnimated', title);
+          slideAnimation('.descAnimated');
 
           return (
                <Box
@@ -27,9 +30,12 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                               width: '100%',
                               rowGap: theme.spacing(2),
                          })}>
-                         <Typography variant="h1"> {title} </Typography>
+                         <Typography
+                              className="textAnimated"
+                              variant="h1"></Typography>
                          {width && (
                               <Typography
+                                   className="descAnimated"
                                    variant="subtitle1"
                                    sx={{
                                         textShadow: '1px 1px 1px black',

@@ -2,8 +2,10 @@ import { useGSAP } from '@gsap/react';
 import type { RefObject } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import TextPlugin from 'gsap/TextPlugin';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 export const useHeaderAnimation = (
      el1: RefObject<null | HTMLElement>,
@@ -34,3 +36,33 @@ export const useMainContentAnimation = (
           );
      }, []);
 };
+
+export const textAnimation = (
+     container: string,
+     textAnimated: string,
+     duration?: number,
+     delay?: number,
+) => {
+     useGSAP(() => {
+          gsap.to(container, {
+               duration: duration ?? 2,
+               text: {
+                    value: textAnimated,
+               },
+               ease: 'bounce.in',
+               delay: delay ?? 2,
+          });
+     }, []);
+};
+
+export const slideAnimation = (container: string) => {
+     useGSAP(() => {
+          gsap.from(container, {
+               xPercent: -200,
+               duration: 2,
+               delay: 2,
+          });
+     }, []);
+};
+
+export const appAnimation = (container: string) => {};
