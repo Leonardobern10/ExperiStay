@@ -9,7 +9,7 @@ export default function GridMainText(props: {
           <Grid
                container
                component="main"
-               sx={{
+               sx={(theme) => ({
                     display: 'flex',
                     flexDirection: 'row',
                     width: '100%',
@@ -18,12 +18,12 @@ export default function GridMainText(props: {
                     alignItems: 'center',
                     height: 'fit-content',
                     [theme.breakpoints.up('md')]: {
-                         padding: (theme) => theme.spacing(20),
+                         padding: theme.spacing(20),
                          position: 'relative',
                          left: 0,
                          top: 0,
                     },
-               }}>
+               })}>
                {props.children}
           </Grid>
      );

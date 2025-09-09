@@ -27,7 +27,7 @@ export default function ContainerMainDestination(): ReactElement {
                <Box
                     onSubmit={handleSubmit(onSubmit)}
                     component="form"
-                    sx={{
+                    sx={(theme) => ({
                          width: '100%',
                          display: 'flex',
                          flexDirection: {
@@ -35,13 +35,12 @@ export default function ContainerMainDestination(): ReactElement {
                               md: 'row',
                          },
                          height: '100%',
-                         paddingY: (theme) => theme.spacing(2),
+                         paddingY: theme.spacing(2),
                          justifyContent: 'space-evenly', // centraliza
                          alignItems: 'center',
-                         rowGap: 2,
-                         backgroundColor: (theme) =>
-                              theme.palette.background.default,
-                    }}>
+                         rowGap: theme.spacing(2),
+                         backgroundColor: theme.palette.background.default,
+                    })}>
                     <Controller
                          name="arrival"
                          control={control}

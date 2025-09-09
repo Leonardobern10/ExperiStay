@@ -9,12 +9,12 @@ export default function ExclusiveComponent(
      return (
           <Paper
                variant="elevation"
-               sx={{
+               sx={(theme) => ({
                     height: '25rem',
                     minWidth: '20rem',
                     position: 'relative',
-                    borderRadius: (theme) => theme.shape.borderRadius,
-               }}>
+                    borderRadius: theme.shape.borderRadius,
+               })}>
                {/* Imagem */}
                <Box sx={{ position: 'relative', height: '70%' }}>
                     <ImageCustom
@@ -25,20 +25,20 @@ export default function ExclusiveComponent(
 
                {/* Texto */}
                <Box
-                    sx={{
+                    sx={(theme) => ({
                          position: 'absolute',
                          bottom: 0,
                          zIndex: 2, // acima do gradiente
                          color: 'white',
                          width: '100%',
-                         padding: (theme) => theme.spacing(4),
-                    }}>
+                         padding: theme.spacing(4),
+                    })}>
                     {/** Mudar para h3 */}
                     <Typography variant="h3">{data.name}</Typography>
                     <Typography
-                         sx={{
-                              color: (theme) => theme.palette.text.secondary,
-                         }}
+                         sx={(theme) => ({
+                              color: theme.palette.text.secondary,
+                         })}
                          variant="body1">
                          {data.available} propriedades disponíveis
                     </Typography>

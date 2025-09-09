@@ -12,17 +12,16 @@ import PropertyHighlights from '@components/HighLights/PropertyHighlights';
 export default function Home(): ReactElement {
      return (
           <Grid
-               sx={{
+               sx={(theme) => ({
                     height: '100%',
                     width: '100%',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    rowGap: (theme) => theme.spacing(20),
-                    backgroundColor: (theme) =>
-                         theme.palette.background.default,
-               }}>
+                    rowGap: theme.spacing(20),
+                    backgroundColor: theme.palette.background.default,
+               })}>
                <HeaderContainer />
                <PresentationContainer className="section" />
                {/* Todas as sections abaixo utilizam ContainerSectionHome */}

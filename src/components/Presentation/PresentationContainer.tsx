@@ -21,14 +21,14 @@ export default function PresentationContainer(props: {
           <Box
                className={props.className}
                ref={container}
-               sx={{
+               sx={(theme) => ({
                     width: '100%',
                     height: '100vh',
-                    marginTop: 5,
-                    paddingY: 8,
-               }}>
+                    marginTop: theme.spacing(5),
+                    paddingY: theme.spacing(8),
+               })}>
                <Box
-                    sx={{
+                    sx={(theme) => ({
                          backgroundImage: `url(${backgroundImage})`,
                          backgroundSize: 'cover',
                          backgroundRepeat: 'no-repeat',
@@ -39,9 +39,15 @@ export default function PresentationContainer(props: {
                          flexDirection: 'column',
                          justifyContent: 'space-between',
                          alignItems: 'center',
-                         rowGap: { xs: 4, md: 8 },
-                         padding: { xs: 4, md: 4 },
-                    }}>
+                         rowGap: {
+                              xs: theme.spacing(4),
+                              md: theme.spacing(8),
+                         },
+                         padding: {
+                              xs: theme.spacing(4),
+                              md: theme.spacing(4),
+                         },
+                    })}>
                     <GridMainText
                          children={
                               <MainText
@@ -53,7 +59,7 @@ export default function PresentationContainer(props: {
                     />
                     {currentWidth && (
                          <Grid
-                              sx={{
+                              sx={(theme) => ({
                                    width: '80%',
                                    height: {
                                         xs: '70%',
@@ -63,12 +69,10 @@ export default function PresentationContainer(props: {
                                    flexDirection: 'row',
                                    justifyContent: 'space-between',
                                    alignItems: 'center',
-                                   padding: 1,
-                                   backgroundColor: (theme) =>
-                                        theme.palette.primary.dark,
-                                   borderRadius: (theme) =>
-                                        theme.shape.borderRadius,
-                              }}>
+                                   padding: theme.spacing(1),
+                                   backgroundColor: theme.palette.primary.dark,
+                                   borderRadius: theme.shape.borderRadius,
+                              })}>
                               <ContainerMainDestination />
                          </Grid>
                     )}

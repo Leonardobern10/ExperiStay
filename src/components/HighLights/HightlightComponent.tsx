@@ -13,12 +13,12 @@ export default function HighlightComponent(
 ): ReactElement {
      return (
           <Card
-               sx={{
-                    backgroundColor: (theme) => theme.palette.secondary.main,
-                    borderRadius: (theme) => theme.shape.borderRadius,
+               sx={(theme) => ({
+                    backgroundColor: theme.palette.secondary.main,
+                    borderRadius: theme.shape.borderRadius,
                     height: '33rem',
                     overflow: 'hidden',
-               }}>
+               })}>
                <Box
                     sx={{
                          height: '50%',
@@ -33,14 +33,14 @@ export default function HighlightComponent(
                     <LabelHighlight labelName={hightLightData.label} />
                </Box>
                <Box
-                    sx={{
+                    sx={(theme) => ({
                          height: '100%',
-                         paddingY: (theme) => theme.spacing(4),
-                         paddingX: (theme) => theme.spacing(6),
+                         paddingY: theme.spacing(4),
+                         paddingX: theme.spacing(6),
                          display: 'flex',
                          flexDirection: 'column',
-                         rowGap: (theme) => theme.spacing(3),
-                    }}>
+                         rowGap: theme.spacing(3),
+                    })}>
                     <Box>
                          <Typography variant="h3">
                               {hightLightData.name}

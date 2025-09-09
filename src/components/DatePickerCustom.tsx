@@ -11,9 +11,7 @@ export default function DatePickerCustom({
           <DatePickerUI
                slotProps={{
                     openPickerIcon: {
-                         sx: (theme) => ({
-                              color: theme.palette.primary.main,
-                         }),
+                         sx: (theme) => ({ color: theme.palette.primary.main }),
                     },
                }}
                label={label}

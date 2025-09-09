@@ -48,10 +48,10 @@ export default function RatingsContainer(props: {
                     </Stack>
                ) : (
                     <Box
-                         sx={{
+                         sx={(theme) => ({
                               width: '100%',
-                              paddingX: (theme) => theme.spacing(4),
-                         }}>
+                              paddingX: theme.spacing(4),
+                         })}>
                          <Carousel
                               children={ratings.map((el) => (
                                    <RatingComponent

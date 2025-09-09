@@ -14,12 +14,12 @@ export default function HeaderDesktop({
      return (
           <Stack
                direction="row"
-               sx={{
+               sx={(theme) => ({
                     height: '100%',
                     width: '100%',
-                    paddingY: (theme) => theme.spacing(1),
-                    paddingX: (theme) => theme.spacing(4),
-               }}>
+                    paddingY: theme.spacing(1),
+                    paddingX: theme.spacing(4),
+               })}>
                <Box
                     ref={refLogo}
                     sx={{ width: 'fit-content' }}>

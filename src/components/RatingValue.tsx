@@ -6,21 +6,20 @@ export default function RatingValue(props: { value: number }): ReactElement {
      return (
           <Box
                component="div"
-               sx={{
+               sx={(theme) => ({
                     width: '5rem',
-                    padding: (theme) => theme.spacing(1),
+                    padding: theme.spacing(1),
                     position: 'absolute',
                     top: '85%',
                     left: '5%',
-                    backgroundColor: (theme) =>
-                         theme.palette.background.default,
+                    backgroundColor: theme.palette.background.default,
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-evenly',
                     alignItems: 'center',
-                    columnGap: (theme) => theme.spacing(1),
-                    borderRadius: (theme) => theme.shape.borderRadius,
-               }}>
+                    columnGap: theme.spacing(1),
+                    borderRadius: theme.shape.borderRadius,
+               })}>
                <StarIcon
                     sx={{
                          height: '1.2rem',

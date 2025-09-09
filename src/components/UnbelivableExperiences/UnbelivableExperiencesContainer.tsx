@@ -46,11 +46,11 @@ export default function UnbelivableExperiences(props: {
                     </BoxGridCustomUI>
                ) : (
                     <Box
-                         sx={{
+                         sx={(theme) => ({
                               width: '100%',
                               height: '100%',
-                              paddingX: (theme) => theme.spacing(4),
-                         }}>
+                              paddingX: theme.spacing(4),
+                         })}>
                          <Carousel
                               arrow={true}
                               children={experienceComponents.map((el) => (

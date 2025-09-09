@@ -12,13 +12,13 @@ export default function SpecialPropertiesAdContainer(props: {
      return (
           <ContainerSectionHome
                className={props.className}
-               sx={{
+               sx={(theme) => ({
                     width: '95%',
                     border: 0.5,
-                    paddingY: (theme) => theme.spacing(10),
-                    borderColor: (theme) => theme.palette.primary.contrastText,
-                    borderRadius: (theme) => theme.shape.borderRadius,
-               }}>
+                    paddingY: theme.spacing(10),
+                    borderColor: theme.palette.primary.contrastText,
+                    borderRadius: theme.shape.borderRadius,
+               })}>
                <Box
                     sx={{
                          display: 'flex',
@@ -36,13 +36,13 @@ export default function SpecialPropertiesAdContainer(props: {
                </Box>
                <Stack
                     spacing={4}
-                    sx={{
+                    sx={(theme) => ({
                          flexDirection: {
                               sx: 'column',
                               md: 'row',
                          },
-                         paddingX: 4,
-                    }}>
+                         paddingX: theme.spacing(4),
+                    })}>
                     {advantages.map((el) => (
                          <AdvantagePropertiesAdComponent
                               key={el.index}

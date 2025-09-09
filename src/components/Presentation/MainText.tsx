@@ -10,23 +10,23 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
           return (
                <Box
                     ref={ref}
-                    sx={{
+                    sx={(theme) => ({
                          width: `${width ? '80%' : '100%'}`,
                          height: '100%',
                          display: 'flex',
                          flexDirection: 'column',
                          justifyContent: 'space-between',
-                         rowGap: (theme) => theme.spacing(2),
-                         borderRadius: (theme) => theme.shape.borderRadius,
-                    }}>
+                         rowGap: theme.spacing(2),
+                         borderRadius: theme.shape.borderRadius,
+                    })}>
                     <Box
-                         sx={{
+                         sx={(theme) => ({
                               display: 'flex',
                               flexDirection: 'column',
                               justifyContent: 'center',
                               width: '100%',
-                              rowGap: (theme) => theme.spacing(2),
-                         }}>
+                              rowGap: theme.spacing(2),
+                         })}>
                          <Typography variant="h1"> {title} </Typography>
                          {width && (
                               <Typography

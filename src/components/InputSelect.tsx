@@ -10,9 +10,7 @@ export default function InputSelect(props: {
      return (
           <FormControl sx={{ minWidth: 120, maxWidth: '70%' }}>
                <InputLabel
-                    sx={{
-                         color: (theme) => theme.palette.primary.main,
-                    }}
+                    sx={(theme) => ({ color: theme.palette.primary.main })}
                     color="primary"
                     id="demo-simple-select-label">
                     {props.label}

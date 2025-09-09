@@ -6,13 +6,13 @@ import AvatarUserRating from './AvatarUserRating';
 export default function RatingComponent(data: RatingProps): ReactElement {
      return (
           <Card
-               sx={{
+               sx={(theme) => ({
                     display: 'flex',
                     flexDirection: 'column',
                     minWidth: '30%',
-                    padding: (theme) => theme.spacing(6),
-                    rowGap: (theme) => theme.spacing(4),
-               }}>
+                    padding: theme.spacing(6),
+                    rowGap: theme.spacing(4),
+               })}>
                <Rating
                     sx={{
                          opacity: '70%',

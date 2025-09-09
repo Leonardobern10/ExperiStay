@@ -11,35 +11,35 @@ export default function ExperienceComponent(
      return (
           <Card
                variant="elevation"
-               sx={{
-                    backgroundColor: (theme) => theme.palette.secondary.main,
-                    padding: (theme) => theme.spacing(8),
+               sx={(theme) => ({
+                    backgroundColor: theme.palette.secondary.main,
+                    padding: theme.spacing(8),
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-evenly',
                     alignItems: 'flex-start',
-                    rowGap: (theme) => theme.spacing(4),
-                    borderRadius: (theme) => theme.shape.borderRadius,
-               }}>
+                    rowGap: theme.spacing(4),
+                    borderRadius: theme.shape.borderRadius,
+               })}>
                <Box
-                    sx={{
+                    sx={(theme) => ({
                          display: 'flex',
                          flexDirection: 'row',
                          justifyContent: 'center',
                          alignItems: 'center',
-                         columnGap: (theme) => theme.spacing(4),
-                    }}>
+                         columnGap: theme.spacing(4),
+                    })}>
                     <Icon />
                     <Typography variant="h3">{data.title}</Typography>
                </Box>
                <Typography variant="body1">{data.description}</Typography>
                <Box
-                    sx={{
+                    sx={(theme) => ({
                          display: 'flex',
                          flexDirection: 'row',
                          alignItems: 'center',
-                         columnGap: (theme) => theme.spacing(),
-                    }}>
+                         columnGap: theme.spacing(2),
+                    })}>
                     <InfoIcon />
                     <Typography
                          variant="body1"

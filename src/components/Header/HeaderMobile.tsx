@@ -19,12 +19,12 @@ export default function HeaderMobile({
                direction="row"
                justifyContent="space-between"
                alignItems="center"
-               sx={{
+               sx={(theme) => ({
                     height: '100%',
                     width: '100vw',
-                    paddingY: 3,
-                    marginY: 0.5,
-               }}>
+                    paddingY: theme.spacing(3),
+                    marginY: theme.spacing(0.5),
+               })}>
                <Logo ref={refLogo} />
                <ButtonCustom
                     ref={refButton}
@@ -36,10 +36,7 @@ export default function HeaderMobile({
                     anchor="top"
                     open={open}
                     onClose={() => toggleMenu(false)}>
-                    <NavList
-                         sx={{
-                              width: '50vw',
-                         }}>
+                    <NavList sx={{ width: '50vw' }}>
                          {headerItemsNav.map((el) => (
                               <ListItem key={el.index}>{el.nameItem}</ListItem>
                          ))}

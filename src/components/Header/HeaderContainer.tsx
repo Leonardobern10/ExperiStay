@@ -20,7 +20,7 @@ export default function HeaderContainer(props: {
           <Box
                zIndex={1000}
                className={props.className}
-               sx={{
+               sx={(theme) => ({
                     position: 'fixed',
                     display: 'flex',
                     flexDirection: 'row',
@@ -29,9 +29,8 @@ export default function HeaderContainer(props: {
                     minHeight: 'fit-content',
                     maxHeight: '4rem',
                     width: '100vw',
-                    backgroundColor: (theme) =>
-                         theme.palette.background.default,
-               }}>
+                    backgroundColor: theme.palette.background.default,
+               })}>
                {width ? (
                     <HeaderDesktop
                          refLogo={elem1}

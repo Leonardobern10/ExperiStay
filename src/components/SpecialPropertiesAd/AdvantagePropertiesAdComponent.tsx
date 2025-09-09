@@ -8,13 +8,13 @@ export default function AdvantagePropertiesAdComponent(
 ): ReactElement {
      return (
           <Box
-               sx={{
+               sx={(theme) => ({
                     display: 'flex',
                     alignItems: 'center',
                     flexDirection: 'column',
-                    paddingY: (theme) => theme.spacing(10),
+                    paddingY: theme.spacing(10),
                     [theme.breakpoints.up('md')]: {},
-               }}>
+               })}>
                <Typography variant="h3">{data.title}</Typography>
                <Typography
                     variant="body2"

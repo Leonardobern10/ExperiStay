@@ -9,14 +9,14 @@ import FooterNavList from './FooterNavList';
 export default function FooterContainer(): ReactElement {
      return (
           <ContainerSectionHome
-               sx={{
+               sx={(theme) => ({
                     height: { xs: '100%', md: '60vh' },
-                    backgroundColor: (theme) => theme.palette.secondary.main,
+                    backgroundColor: theme.palette.secondary.main,
                     rowGap: {
-                         xs: 1,
-                         md: 4,
+                         xs: theme.spacing(1),
+                         md: theme.spacing(4),
                     },
-               }}>
+               })}>
                <Box
                     sx={{
                          display: 'flex',
@@ -28,7 +28,7 @@ export default function FooterContainer(): ReactElement {
                          padding: 8,
                     }}>
                     <Box
-                         sx={{
+                         sx={(theme) => ({
                               display: 'flex',
                               flexDirection: 'column',
                               justifyContent: 'space-between',
@@ -37,8 +37,8 @@ export default function FooterContainer(): ReactElement {
                                    md: 'flex-start',
                               },
                               width: { xs: '100%', md: '30%' },
-                              rowGap: 4,
-                         }}>
+                              rowGap: theme.spacing(4),
+                         })}>
                          <Logo />
                          <Typography
                               sx={{
@@ -59,13 +59,13 @@ export default function FooterContainer(): ReactElement {
                          </Stack>
                     </Box>
                     <Box
-                         sx={{
+                         sx={(theme) => ({
                               display: 'flex',
                               flexDirection: 'row',
-                              paddingY: 4,
-                              paddingX: (theme) => theme.spacing(8),
-                              columnGap: (theme) => theme.spacing(2),
-                         }}>
+                              paddingY: theme.spacing(4),
+                              paddingX: theme.spacing(8),
+                              columnGap: theme.spacing(2),
+                         })}>
                          {footerNavList.map((el) => (
                               <FooterNavList
                                    key={el.index}
@@ -76,7 +76,7 @@ export default function FooterContainer(): ReactElement {
                     </Box>
                </Box>
                <Stack
-                    sx={{
+                    sx={(theme) => ({
                          flexDirection: {
                               xs: 'column-reverse',
                               md: 'row',
@@ -86,10 +86,10 @@ export default function FooterContainer(): ReactElement {
                          height: '20%',
                          width: '100%',
                          paddingX: {
-                              xs: 0,
-                              md: 8,
+                              xs: theme.spacing(0),
+                              md: theme.spacing(8),
                          },
-                    }}>
+                    })}>
                     <Typography variant="body2">
                          2025 ExperiStay. Todos os direitos reservados.
                     </Typography>

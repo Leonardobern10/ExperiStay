@@ -36,15 +36,15 @@ export default function PropertyHighlights(props: {
                </Box>
                {currentWidth ? (
                     <Box
-                         sx={{
-                              paddingX: (theme) => theme.spacing(8),
+                         sx={(theme) => ({
+                              paddingX: theme.spacing(8),
                               width: '100vw',
                               display: 'flex',
                               flexDirection: 'row',
                               justifyContent: 'space-evenly',
                               alignItems: 'center',
-                              columnGap: (theme) => theme.spacing(6),
-                         }}>
+                              columnGap: theme.spacing(6),
+                         })}>
                          {allProperties.map((el) => (
                               <HighlightComponent
                                    key={el.index}
@@ -62,10 +62,10 @@ export default function PropertyHighlights(props: {
                     </Box>
                ) : (
                     <Box
-                         sx={{
+                         sx={(theme) => ({
                               width: '100%',
-                              paddingX: (theme) => theme.spacing(4),
-                         }}>
+                              paddingX: theme.spacing(4),
+                         })}>
                          <Carousel
                               arrow={true}
                               children={allProperties.map((el) => (

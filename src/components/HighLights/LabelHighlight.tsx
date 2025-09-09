@@ -7,15 +7,15 @@ export default function LabelHighlight(props: {
      return (
           <Paper
                variant="outlined"
-               sx={{
+               sx={(theme) => ({
                     position: 'absolute',
                     top: 15,
                     right: 15,
                     width: 'fit-content',
-                    color: (theme) => theme.palette.primary.main,
-                    paddingX: (theme) => theme.spacing(2),
-                    borderRadius: (theme) => theme.shape.borderRadius,
-               }}>
+                    color: theme.palette.primary.main,
+                    paddingX: theme.spacing(2),
+                    borderRadius: theme.shape.borderRadius,
+               })}>
                <Typography variant="caption"> {props.labelName} </Typography>
           </Paper>
      );

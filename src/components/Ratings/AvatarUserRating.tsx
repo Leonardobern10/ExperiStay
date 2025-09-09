@@ -15,10 +15,10 @@ export default function AvatarUserRating(props: {
 
      return (
           <Avatar
-               sx={{
-                    backgroundColor: (theme) => theme.palette.primary.main,
+               sx={(theme) => ({
+                    backgroundColor: theme.palette.primary.main,
                     fontSize: '16px',
-               }}>
+               })}>
                {getInitials()}
           </Avatar>
      );

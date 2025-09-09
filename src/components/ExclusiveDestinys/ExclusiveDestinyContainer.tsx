@@ -35,10 +35,10 @@ export default function ExclusiveDestinyContainer(props: {
                {currentWidth ? (
                     <Stack
                          direction="row"
-                         sx={{
-                              columnGap: (theme) => theme.spacing(8),
-                              padding: (theme) => theme.spacing(8),
-                         }}>
+                         sx={(theme) => ({
+                              columnGap: theme.spacing(8),
+                              padding: theme.spacing(8),
+                         })}>
                          {exclusiveDestines.map((el) => (
                               <ExclusiveComponent
                                    key={el.index}
@@ -50,10 +50,10 @@ export default function ExclusiveDestinyContainer(props: {
                     </Stack>
                ) : (
                     <Box
-                         sx={{
+                         sx={(theme) => ({
                               width: '100%',
-                              paddingX: (theme) => theme.spacing(4),
-                         }}>
+                              paddingX: theme.spacing(4),
+                         })}>
                          <Carousel
                               children={exclusiveDestines.map((el) => (
                                    <ExclusiveComponent

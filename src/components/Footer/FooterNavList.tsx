@@ -15,21 +15,21 @@ export default function FooterNavList(
                }}>
                <Typography
                     variant="body1"
-                    sx={{
+                    sx={(theme) => ({
                          fontWeight: 500,
-                         paddingBottom: (theme) => theme.spacing(3),
-                    }}>
+                         paddingBottom: theme.spacing(3),
+                    })}>
                     {footerData.title}
                </Typography>
                {footerData.items.map((el, index) => (
                     <Typography
                          variant="body2"
                          key={index}
-                         sx={{
+                         sx={(theme) => ({
                               opacity: '70%',
                               fontWeight: 300,
-                              paddingY: (theme) => theme.spacing(1),
-                         }}>
+                              paddingY: theme.spacing(1),
+                         })}>
                          {el}
                     </Typography>
                ))}
