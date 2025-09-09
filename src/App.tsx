@@ -10,7 +10,8 @@ function App() {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    width: '100%',
+                    width: '100vw',
+                    overflow: 'hidden',
                }}>
                <Outlet />
           </Grid>

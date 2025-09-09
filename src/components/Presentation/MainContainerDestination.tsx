@@ -18,6 +18,7 @@ export default function ContainerMainDestination(): ReactElement {
           },
      });
 
+     // Implementar submit ao servidor
      const onSubmit: SubmitHandler<SearchPropertiesProps> = (data) =>
           console.log(data);
 
@@ -46,7 +47,7 @@ export default function ContainerMainDestination(): ReactElement {
                          control={control}
                          render={({ field }) => (
                               <DatePickerCustom
-                                   label={field.name}
+                                   label={'Chegada'}
                                    value={field.value ?? null}
                                    onChange={field.onChange}
                               />
@@ -57,7 +58,7 @@ export default function ContainerMainDestination(): ReactElement {
                          control={control}
                          render={({ field }) => (
                               <DatePickerCustom
-                                   label={field.name}
+                                   label={'Saída'}
                                    value={field.value ?? null}
                                    onChange={field.onChange}
                               />

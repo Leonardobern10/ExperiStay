@@ -12,7 +12,6 @@ export default function InputSelect(props: {
                <InputLabel
                     sx={{
                          color: (theme) => theme.palette.primary.main,
-                         border: 2,
                     }}
                     color="primary"
                     id="demo-simple-select-label">
