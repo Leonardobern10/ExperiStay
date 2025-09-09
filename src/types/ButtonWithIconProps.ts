@@ -6,4 +6,5 @@ export type ButtonWithIconProps = {
      main?: boolean;
      ref?: RefObject<HTMLButtonElement | null>;
      onClick?: () => void;
+     submit?: boolean;
 };

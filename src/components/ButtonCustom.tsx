@@ -8,12 +8,14 @@ export default function ButtonCustom({
      onClick,
      main,
      ref,
+     submit,
 }: ButtonWithIconProps): ReactElement {
      return (
           <Button
                ref={ref}
                variant={main ? 'main' : 'default'}
                onClick={onClick}
+               type={submit ? 'submit' : 'button'}
                startIcon={Icon ? <Icon /> : undefined}>
                {buttonName}
           </Button>

@@ -1,32 +1,40 @@
 import { FormControl, InputLabel, MenuItem } from '@mui/material';
-import { useState, type ReactElement } from 'react';
-import SelectCustomUI from '@components/ui/InputCustomUI';
+import { type ReactElement } from 'react';
+import SelectCustomUI from '@components/ui/SelectCustomUI';
 
-export default function InputSelect(): ReactElement {
-     const [location, setLocation] = useState<string | null>(null);
-
-     const handleChange = (e: any) => {
-          setLocation(e.target.value);
-     };
-
+export default function InputSelect(props: {
+     value: string | null;
+     onChange: (value: string) => void;
+     label: string;
+}): ReactElement {
      return (
-          <FormControl>
+          <FormControl sx={{ minWidth: 120, maxWidth: '70%' }}>
                <InputLabel
                     sx={{
                          color: (theme) => theme.palette.primary.main,
+                         border: 2,
                     }}
-                    color="secondary"
+                    color="primary"
                     id="demo-simple-select-label">
-                    Location
+                    {props.label}
                </InputLabel>
                <SelectCustomUI
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={location}
-                    label="Age"
-                    onChange={handleChange}>
-                    <MenuItem value={'Rio de Janeiro'}>Rio de Janeiro</MenuItem>
-                    <MenuItem value={'São Paulo'}>São Paulo</MenuItem>
+                    value={props.value}
+                    label={props.label}
+                    onChange={(e: any) => props.onChange(e.target.value)}
+                    MenuProps={{
+                         PaperProps: {
+                              sx: {
+                                   '& .MuiList-root': {
+                                        display: 'block', // força layout vertical
+                                   },
+                              },
+                         },
+                    }}>
+                    <MenuItem value={'RJ'}>Rio de Janeiro</MenuItem>
+                    <MenuItem value={'SP'}>São Paulo</MenuItem>
                     <MenuItem value={'Curitiba'}>Curitiba</MenuItem>
                </SelectCustomUI>
           </FormControl>
