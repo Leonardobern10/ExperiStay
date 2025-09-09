@@ -34,7 +34,7 @@ export default function ExclusiveComponent(
                          padding: (theme) => theme.spacing(4),
                     }}>
                     {/** Mudar para h3 */}
-                    <Typography variant="h5">{data.name}</Typography>
+                    <Typography variant="h3">{data.name}</Typography>
                     <Typography
                          sx={{
                               color: (theme) => theme.palette.text.secondary,
