@@ -35,7 +35,7 @@ export default function ContainerMainDestination(): ReactElement {
                               md: 'row',
                          },
                          height: '100%',
-                         paddingY: theme.spacing(2),
+                         padding: theme.spacing(2),
                          justifyContent: 'space-evenly', // centraliza
                          alignItems: 'center',
                          rowGap: theme.spacing(2),

@@ -1,5 +1,4 @@
 import { Grid } from '@mui/material';
-import theme from '@theme/theme';
 import type { ReactElement } from 'react';
 
 export default function GridMainText(props: {
@@ -17,6 +16,9 @@ export default function GridMainText(props: {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: 'fit-content',
+                    paddingX: theme.spacing(8),
+                    textAlign: 'center',
+                    marginTop: theme.spacing(4),
                     [theme.breakpoints.up('md')]: {
                          padding: theme.spacing(20),
                          position: 'relative',

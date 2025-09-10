@@ -46,7 +46,6 @@ const MainText = forwardRef<HTMLDivElement, MainTextProps>(
                               </Typography>
                          )}
                     </Box>
-                    {/*<ButtonWithIcon buttonName="Exibir catálogo" buttonIcon={RealEstateAgentIcon}> */}
                </Box>
           );
      },

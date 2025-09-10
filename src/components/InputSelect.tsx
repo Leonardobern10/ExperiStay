@@ -16,6 +16,7 @@ export default function InputSelect(props: {
                     {props.label}
                </InputLabel>
                <SelectCustomUI
+                    sx={{ width: '100%' }}
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={props.value}

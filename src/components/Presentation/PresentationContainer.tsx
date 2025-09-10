@@ -15,8 +15,6 @@ export default function PresentationContainer(props: {
      const mainText = useRef(null);
      useMainContentAnimation(container, mainText);
 
-     const currentWidth = useWidth('md');
-
      return (
           <Box
                className={props.className}
@@ -57,25 +55,25 @@ export default function PresentationContainer(props: {
                               />
                          }
                     />
-                    {currentWidth && (
-                         <Grid
-                              sx={(theme) => ({
-                                   width: '80%',
-                                   height: {
-                                        xs: '70%',
-                                        md: 'fit-content',
-                                   },
-                                   display: 'flex',
-                                   flexDirection: 'row',
-                                   justifyContent: 'space-between',
-                                   alignItems: 'center',
-                                   padding: theme.spacing(1),
-                                   backgroundColor: theme.palette.primary.dark,
-                                   borderRadius: theme.shape.borderRadius,
-                              })}>
-                              <ContainerMainDestination />
-                         </Grid>
-                    )}
+                    <Grid
+                         sx={(theme) => ({
+                              width: '80%',
+                              height: {
+                                   xs: '70%',
+                                   md: 'fit-content',
+                              },
+                              display: 'flex',
+                              flexDirection: 'row',
+                              justifyContent: 'space-between',
+                              alignItems: 'center',
+                              padding: theme.spacing(1),
+                              backgroundColor: theme.palette.primary.dark,
+                              borderRadius: theme.shape.borderRadius,
+                              border: 2,
+                              borderColor: theme.palette.secondary.main,
+                         })}>
+                         <ContainerMainDestination />
+                    </Grid>
                </Box>
           </Box>
      );
