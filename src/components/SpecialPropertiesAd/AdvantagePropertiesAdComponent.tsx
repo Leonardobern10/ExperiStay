@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { AdvantageAdProps } from '../../types/AdvantagesAdProps';
-import theme from '@theme/theme';
 
 export default function AdvantagePropertiesAdComponent(
      data: AdvantageAdProps,

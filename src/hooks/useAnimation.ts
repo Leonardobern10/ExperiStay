@@ -64,5 +64,3 @@ export const slideAnimation = (container: string) => {
           });
      }, []);
 };
-
-export const appAnimation = (container: string) => {};

@@ -6,7 +6,6 @@ import { mainTexts } from '@data/mainTexts';
 import { useMainContentAnimation } from '@hooks/useAnimation';
 import GridMainText from './GridMainText';
 import ContainerMainDestination from './MainContainerDestination';
-import useWidth from '@hooks/useWidth';
 
 export default function PresentationContainer(props: {
      className?: string;
