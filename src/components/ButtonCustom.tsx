@@ -13,7 +13,7 @@ const ButtonCustom = forwardRef<HTMLButtonElement, ButtonWithIconProps>(
                     onClick={onClick}
                     type={submit ? 'submit' : 'button'}
                     startIcon={Icon ? <Icon /> : undefined}>
-                    {buttonName}
+                    {buttonName && buttonName}
                </Button>
           );
      },

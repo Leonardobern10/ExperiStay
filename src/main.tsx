@@ -6,7 +6,8 @@ import theme from './theme/theme.ts';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Services from './pages/Services.tsx';
 import Home from './pages/Home.tsx';
-import Properties from './pages/Properties.tsx';
+import Destines from './pages/Destines.tsx';
+import About from '@pages/About.tsx';
 
 createRoot(document.getElementById('root')!).render(
      <StrictMode>
@@ -27,7 +28,11 @@ createRoot(document.getElementById('root')!).render(
                               />
                               <Route
                                    path="imoveis"
-                                   element={<Properties />}
+                                   element={<Destines />}
+                              />
+                              <Route
+                                   path="about"
+                                   element={<About />}
                               />
                          </Route>
                     </Routes>

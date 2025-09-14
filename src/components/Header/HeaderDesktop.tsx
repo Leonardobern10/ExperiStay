@@ -1,4 +1,4 @@
-import { Box, ListItem, Stack } from '@mui/material';
+import { Box, Link, ListItem, Stack } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -17,8 +17,9 @@ export default function HeaderDesktop({
                sx={(theme) => ({
                     height: '100%',
                     width: '100%',
+                    justifyContent: 'space-between',
                     paddingY: theme.spacing(1),
-                    paddingX: theme.spacing(4),
+                    paddingX: theme.spacing(16),
                })}>
                <Box
                     ref={refLogo}
@@ -30,16 +31,34 @@ export default function HeaderDesktop({
                     component="nav">
                     <NavList>
                          {headerItemsNav.map((el) => (
-                              <ListItem key={el.index}>{el.nameItem}</ListItem>
+                              <ListItem key={el.index}>
+                                   <Link
+                                        underline="none"
+                                        color="textPrimary"
+                                        href={el.href}>
+                                        {el.nameItem}
+                                   </Link>
+                              </ListItem>
                          ))}
                     </NavList>
                </Box>
-               <ButtonCustom
-                    main={true}
+               <Box
                     ref={refButton}
-                    buttonName="Anuncie seu imóvel"
-                    buttonIcon={AccountCircleIcon}
-               />
+                    sx={(theme) => ({
+                         display: 'flex',
+                         flexDirection: 'row',
+                         justifyContent: 'space-between',
+                         columnGap: theme.spacing(4),
+                    })}>
+                    <ButtonCustom
+                         buttonName="Login"
+                         buttonIcon={AccountCircleIcon}
+                    />
+                    <ButtonCustom
+                         main={true}
+                         buttonName="Anuncie seu imóvel"
+                    />
+               </Box>
           </Stack>
      );
 }

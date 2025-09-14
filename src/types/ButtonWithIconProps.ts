@@ -1,7 +1,7 @@
 import type { ElementType } from 'react';
 
 export type ButtonWithIconProps = {
-     buttonName: string;
+     buttonName?: string;
      buttonIcon?: ElementType;
      main?: boolean;
      onClick?: () => void;

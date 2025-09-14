@@ -144,7 +144,7 @@ theme = createTheme(theme, {
                          fontWeight: 300,
                          color: theme.palette.text.primary,
                          textShadow: '1px 1px 2px black',
-                         fontSize: '1.1rem',
+                         fontSize: '1rem',
                          transition: theme.transitions.create(
                               ['color', 'transform'],
                               {
@@ -168,7 +168,7 @@ theme = createTheme(theme, {
                          fontFamily: 'Poppins, sans-serif',
                          textTransform: 'none',
                          fontWeight: 500,
-                         fontSize: '.8rem',
+                         fontSize: '1rem',
                          display: 'flex',
                          alignItems: 'center',
                          gap: theme.spacing(1),
