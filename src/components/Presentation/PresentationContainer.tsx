@@ -21,7 +21,6 @@ export default function PresentationContainer(props: {
                sx={(theme) => ({
                     width: '100%',
                     height: '100vh',
-                    marginTop: theme.spacing(5),
                     paddingY: theme.spacing(8),
                })}>
                <Box

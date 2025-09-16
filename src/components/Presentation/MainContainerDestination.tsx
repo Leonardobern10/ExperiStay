@@ -8,6 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ButtonCustom from '@components/ButtonCustom';
 import type { SearchPropertiesProps } from '../../types/SearchAvailablePropertiesProps';
 import { Controller, useForm, type SubmitHandler } from 'react-hook-form';
+import { allSelectItemsData } from '@data/allSelectItemsData';
 
 export default function ContainerMainDestination(): ReactElement {
      const { handleSubmit, control } = useForm<SearchPropertiesProps>({
@@ -38,8 +39,9 @@ export default function ContainerMainDestination(): ReactElement {
                          padding: theme.spacing(2),
                          justifyContent: 'space-evenly', // centraliza
                          alignItems: 'center',
-                         rowGap: theme.spacing(2),
+                         columnGap: theme.spacing(2),
                          backgroundColor: theme.palette.background.default,
+                         borderRadius: theme.shape.borderRadius,
                     })}>
                     <Controller
                          name="arrival"
@@ -71,6 +73,7 @@ export default function ContainerMainDestination(): ReactElement {
                                    label="Localização"
                                    onChange={field.onChange}
                                    value={field.value}
+                                   allItems={allSelectItemsData}
                               />
                          )}
                     />

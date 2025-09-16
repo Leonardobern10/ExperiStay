@@ -8,6 +8,7 @@ import Services from './pages/Services.tsx';
 import Home from './pages/Home.tsx';
 import Destines from './pages/Destines.tsx';
 import About from '@pages/About.tsx';
+import Property from '@pages/Property.tsx';
 
 createRoot(document.getElementById('root')!).render(
      <StrictMode>
@@ -26,10 +27,16 @@ createRoot(document.getElementById('root')!).render(
                                    path="servicos"
                                    element={<Services />}
                               />
-                              <Route
-                                   path="imoveis"
-                                   element={<Destines />}
-                              />
+                              <Route path="destinos">
+                                   <Route
+                                        index
+                                        element={<Destines />}
+                                   />
+                                   <Route
+                                        path=":id"
+                                        element={<Property />}
+                                   />
+                              </Route>
                               <Route
                                    path="about"
                                    element={<About />}

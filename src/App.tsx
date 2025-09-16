@@ -1,3 +1,5 @@
+import FooterContainer from '@components/Footer/FooterContainer';
+import HeaderContainer from '@components/Header/HeaderContainer';
 import { Grid } from '@mui/material';
 import { Outlet } from 'react-router';
 
@@ -13,7 +15,9 @@ function App() {
                     width: '100vw',
                     overflow: 'hidden',
                }}>
+               <HeaderContainer />
                <Outlet />
+               <FooterContainer />
           </Grid>
      );
 }

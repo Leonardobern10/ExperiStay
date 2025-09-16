@@ -1,11 +1,13 @@
 import { FormControl, InputLabel, MenuItem } from '@mui/material';
 import { type ReactElement } from 'react';
 import SelectCustomUI from '@components/ui/SelectCustomUI';
+import type { SelectItemType } from '../types/SelectItemType';
 
 export default function InputSelect(props: {
      value: string | null;
      onChange: (value: string) => void;
      label: string;
+     allItems: SelectItemType[];
 }): ReactElement {
      return (
           <FormControl sx={{ minWidth: 120, maxWidth: '70%' }}>
@@ -31,9 +33,13 @@ export default function InputSelect(props: {
                               },
                          },
                     }}>
-                    <MenuItem value={'RJ'}>Rio de Janeiro</MenuItem>
-                    <MenuItem value={'SP'}>São Paulo</MenuItem>
-                    <MenuItem value={'Curitiba'}>Curitiba</MenuItem>
+                    {props.allItems.map((el) => (
+                         <MenuItem
+                              key={el.selectIndex}
+                              value={el.selectValue}>
+                              {el.selectName}
+                         </MenuItem>
+                    ))}
                </SelectCustomUI>
           </FormControl>
      );

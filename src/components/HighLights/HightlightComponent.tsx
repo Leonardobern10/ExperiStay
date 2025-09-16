@@ -1,37 +1,34 @@
 import { Box, Card, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { HighlightType } from '../../types/HighlightType';
-import ImageComponent from '../ImageComponent';
-import RatingValue from '../RatingValue';
 import LikedComponent from '../LikedComponent';
 import PriceHighlight from './PriceHighlight';
 import DescriptionHighlight from './DescriptionHighlight';
-import LabelHighlight from './LabelHighlight';
+import ImagePropertyComponent from '@components/ImagePropertyComponent';
+import { useNavigate } from 'react-router';
 
 export default function HighlightComponent(
      hightLightData: HighlightType,
 ): ReactElement {
+     const navigate = useNavigate();
+
      return (
           <Card
+               className="cardProperty"
+               onClick={() => navigate(`/destinos/${hightLightData.index}`)}
                sx={(theme) => ({
                     backgroundColor: theme.palette.secondary.main,
                     borderRadius: theme.shape.borderRadius,
                     height: '33rem',
                     overflow: 'hidden',
                })}>
-               <Box
-                    sx={{
-                         height: '50%',
-                         width: '100%',
-                         position: 'relative',
-                    }}>
-                    <ImageComponent
-                         src={hightLightData.img}
-                         alt={`imagem do imovel em destaque ${hightLightData.name} no(a) ${hightLightData.location}`}
-                    />
-                    <RatingValue value={hightLightData.rating} />
-                    <LabelHighlight labelName={hightLightData.label} />
-               </Box>
+               <ImagePropertyComponent
+                    src={hightLightData.img}
+                    name={hightLightData.name}
+                    label={hightLightData.label}
+                    rating={hightLightData.rating}
+                    location={hightLightData.location}
+               />
                <Box
                     sx={(theme) => ({
                          height: '100%',
