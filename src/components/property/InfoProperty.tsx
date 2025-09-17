@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Paper, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import HeadInfoProperty from './HeadInfoProperty';
 import {
@@ -10,6 +10,9 @@ import {
 import LabelProperty from '@components/LabelProperty';
 import AcomodationsItem from './AcomodationsItems';
 import BookingForm from './BookingForm';
+import PriceValueProperty from './PricePropertyValue';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Divider from '@mui/material/Divider';
 
 export default function InfoProperty(): ReactElement {
      return (
@@ -84,21 +87,57 @@ export default function InfoProperty(): ReactElement {
                          </Box>
                     </Box>
                </Box>
-               <Box
+               <Paper
+                    elevation={2}
                     sx={(theme) => ({
                          backgroundColor: theme.palette.secondary.main,
-                         borderRadius: theme.shape.borderRadius,
-                         padding: theme.spacing(8),
+                         borderRadius: 2,
+                         padding: theme.spacing(4),
                          rowGap: theme.spacing(8),
                          display: 'flex',
                          flexDirection: 'column',
                          width: '40%',
+                         border: 1,
+                         borderColor: theme.palette.secondary.light,
                     })}>
-                    <Box>
-                         <Typography variant="h3">R$ 1200/noite</Typography>
-                    </Box>
+                    <Stack
+                         direction="row"
+                         justifyContent="space-between">
+                         <PriceValueProperty price={1200} />
+                         <FavoriteBorderIcon />
+                    </Stack>
                     <BookingForm />
-               </Box>
+                    <Divider
+                         sx={(theme) => ({
+                              backgroundColor: theme.palette.primary.light,
+                              opacity: 0.2,
+                         })}
+                         variant="middle"
+                         flexItem
+                    />
+                    <Box>
+                         <Stack
+                              direction="row"
+                              justifyContent="space-between">
+                              <Typography variant="body1">
+                                   Taxa de serviço
+                              </Typography>
+                              <Typography variant="body1">Incluída</Typography>
+                         </Stack>
+                         <Stack
+                              direction="row"
+                              justifyContent="space-between">
+                              <Typography variant="body1">
+                                   Cancelamento grátis
+                              </Typography>
+                              <Typography
+                                   variant="body1"
+                                   color="primary">
+                                   Até 48 horas antes
+                              </Typography>
+                         </Stack>
+                    </Box>
+               </Paper>
           </Box>
      );
 }
