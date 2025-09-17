@@ -8,9 +8,14 @@ export default function InputSelect(props: {
      onChange: (value: string) => void;
      label: string;
      allItems: SelectItemType[];
+     fullWidth: boolean;
 }): ReactElement {
      return (
-          <FormControl sx={{ minWidth: 120, maxWidth: '70%' }}>
+          <FormControl
+               sx={{
+                    minWidth: '15rem',
+                    width: `${props.fullWidth && '100%'}`,
+               }}>
                <InputLabel
                     sx={(theme) => ({ color: theme.palette.primary.main })}
                     color="primary"

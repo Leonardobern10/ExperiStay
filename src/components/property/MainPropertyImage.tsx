@@ -8,7 +8,7 @@ export default function MainPropertyImage({
      testImage: string;
 }): ReactElement {
      return (
-          <Box sx={{ height: '70vh' }}>
+          <Box sx={{ height: '60vh' }}>
                <ImagePropertyComponent
                     src={testImage}
                     name="text"

@@ -7,7 +7,10 @@ export default function PriceValueProperty({
      price: number;
 }): ReactElement {
      return (
-          <Typography variant="h3">
+          <Typography
+               sx={{
+                    fontSize: 30,
+               }}>
                {`R$ ${price.toFixed(2)}`}
                <Box
                     component="span"

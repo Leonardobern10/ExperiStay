@@ -3,6 +3,7 @@ import type { ReactElement } from 'react';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import type { HeadInfoPropertyProps } from '../../types/property/HeadInfoPropertyProps';
 import HeadAcomodationItem from './HeadAcomodationItem';
+import { descriptionExample } from '@data/property/headInfoPropertyData';
 
 export default function HeadInfoProperty({
      headTitle,

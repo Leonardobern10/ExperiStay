@@ -13,16 +13,23 @@ import BookingForm from './BookingForm';
 import PriceValueProperty from './PricePropertyValue';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Divider from '@mui/material/Divider';
+import useWidth from '@hooks/useWidth';
 
 export default function InfoProperty(): ReactElement {
+     const width: boolean = useWidth('md');
+
      return (
           <Box
                sx={(theme) => ({
                     display: 'flex',
-                    flexDirection: 'row',
+                    flexDirection: 'column',
                     justifyContent: 'space-between',
-                    columnGap: theme.spacing(4),
                     paddingY: theme.spacing(8),
+                    rowGap: theme.spacing(8),
+                    [theme.breakpoints.up('md')]: {
+                         flexDirection: 'row',
+                         columnGap: theme.spacing(4),
+                    },
                })}>
                <Box
                     sx={(theme) => ({
@@ -30,7 +37,9 @@ export default function InfoProperty(): ReactElement {
                          flexDirection: 'column',
                          justifyContent: 'space-between',
                          alignItems: 'flex-start',
-                         rowGap: theme.spacing(6),
+                         height: 'fit-content',
+                         rowGap: theme.spacing(4),
+                         border: 2,
                     })}>
                     <HeadInfoProperty
                          headTitle={headInfoPropertyData.headTitle}
@@ -40,7 +49,12 @@ export default function InfoProperty(): ReactElement {
                          }
                     />
                     <Typography
-                         width="70%"
+                         sx={(theme) => ({
+                              width: '100%',
+                              [theme.breakpoints.up('md')]: {
+                                   width: '70%',
+                              },
+                         })}
                          variant="body1">
                          {descriptionExample}
                     </Typography>
@@ -48,7 +62,7 @@ export default function InfoProperty(): ReactElement {
                          sx={(theme) => ({
                               display: 'flex',
                               flexDirection: 'column',
-                              rowGap: theme.spacing(4),
+                              rowGap: theme.spacing(2),
                          })}>
                          <Typography variant="h3">
                               {labelsPropertyData.title}
@@ -66,7 +80,7 @@ export default function InfoProperty(): ReactElement {
                          sx={(theme) => ({
                               display: 'flex',
                               flexDirection: 'column',
-                              rowGap: theme.spacing(4),
+                              rowGap: theme.spacing(2),
                          })}>
                          <Typography variant="h3">
                               {acommodationsData.title}
@@ -75,7 +89,7 @@ export default function InfoProperty(): ReactElement {
                               sx={(theme) => ({
                                    display: 'grid',
                                    gridTemplateColumns: 'repeat(2, 1fr)',
-                                   width: '50vw',
+                                   minWidth: '50vw',
                                    rowGap: theme.spacing(1),
                               })}>
                               {acommodationsData.allAcomodations.map((el) => (
@@ -96,9 +110,7 @@ export default function InfoProperty(): ReactElement {
                          rowGap: theme.spacing(8),
                          display: 'flex',
                          flexDirection: 'column',
-                         width: '40%',
-                         border: 1,
-                         borderColor: theme.palette.secondary.light,
+                         minWidth: '40%',
                     })}>
                     <Stack
                          direction="row"

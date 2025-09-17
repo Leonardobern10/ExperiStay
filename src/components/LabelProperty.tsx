@@ -10,8 +10,8 @@ export default function LabelProperty(props: {
                variant="outlined"
                sx={(theme) => ({
                     position: `${props.highlight ? 'absolute' : ''}`,
-                    top: `${props.highlight ? '10px' : ''}`,
-                    right: `${props.highlight ? '10px' : ''}`,
+                    top: `${props.highlight ? '5%' : ''}`,
+                    right: `${props.highlight ? '3%' : ''}`,
                     width: 'fit-content',
                     color: theme.palette.primary.main,
                     paddingX: theme.spacing(2),

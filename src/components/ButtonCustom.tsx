@@ -3,11 +3,17 @@ import type { ButtonWithIconProps } from '../types/ButtonWithIconProps';
 import { Button } from '@mui/material';
 
 const ButtonCustom = forwardRef<HTMLButtonElement, ButtonWithIconProps>(
-     ({ main, onClick, submit, buttonIcon, buttonName }, ref): ReactElement => {
+     (
+          { main, onClick, submit, buttonIcon, buttonName, fullWidth },
+          ref,
+     ): ReactElement => {
           const Icon = buttonIcon;
 
           return (
                <Button
+                    sx={{
+                         width: `${fullWidth && '100%'}`,
+                    }}
                     ref={ref}
                     variant={main ? 'main' : 'default'}
                     onClick={onClick}

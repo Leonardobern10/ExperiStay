@@ -5,9 +5,8 @@ const DatePickerUI = styled(DatePicker)<DatePickerProps>(({ theme }) => ({
      //backgroundColor: `${theme.palette.primary.main}`,
      color: `${theme.palette.primary.main}`,
      borderRadius: `${theme.shape.borderRadius}`,
-     paddingX: `${theme.spacing(5)}`,
+     paddingX: `${theme.spacing(3)}`,
      minWidth: '10rem',
-     maxWidth: '15rem',
      '& .MuiInputBase-root': {
           borderRadius: `${theme.shape.borderRadius}`,
           backgroundColor: '#acaf02ff',

@@ -41,9 +41,11 @@ export default function BookingForm(): ReactElement {
                               control={control}
                               render={({ field }) => (
                                    <DatePickerCustom
+                                        fullWidth
                                         label={'Chegada'}
                                         value={field.value ?? null}
                                         onChange={field.onChange}
+                                        main
                                    />
                               )}
                          />
@@ -52,9 +54,11 @@ export default function BookingForm(): ReactElement {
                               control={control}
                               render={({ field }) => (
                                    <DatePickerCustom
+                                        fullWidth
                                         label={'Saída'}
                                         value={field.value ?? null}
                                         onChange={field.onChange}
+                                        main
                                    />
                               )}
                          />
@@ -63,6 +67,7 @@ export default function BookingForm(): ReactElement {
                               control={control}
                               render={({ field }) => (
                                    <InputSelect
+                                        fullWidth
                                         label="Localização"
                                         onChange={field.onChange}
                                         value={field.value}
@@ -74,6 +79,7 @@ export default function BookingForm(): ReactElement {
                               submit
                               main={true}
                               buttonName="Buscar"
+                              fullWidth
                          />
                     </Box>
                </LocalizationProvider>

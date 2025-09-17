@@ -4,4 +4,6 @@ export type DatePickerProps = {
      label: string;
      value: Moment | null;
      onChange: (newValue: Moment | null) => void;
+     fullWidth?: boolean;
+     main?: boolean;
 };

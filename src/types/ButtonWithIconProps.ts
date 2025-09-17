@@ -6,4 +6,5 @@ export type ButtonWithIconProps = {
      main?: boolean;
      onClick?: () => void;
      submit?: boolean;
+     fullWidth?: boolean;
 };
