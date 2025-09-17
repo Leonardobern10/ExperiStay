@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import type { PropertyHighlightsType } from '../../types/PropertyHighlightsType';
 import {

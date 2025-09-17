@@ -10,17 +10,19 @@ export default function ImagePropertyComponent({
      location,
      rating,
      label,
+     full,
 }: {
      src: string;
      name: string;
      location: string;
      rating: number;
      label: string;
+     full?: boolean;
 }): ReactElement {
      return (
           <Box
                sx={{
-                    height: '50%',
+                    height: `${full ? '100%' : '50%'}`,
                     width: '100%',
                     position: 'relative',
                }}>

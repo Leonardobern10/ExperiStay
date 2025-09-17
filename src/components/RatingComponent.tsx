@@ -1,7 +1,7 @@
 import { Rating, Stack, Typography, Card } from '@mui/material';
 import type { ReactElement } from 'react';
-import type { RatingProps } from '../../types/RatingProps';
-import AvatarUserRating from './AvatarUserRating';
+import type { RatingProps } from '../types/RatingProps';
+import AvatarUserRating from './home/Ratings/AvatarUserRating';
 
 export default function RatingComponent(data: RatingProps): ReactElement {
      return (
@@ -10,6 +10,7 @@ export default function RatingComponent(data: RatingProps): ReactElement {
                     display: 'flex',
                     flexDirection: 'column',
                     minWidth: '30%',
+                    maxWidth: '30rem',
                     padding: theme.spacing(6),
                     rowGap: theme.spacing(4),
                })}>
