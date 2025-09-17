@@ -9,26 +9,9 @@ import {
 } from '@data/property/headInfoPropertyData';
 import LabelProperty from '@components/LabelProperty';
 import AcomodationsItem from './AcomodationsItems';
-import { Controller, useForm, type SubmitHandler } from 'react-hook-form';
-import type { BookingProperty } from '../../types/property/BookingProperty';
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import DatePickerCustom from '@components/DatePickerCustom';
-import InputSelect from '@components/InputSelect';
-import ButtonCustom from '@components/ButtonCustom';
-import { allSelectItemsData } from '@data/allSelectItemsData';
+import BookingForm from './BookingForm';
 
 export default function InfoProperty(): ReactElement {
-     const { handleSubmit, control } = useForm<BookingProperty>({
-          defaultValues: {
-               arrival: null,
-               exit: null,
-               person: '',
-          },
-     });
-
-     const onSubmit: SubmitHandler<BookingProperty> = (data) =>
-          console.log(data);
      return (
           <Box
                sx={(theme) => ({
@@ -114,63 +97,7 @@ export default function InfoProperty(): ReactElement {
                     <Box>
                          <Typography variant="h3">R$ 1200/noite</Typography>
                     </Box>
-                    <Box
-                         onSubmit={handleSubmit(onSubmit)}
-                         component="form"
-                         sx={{
-                              width: '100%',
-                         }}>
-                         <LocalizationProvider dateAdapter={AdapterMoment}>
-                              <Box
-                                   sx={(theme) => ({
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        alignItems: 'center',
-                                        justifyContent: 'flex-end',
-                                        rowGap: theme.spacing(4),
-                                   })}>
-                                   <Controller
-                                        name="arrival"
-                                        control={control}
-                                        render={({ field }) => (
-                                             <DatePickerCustom
-                                                  label={'Chegada'}
-                                                  value={field.value ?? null}
-                                                  onChange={field.onChange}
-                                             />
-                                        )}
-                                   />
-                                   <Controller
-                                        name="exit"
-                                        control={control}
-                                        render={({ field }) => (
-                                             <DatePickerCustom
-                                                  label={'Saída'}
-                                                  value={field.value ?? null}
-                                                  onChange={field.onChange}
-                                             />
-                                        )}
-                                   />
-                                   <Controller
-                                        name="person"
-                                        control={control}
-                                        render={({ field }) => (
-                                             <InputSelect
-                                                  label="Localização"
-                                                  onChange={field.onChange}
-                                                  value={field.value}
-                                                  allItems={allSelectItemsData}
-                                             />
-                                        )}
-                                   />
-                                   <ButtonCustom
-                                        submit
-                                        main={true}
-                                        buttonName="Buscar"
-                                   />
-                              </Box>
-                         </LocalizationProvider>
-                    </Box>
+                    <BookingForm />
                </Box>
           </Box>
      );
