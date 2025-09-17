@@ -16,12 +16,7 @@ import LabelProperty from '@components/LabelProperty';
 import RatingComponent from '@components/RatingComponent';
 import HeadInfoProperty from '@components/property/HeadInfoProperty';
 import { headInfoPropertyData } from '@data/property/headInfoPropertyData';
-
-type BookingProperty = {
-     arrival: Moment | null;
-     exit: Moment | null;
-     person: string;
-};
+import type { BookingProperty } from '../types/property/BookingProperty';
 
 export default function Property(): ReactElement {
      const { handleSubmit, control } = useForm<BookingProperty>({
