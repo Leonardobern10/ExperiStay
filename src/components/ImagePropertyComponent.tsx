@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import type { ReactElement } from 'react';
 import ImageComponent from './ImageComponent';
 import RatingValue from './RatingValue';
-import LabelProperty from './HighLights/LabelHighlight';
+import LabelProperty from './LabelProperty';
 
 export default function ImagePropertyComponent({
      src,

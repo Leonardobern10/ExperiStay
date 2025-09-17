@@ -3,13 +3,7 @@ import type { ReactElement } from 'react';
 import test from '@images/Gemini_Generated_Image_y0d4kby0d4kby0d4.png';
 import { PageContainer } from '@components/ui/PageContainer';
 import { Box, Stack, Typography } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import GroupIcon from '@mui/icons-material/Group';
-import BedIcon from '@mui/icons-material/Bed';
-import BathtubIcon from '@mui/icons-material/Bathtub';
-
 import CircleIcon from '@mui/icons-material/Circle';
-
 import DatePickerCustom from '@components/DatePickerCustom';
 import { Controller, useForm, type SubmitHandler } from 'react-hook-form';
 import type { Moment } from 'moment';
@@ -20,6 +14,8 @@ import InputSelect from '@components/InputSelect';
 import { allSelectItemsData } from '@data/allSelectItemsData';
 import LabelProperty from '@components/LabelProperty';
 import RatingComponent from '@components/RatingComponent';
+import HeadInfoProperty from '@components/property/HeadInfoProperty';
+import { headInfoPropertyData } from '@data/property/headInfoPropertyData';
 
 type BookingProperty = {
      arrival: Moment | null;
@@ -46,10 +42,7 @@ export default function Property(): ReactElement {
                          paddingY: theme.spacing(10),
                          width: '90%',
                     })}>
-                    <Box
-                         sx={{
-                              height: '70vh',
-                         }}>
+                    <Box sx={{ height: '70vh' }}>
                          <ImagePropertyComponent
                               src={test}
                               name="text"
@@ -75,52 +68,15 @@ export default function Property(): ReactElement {
                                    alignItems: 'flex-start',
                                    rowGap: theme.spacing(6),
                               })}>
-                              <Box>
-                                   <Typography variant="h2">
-                                        Penthouse Ipanema
-                                   </Typography>
-                                   <Stack
-                                        direction="row"
-                                        justifyContent="flex-start"
-                                        spacing={2}>
-                                        <LocationOnIcon fontSize="inherit" />
-                                        <Typography variant="body1">
-                                             Rio de Janeiro, RJ
-                                        </Typography>
-                                   </Stack>
-                                   <Stack
-                                        direction="row"
-                                        justifyContent="flex-start"
-                                        spacing={2}>
-                                        <Stack
-                                             direction="row"
-                                             justifyContent="flex-start"
-                                             spacing={2}>
-                                             <GroupIcon fontSize="inherit" />
-                                             <Typography variant="body2">
-                                                  6 hóspedes
-                                             </Typography>
-                                        </Stack>
-                                        <Stack
-                                             direction="row"
-                                             justifyContent="flex-start"
-                                             spacing={2}>
-                                             <BedIcon fontSize="inherit" />
-                                             <Typography variant="body2">
-                                                  3 quartos
-                                             </Typography>
-                                        </Stack>
-                                        <Stack
-                                             direction="row"
-                                             justifyContent="flex-start"
-                                             spacing={2}>
-                                             <BathtubIcon fontSize="inherit" />
-                                             <Typography variant="body2">
-                                                  3 banheiros
-                                             </Typography>
-                                        </Stack>
-                                   </Stack>
-                              </Box>
+                              <HeadInfoProperty
+                                   headTitle={headInfoPropertyData.headTitle}
+                                   headLocation={
+                                        headInfoPropertyData.headLocation
+                                   }
+                                   headAcomodations={
+                                        headInfoPropertyData.headAcomodations
+                                   }
+                              />
                               <Typography
                                    width="70%"
                                    variant="body1">

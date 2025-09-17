@@ -1,6 +1,6 @@
 import { Box, Card, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import type { ExperienceComponentsProps } from '../../types/ExperienceComponentProps';
+import type { ExperienceComponentsProps } from '../../../types/ExperienceComponentProps';
 import InfoIcon from '@mui/icons-material/Info';
 
 export default function ExperienceComponent(

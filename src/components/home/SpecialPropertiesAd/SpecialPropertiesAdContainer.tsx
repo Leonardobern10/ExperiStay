@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
 import { advantages, dataContainer } from '@data/specialPropertiesAdData';
 import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';
-import MainTitle from '../MainTitle';
+import MainTitle from '@components/MainTitle';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import ButtonCustom from '@components/ButtonCustom';
 

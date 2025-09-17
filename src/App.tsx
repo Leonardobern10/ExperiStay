@@ -1,5 +1,5 @@
-import FooterContainer from '@components/Footer/FooterContainer';
 import HeaderContainer from '@components/Header/HeaderContainer';
+import FooterContainer from '@components/home/Footer/FooterContainer';
 import { Grid } from '@mui/material';
 import { Outlet } from 'react-router';
 

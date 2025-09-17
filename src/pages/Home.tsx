@@ -1,11 +1,12 @@
 import { type ReactElement } from 'react';
-import UnbelivableExperiences from '@components/UnbelivableExperiences/UnbelivableExperiencesContainer';
-import ExclusiveDestinyContainer from '@components/ExclusiveDestinys/ExclusiveDestinyContainer';
-import RatingsContainer from '@components/Ratings/RatingsContainer';
-import SpecialPropertiesAdContainer from '@components/SpecialPropertiesAd/SpecialPropertiesAdContainer';
-import PresentationContainer from '@components/Presentation/PresentationContainer';
-import PropertyHighlights from '@components/HighLights/PropertyHighlights';
+
 import { PageContainer } from '@components/ui/PageContainer';
+import PresentationContainer from '@components/home/Presentation/PresentationContainer';
+import PropertyHighlights from '@components/home/HighLights/PropertyHighlights';
+import UnbelivableExperiences from '@components/home/UnbelivableExperiences/UnbelivableExperiencesContainer';
+import ExclusiveDestinyContainer from '@components/home/ExclusiveDestinys/ExclusiveDestinyContainer';
+import RatingsContainer from '@components/home/Ratings/RatingsContainer';
+import SpecialPropertiesAdContainer from '@components/home/SpecialPropertiesAd/SpecialPropertiesAdContainer';
 
 export default function Home(): ReactElement {
      return (

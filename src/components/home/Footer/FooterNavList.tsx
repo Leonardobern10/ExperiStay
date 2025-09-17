@@ -1,6 +1,6 @@
 import { Stack, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import type { FooterNavListProps } from '../../types/FooterNavListProps';
+import type { FooterNavListProps } from '../../../types/FooterNavListProps';
 
 export default function FooterNavList(
      footerData: FooterNavListProps,

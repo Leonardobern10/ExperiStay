@@ -2,13 +2,15 @@ import { Box } from '@mui/material';
 import { type ReactElement } from 'react';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import InputSelect from '../InputSelect';
-import DatePickerCustom from '../DatePickerCustom';
+
 import SearchIcon from '@mui/icons-material/Search';
 import ButtonCustom from '@components/ButtonCustom';
-import type { SearchPropertiesProps } from '../../types/SearchAvailablePropertiesProps';
+
 import { Controller, useForm, type SubmitHandler } from 'react-hook-form';
 import { allSelectItemsData } from '@data/allSelectItemsData';
+import type { SearchPropertiesProps } from '../../../types/SearchAvailablePropertiesProps';
+import DatePickerCustom from '@components/DatePickerCustom';
+import InputSelect from '@components/InputSelect';
 
 export default function ContainerMainDestination(): ReactElement {
      const { handleSubmit, control } = useForm<SearchPropertiesProps>({

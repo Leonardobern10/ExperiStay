@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { forwardRef, type ReactElement } from 'react';
-import type { MainTextProps } from '../../types/MainTextProps';
+import type { MainTextProps } from '../../../types/MainTextProps';
 import useWidth from '@hooks/useWidth';
 import { slideAnimation } from '@hooks/useAnimation';
 

@@ -1,15 +1,15 @@
 import { Box, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import type { PropertyHighlightsType } from '../../types/PropertyHighlightsType';
+import type { PropertyHighlightsType } from '../../../types/PropertyHighlightsType';
 import {
      allProperties,
      propertyHighlightsData,
 } from '@data/PropertyHighlightsData';
 import HighlightComponent from './HightlightComponent';
-import MainTitle from '../MainTitle';
+import MainTitle from '@components/MainTitle';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import useWidth from '@hooks/useWidth';
-import Carousel from '../Carousel';
+import Carousel from '@components/Carousel';
 import ButtonCustom from '@components/ButtonCustom';
 import ContainerProperties from '@components/ContainerProperties';
 

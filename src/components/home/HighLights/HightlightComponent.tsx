@@ -1,11 +1,11 @@
 import { Box, Card, Typography } from '@mui/material';
 import type { ReactElement } from 'react';
-import type { HighlightType } from '../../types/HighlightType';
-import LikedComponent from '../LikedComponent';
+import type { HighlightType } from '../../../types/HighlightType';
 import PriceHighlight from './PriceHighlight';
 import DescriptionHighlight from './DescriptionHighlight';
 import ImagePropertyComponent from '@components/ImagePropertyComponent';
 import { useNavigate } from 'react-router';
+import LikedComponent from '@components/LikedComponent';
 
 export default function HighlightComponent(
      hightLightData: HighlightType,

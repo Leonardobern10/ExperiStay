@@ -1,6 +1,7 @@
 import ContainerProperties from '@components/ContainerProperties';
+import ContainerMainDestination from '@components/home/Presentation/MainContainerDestination';
 import InputSelect from '@components/InputSelect';
-import ContainerMainDestination from '@components/Presentation/MainContainerDestination';
+
 import { PageContainer } from '@components/ui/PageContainer';
 import { sortOptions } from '@data/allSelectItemsData';
 import { Box, Stack, Typography } from '@mui/material';
@@ -43,6 +44,7 @@ export default function Destines(): ReactElement {
                               onChange={() => console.log('Ola')}
                               label="Organizar por"
                               allItems={sortOptions}
+                              value={null}
                          />
                     </Stack>
                     <ContainerProperties />

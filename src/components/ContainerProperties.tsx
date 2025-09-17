@@ -1,7 +1,7 @@
 import { allProperties } from '@data/PropertyHighlightsData';
 import { Grid } from '@mui/material';
 import type { ReactElement } from 'react';
-import HighlightComponent from './HighLights/HightlightComponent';
+import HighlightComponent from './home/HighLights/HightlightComponent';
 
 export default function ContainerProperties(): ReactElement {
      return (
