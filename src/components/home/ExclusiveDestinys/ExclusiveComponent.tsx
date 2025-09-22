@@ -11,7 +11,7 @@ export default function ExclusiveComponent(
                variant="elevation"
                sx={(theme) => ({
                     height: '25rem',
-                    minWidth: '20rem',
+                    minWidth: '19rem',
                     position: 'relative',
                     borderRadius: theme.shape.borderRadius,
                })}>
