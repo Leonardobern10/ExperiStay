@@ -9,7 +9,8 @@ const ContainerSectionHome = styled(Box)(({ theme }) => ({
      width: '100%',
      rowGap: theme.spacing(10),
      paddingY: theme.spacing(10),
-     paddingX: theme.spacing(8),
+     paddingLeft: theme.spacing(20),
+     paddingRight: theme.spacing(20),
 }));
 
 export default ContainerSectionHome;
