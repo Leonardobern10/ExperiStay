@@ -34,8 +34,7 @@ export default function RatingsContainer(props: {
                {currentWidth ? (
                     <Stack
                          direction="row"
-                         spacing={8}
-                         paddingX={8}>
+                         spacing={8}>
                          {ratings.map((el) => (
                               <RatingComponent
                                    key={el.index}
