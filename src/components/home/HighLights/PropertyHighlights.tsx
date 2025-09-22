@@ -23,7 +23,7 @@ export default function PropertyHighlights(props: {
           <ContainerSectionHome className={props.className}>
                <Box
                     sx={{
-                         width: '100%',
+                         width: '90%',
                          display: 'flex',
                          flexDirection: 'column',
                          alignItems: 'center',
