@@ -16,6 +16,8 @@ export default function FooterContainer(): ReactElement {
                          xs: theme.spacing(1),
                          md: theme.spacing(4),
                     },
+                    paddingLeft: theme.spacing(4),
+                    paddingRight: theme.spacing(4),
                })}>
                <Box
                     sx={{
