@@ -3,7 +3,8 @@ import { Box, styled } from '@mui/material';
 export const BoxGridCustomUI = styled(Box)(({ theme }) => ({
      display: 'grid',
      gap: theme.spacing(2),
-     padding: theme.spacing(8),
+     paddingTop: theme.spacing(8),
+     paddingBottom: theme.spacing(8),
      [theme.breakpoints.down('md')]: {
           gridTemplateRows: 'repeat(4, 1fr)',
      },
