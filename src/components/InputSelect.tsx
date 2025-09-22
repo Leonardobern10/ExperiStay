@@ -8,7 +8,7 @@ export default function InputSelect(props: {
      onChange: (value: string) => void;
      label: string;
      allItems: SelectItemType[];
-     fullWidth: boolean;
+     fullWidth?: boolean;
 }): ReactElement {
      return (
           <FormControl

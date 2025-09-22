@@ -33,17 +33,23 @@ export default function ContainerMainDestination(): ReactElement {
                     sx={(theme) => ({
                          width: '100%',
                          display: 'flex',
-                         flexDirection: {
-                              xs: 'column',
-                              md: 'row',
-                         },
+                         flexDirection: 'column',
                          height: '100%',
                          padding: theme.spacing(2),
-                         justifyContent: 'space-evenly', // centraliza
+                         paddingTop: theme.spacing(4),
+                         paddingBottom: theme.spacing(4),
+                         rowGap: theme.spacing(2),
+                         justifyContent: 'space-between',
                          alignItems: 'center',
-                         columnGap: theme.spacing(2),
                          backgroundColor: theme.palette.background.default,
                          borderRadius: theme.shape.borderRadius,
+                         [theme.breakpoints.up('md')]: {
+                              flexDirection: 'row',
+                              padding: theme.spacing(2),
+                              justifyContent: 'space-evenly',
+                              height: '100%',
+                              columnGap: theme.spacing(2),
+                         },
                     })}>
                     <Controller
                          name="arrival"

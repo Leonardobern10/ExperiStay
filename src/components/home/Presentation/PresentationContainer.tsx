@@ -66,10 +66,7 @@ const boxImage = (theme: Theme) => ({
 
 const gridCustom = (theme: Theme) => ({
      width: '80%',
-     height: {
-          xs: '70%',
-          md: 'fit-content',
-     },
+     height: 'fit-content',
      display: 'flex',
      flexDirection: 'row',
      justifyContent: 'space-between',
