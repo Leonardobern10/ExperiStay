@@ -13,11 +13,12 @@ export default function SpecialPropertiesAdContainer(props: {
           <ContainerSectionHome
                className={props.className}
                sx={(theme) => ({
-                    width: '95%',
+                    width: '80%',
                     border: 0.5,
                     paddingY: theme.spacing(10),
                     borderColor: theme.palette.primary.contrastText,
                     borderRadius: theme.shape.borderRadius,
+                    marginBottom: theme.spacing(20),
                })}>
                <Box
                     sx={{
