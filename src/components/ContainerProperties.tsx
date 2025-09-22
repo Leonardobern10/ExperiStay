@@ -7,13 +7,13 @@ export default function ContainerProperties(): ReactElement {
      return (
           <Grid
                sx={(theme) => ({
-                    paddingX: theme.spacing(8),
                     width: '100vw',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-evenly',
                     alignItems: 'center',
                     columnGap: theme.spacing(6),
+                    paddingX: theme.spacing(20),
                     paddingY: theme.spacing(10),
                })}>
                {allProperties.map((el) => (
