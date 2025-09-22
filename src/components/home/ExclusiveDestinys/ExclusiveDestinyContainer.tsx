@@ -35,9 +35,12 @@ export default function ExclusiveDestinyContainer(props: {
                {currentWidth ? (
                     <Stack
                          direction="row"
+                         justifyContent="space-between"
+                         alignItems="center"
                          sx={(theme) => ({
-                              columnGap: theme.spacing(8),
-                              padding: theme.spacing(8),
+                              columnGap: theme.spacing(2),
+                              paddingTop: theme.spacing(8),
+                              paddingBottom: theme.spacing(8),
                          })}>
                          {exclusiveDestines.map((el) => (
                               <ExclusiveComponent
