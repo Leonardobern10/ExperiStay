@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography, type Theme } from '@mui/material';
 import type { ReactElement } from 'react';
 import { advantages, dataContainer } from '@data/specialPropertiesAdData';
 import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';
@@ -12,14 +12,7 @@ export default function SpecialPropertiesAdContainer(props: {
      return (
           <ContainerSectionHome
                className={props.className}
-               sx={(theme) => ({
-                    width: '80%',
-                    border: 0.5,
-                    paddingY: theme.spacing(10),
-                    borderColor: theme.palette.primary.contrastText,
-                    borderRadius: theme.shape.borderRadius,
-                    marginBottom: theme.spacing(20),
-               })}>
+               sx={sectionSx}>
                <Box
                     sx={{
                          display: 'flex',
@@ -37,13 +30,7 @@ export default function SpecialPropertiesAdContainer(props: {
                </Box>
                <Stack
                     spacing={4}
-                    sx={(theme) => ({
-                         flexDirection: {
-                              sx: 'column',
-                              md: 'row',
-                         },
-                         paddingX: theme.spacing(4),
-                    })}>
+                    sx={propertySx}>
                     {advantages.map((el) => (
                          <AdvantagePropertiesAdComponent
                               key={el.index}
@@ -64,3 +51,24 @@ export default function SpecialPropertiesAdContainer(props: {
           </ContainerSectionHome>
      );
 }
+
+const sectionSx = (theme: Theme) => ({
+     width: '70%',
+     border: 0.5,
+     paddingTop: theme.spacing(10),
+     paddingBottom: theme.spacing(10),
+     borderColor: theme.palette.primary.contrastText,
+     borderRadius: theme.shape.borderRadius,
+     marginBottom: theme.spacing(20),
+});
+
+const propertySx = (theme: Theme) => ({
+     flexDirection: {
+          sx: 'column',
+          md: 'row',
+     },
+     alignItems: 'center',
+     justifyContent: 'center',
+     paddingRight: theme.spacing(4),
+     paddingLeft: theme.spacing(4),
+});
