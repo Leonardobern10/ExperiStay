@@ -69,7 +69,7 @@ theme = createTheme(theme, {
           },
           h3: {
                fontFamily: 'Lexend, sans-serif',
-               fontSize: '1.5rem',
+               fontSize: '1.3rem',
                fontWeight: 500,
                color: theme.palette.text.primary,
                [theme.breakpoints.up('md')]: {
@@ -86,6 +86,9 @@ theme = createTheme(theme, {
                fontWeight: 200,
                color: theme.palette.text.primary,
                fontFamily: 'Lexend, sans-serif',
+               [theme.breakpoints.up('md')]: {
+                    fontSize: '.8rem',
+               },
           },
           /** Textos curtos */
           body2: {},

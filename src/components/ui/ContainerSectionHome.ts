@@ -9,8 +9,12 @@ const ContainerSectionHome = styled(Box)(({ theme }) => ({
      width: '100%',
      rowGap: theme.spacing(10),
      paddingY: theme.spacing(10),
-     paddingLeft: theme.spacing(20),
-     paddingRight: theme.spacing(20),
+     paddingLeft: theme.spacing(5),
+     paddingRight: theme.spacing(5),
+     [theme.breakpoints.up('md')]: {
+          paddingLeft: theme.spacing(20),
+          paddingRight: theme.spacing(20),
+     },
 }));
 
 export default ContainerSectionHome;

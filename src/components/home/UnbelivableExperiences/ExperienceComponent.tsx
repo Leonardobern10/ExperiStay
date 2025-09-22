@@ -13,13 +13,16 @@ export default function ExperienceComponent(
                variant="elevation"
                sx={(theme) => ({
                     backgroundColor: theme.palette.secondary.main,
-                    padding: theme.spacing(8),
+                    padding: theme.spacing(4),
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-evenly',
                     alignItems: 'flex-start',
                     rowGap: theme.spacing(4),
                     borderRadius: theme.shape.borderRadius,
+                    [theme.breakpoints.up('md')]: {
+                         padding: theme.spacing(8),
+                    },
                })}>
                <Box
                     sx={(theme) => ({
