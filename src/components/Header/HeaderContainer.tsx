@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, type Theme } from '@mui/material';
 import { useRef, type ReactElement, type RefObject } from 'react';
 import { headerItemsNav } from '@data/headerItemsNav';
 import useWidth from '@hooks/useWidth';
@@ -20,17 +20,7 @@ export default function HeaderContainer(props: {
           <Box
                zIndex={1000}
                className={props.className}
-               sx={(theme) => ({
-                    position: 'fixed',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    minHeight: 'fit-content',
-                    maxHeight: '4rem',
-                    width: '100vw',
-                    backgroundColor: theme.palette.background.default,
-               })}>
+               sx={customBox}>
                {width ? (
                     <HeaderDesktop
                          refLogo={elem1}
@@ -48,3 +38,16 @@ export default function HeaderContainer(props: {
           </Box>
      );
 }
+
+// Estilização para o Box
+const customBox = (theme: Theme) => ({
+     position: 'fixed',
+     display: 'flex',
+     flexDirection: 'row',
+     justifyContent: 'space-between',
+     alignItems: 'center',
+     minHeight: 'fit-content',
+     maxHeight: '4rem',
+     width: '100vw',
+     backgroundColor: theme.palette.background.default,
+});
