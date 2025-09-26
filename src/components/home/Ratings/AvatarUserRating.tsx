@@ -1,25 +1,14 @@
-import { Avatar } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Avatar, useTheme } from '@mui/material';
+import { getInitials } from '@services/avatarService';
+import { useMemo, type ReactElement } from 'react';
+import { avatarSx } from './ratings.styles';
 
-export default function AvatarUserRating(props: {
-     userName: string;
+export default function AvatarUserRating({
+    userName,
+}: {
+    userName: string;
 }): ReactElement {
-     const getInitials = () => {
-          let string = props.userName.split(' ');
-          let initials = '';
-          string.forEach((el) => {
-               initials += el[0];
-          });
-          return initials;
-     };
-
-     return (
-          <Avatar
-               sx={(theme) => ({
-                    backgroundColor: theme.palette.primary.main,
-                    fontSize: '16px',
-               })}>
-               {getInitials()}
-          </Avatar>
-     );
+    const theme = useTheme();
+    const avatarStyle = useMemo(() => avatarSx(theme), [theme]);
+    return <Avatar sx={avatarStyle}>{getInitials(userName)}</Avatar>;
 }
