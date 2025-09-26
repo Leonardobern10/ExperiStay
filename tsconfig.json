@@ -8,7 +8,8 @@
                "@data/*": ["data/*"],
                "@hooks/*": ["hooks/*"],
                "@theme/*": ["theme/*"],
-               "@types/*": ["types/*"]
+               "@types/*": ["types/*"],
+               "@services/*": ["services/*"],
           }
      },
      "files": [],
