@@ -1,68 +1,67 @@
-import { Box, Typography } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Box, Typography, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import type { PropertyHighlightsType } from '../../../types/PropertyHighlightsType';
 import {
-     allProperties,
-     propertyHighlightsData,
-} from '@data/PropertyHighlightsData';
-import HighlightComponent from './HightlightComponent';
+    allProperties,
+    propertyHighlightsData,
+} from '@data/propertyHighlightsData';
+
 import MainTitle from '@components/MainTitle';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import useWidth from '@hooks/useWidth';
 import Carousel from '@components/Carousel';
 import ButtonCustom from '@components/ButtonCustom';
 import ContainerProperties from '@components/ContainerProperties';
+import { propertyHighlightsSx } from './propertyHighlights.styles';
+import HighlightComponent from './HighlightComponent';
 
-export default function PropertyHighlights(props: {
-     className: string;
+export default function PropertyHighlights({
+    className,
+}: {
+    className: string;
 }): ReactElement {
-     const data: PropertyHighlightsType = propertyHighlightsData;
-     const currentWidth = useWidth('md');
+    const data: PropertyHighlightsType = propertyHighlightsData;
+    const currentWidth = useWidth('md');
+    const theme = useTheme();
+    const propertyHighlightStyle = useMemo(
+        () => propertyHighlightsSx(theme),
+        [theme],
+    );
 
-     return (
-          <ContainerSectionHome className={props.className}>
-               <Box
-                    sx={{
-                         width: '90%',
-                         display: 'flex',
-                         flexDirection: 'column',
-                         alignItems: 'center',
-                    }}>
-                    <MainTitle
-                         align="center"
-                         string={data.title}
+    return (
+        <ContainerSectionHome className={className}>
+            <Box sx={propertyHighlightStyle.boxTitleSx}>
+                <MainTitle
+                    align="center"
+                    string={data.title}
+                />
+                {/** Subtitulo da seção */}
+                <Typography variant="subtitle2">{data.subtitle}</Typography>
+            </Box>
+            {currentWidth ? (
+                <ContainerProperties />
+            ) : (
+                <Box sx={propertyHighlightStyle.boxMobileSx}>
+                    <Carousel
+                        arrow={true}
+                        children={allProperties.map((el) => (
+                            <HighlightComponent
+                                key={el.index}
+                                index={el.index}
+                                name={el.name}
+                                location={el.location}
+                                description={el.description}
+                                price={el.price}
+                                rating={el.rating}
+                                liked={el.liked}
+                                img={el.img}
+                                label={el.label}
+                            />
+                        ))}
                     />
-                    {/** Subtitulo da seção */}
-                    <Typography variant="subtitle2">{data.subtitle}</Typography>
-               </Box>
-               {currentWidth ? (
-                    <ContainerProperties />
-               ) : (
-                    <Box
-                         sx={(theme) => ({
-                              width: '100%',
-                              paddingX: theme.spacing(4),
-                         })}>
-                         <Carousel
-                              arrow={true}
-                              children={allProperties.map((el) => (
-                                   <HighlightComponent
-                                        key={el.index}
-                                        index={el.index}
-                                        name={el.name}
-                                        location={el.location}
-                                        description={el.description}
-                                        price={el.price}
-                                        rating={el.rating}
-                                        liked={el.liked}
-                                        img={el.img}
-                                        label={el.label}
-                                   />
-                              ))}
-                         />
-                    </Box>
-               )}
-               <ButtonCustom buttonName={data.buttonName} />
-          </ContainerSectionHome>
-     );
+                </Box>
+            )}
+            <ButtonCustom buttonName={data.buttonName} />
+        </ContainerSectionHome>
+    );
 }

@@ -1,38 +1,28 @@
-import { Stack, Typography } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Stack, Typography, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import type { FooterNavListProps } from '../../../types/FooterNavListProps';
+import { footerNavListSx } from './FooterNavList.styles';
 
 export default function FooterNavList(
-     footerData: FooterNavListProps,
+    footerData: FooterNavListProps,
 ): ReactElement {
-     return (
-          <Stack
-               sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'flex-start',
-                    alignItems: 'flex-start',
-               }}>
-               <Typography
-                    variant="body1"
-                    sx={(theme) => ({
-                         fontWeight: 500,
-                         paddingBottom: theme.spacing(3),
-                    })}>
-                    {footerData.title}
-               </Typography>
-               {footerData.items.map((el, index) => (
-                    <Typography
-                         variant="body2"
-                         key={index}
-                         sx={(theme) => ({
-                              opacity: '70%',
-                              fontWeight: 300,
-                              paddingY: theme.spacing(1),
-                         })}>
-                         {el}
-                    </Typography>
-               ))}
-          </Stack>
-     );
+    const theme = useTheme();
+    const styleSx = useMemo(() => footerNavListSx(theme), [theme]);
+    return (
+        <Stack sx={styleSx.stackSx}>
+            <Typography
+                variant="body1"
+                sx={styleSx.typographyTitleSectionSx}>
+                {footerData.title}
+            </Typography>
+            {footerData.items.map((el, index) => (
+                <Typography
+                    variant="body2"
+                    key={index}
+                    sx={styleSx.typographyAllSectionsSx}>
+                    {el}
+                </Typography>
+            ))}
+        </Stack>
+    );
 }

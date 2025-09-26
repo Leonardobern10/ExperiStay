@@ -1,54 +1,39 @@
-import { Box, Typography } from '@mui/material';
-import { forwardRef, type ReactElement } from 'react';
+import { Box, Typography, useTheme } from '@mui/material';
+import { forwardRef, useMemo, type ReactElement } from 'react';
 import type { MainTextProps } from '../../../types/MainTextProps';
 import useWidth from '@hooks/useWidth';
 import { slideAnimation } from '@hooks/useAnimation';
+import { mainTextSx } from './mainText.styles';
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
-     ({ title, desc }, ref): ReactElement => {
-          let width: boolean = useWidth('md');
-          slideAnimation('.mainTextAnimated');
-
-          return (
-               <Box
-                    ref={ref}
-                    sx={(theme) => ({
-                         width: `${width ? '80%' : '100%'}`,
-                         height: '100%',
-                         display: 'flex',
-                         flexDirection: 'column',
-                         justifyContent: 'space-between',
-                         rowGap: theme.spacing(2),
-                         borderRadius: theme.shape.borderRadius,
-                    })}>
-                    <Box
-                         className="mainTextAnimated"
-                         sx={(theme) => ({
-                              display: 'flex',
-                              flexDirection: 'column',
-                              justifyContent: 'center',
-                              width: '100%',
-                              rowGap: theme.spacing(2),
-                         })}>
-                         <Typography
-                              className="textAnimated"
-                              variant="h1">
-                              {title}
-                         </Typography>
-                         {width && (
-                              <Typography
-                                   variant="subtitle1"
-                                   sx={{
-                                        textShadow: '1px 1px 1px black',
-                                        letterSpacing: 0.7,
-                                   }}>
-                                   {desc}
-                              </Typography>
-                         )}
-                    </Box>
-               </Box>
-          );
-     },
+    ({ title, desc }, ref): ReactElement => {
+        let width: boolean = useWidth('md');
+        slideAnimation('.mainTextAnimated');
+        const theme = useTheme();
+        const mainTextStyle = useMemo(() => mainTextSx(theme), [theme]);
+        return (
+            <Box
+                ref={ref}
+                sx={mainTextStyle.mainTextContainer}>
+                <Box
+                    className="mainTextAnimated"
+                    sx={mainTextStyle.boxTitle}>
+                    <Typography
+                        className="textAnimated"
+                        variant="h1">
+                        {title}
+                    </Typography>
+                    {width && (
+                        <Typography
+                            variant="subtitle1"
+                            sx={mainTextStyle.typographySx}>
+                            {desc}
+                        </Typography>
+                    )}
+                </Box>
+            </Box>
+        );
+    },
 );
 
 export default MainText;
