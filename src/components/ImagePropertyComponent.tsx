@@ -1,4 +1,4 @@
-import { Box, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import ImageComponent from './ImageComponent';
 import RatingValue from './RatingValue';
@@ -14,11 +14,7 @@ export default function ImagePropertyComponent({
     label,
     full,
 }: ImagePropertyComponentProps): ReactElement {
-    const theme = useTheme();
-    const imagePropertyStyles = useMemo(
-        () => imagePropertySx(theme, full),
-        [theme, full],
-    );
+    const imagePropertyStyles = useMemo(() => imagePropertySx(full), [full]);
     return (
         <Box sx={imagePropertyStyles}>
             <ImageComponent

@@ -1,4 +1,4 @@
-import { Drawer, ListItem, Stack, useTheme, type Theme } from '@mui/material';
+import { Drawer, ListItem, Stack, useTheme } from '@mui/material';
 import { useMemo, useState, type ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
 import MenuIcon from '@mui/icons-material/Menu';

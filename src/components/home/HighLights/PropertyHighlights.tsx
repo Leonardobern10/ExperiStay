@@ -1,10 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import type { PropertyHighlightsType } from '../../../types/PropertyHighlightsType';
-import {
-    allProperties,
-    propertyHighlightsData,
-} from '@data/propertyHighlightsData';
 
 import MainTitle from '@components/MainTitle';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
@@ -14,6 +10,11 @@ import ButtonCustom from '@components/ButtonCustom';
 import ContainerProperties from '@components/ContainerProperties';
 import { propertyHighlightsSx } from './propertyHighlights.styles';
 import HighlightComponent from './HighlightComponent';
+import {
+    allProperties,
+    propertyHighlightsData,
+} from '@data/propertyHighlightsData';
+import type { HighlightType } from '../../../types/HighlightType';
 
 export default function PropertyHighlights({
     className,
@@ -44,7 +45,7 @@ export default function PropertyHighlights({
                 <Box sx={propertyHighlightStyle.boxMobileSx}>
                     <Carousel
                         arrow={true}
-                        children={allProperties.map((el) => (
+                        children={allProperties.map((el: HighlightType) => (
                             <HighlightComponent
                                 key={el.index}
                                 index={el.index}

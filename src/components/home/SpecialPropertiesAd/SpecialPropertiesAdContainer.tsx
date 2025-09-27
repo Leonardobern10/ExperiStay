@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, useTheme, type Theme } from '@mui/material';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import { advantages, dataContainer } from '@data/specialPropertiesAdData';
 import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';

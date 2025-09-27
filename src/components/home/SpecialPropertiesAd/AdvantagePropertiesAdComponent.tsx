@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme, type Theme } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import type { AdvantageAdProps } from '../../../types/AdvantagesAdProps';
 import { advantagePropertiesSx } from './specialProperties.styles';
