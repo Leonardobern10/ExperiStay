@@ -5,19 +5,7 @@ import useWidth from '@hooks/useWidth';
 import HeaderDesktop from './HeaderDesktop';
 import HeaderMobile from './HeaderMobile';
 import { useHeaderAnimation } from '@hooks/useAnimation';
-
-// Estilização para o Box
-const customBox = (theme: Theme) => ({
-    position: 'fixed',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    minHeight: 'fit-content',
-    maxHeight: '4rem',
-    width: '100vw',
-    backgroundColor: theme.palette.background.default,
-});
+import { headerContainerSx } from './header.styles';
 
 export default function HeaderContainer(props: {
     className?: string;
@@ -27,7 +15,7 @@ export default function HeaderContainer(props: {
     const elem1: RefObject<null | HTMLElement> = useRef(null);
     const elem2: RefObject<null | HTMLElement> = useRef(null);
     const theme: Theme = useTheme();
-    const boxSx = useMemo(() => customBox(theme), [theme]);
+    const boxSx = useMemo(() => headerContainerSx(theme), [theme]);
 
     useHeaderAnimation(elem1, elem2, elem3);
 

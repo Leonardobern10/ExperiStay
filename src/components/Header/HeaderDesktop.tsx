@@ -1,9 +1,10 @@
-import { Box, Link, ListItem, Stack, type Theme } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Box, Link, ListItem, Stack, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NavList from '@components/ui/NavList';
 import ButtonCustom from '@components/ButtonCustom';
+import { headerDesktopSx } from './header.styles';
 
 export default function HeaderDesktop({
     refLogo,
@@ -11,13 +12,15 @@ export default function HeaderDesktop({
     refButton,
     headerItemsNav,
 }: HeaderProps): ReactElement {
+    const theme = useTheme();
+    const desktopStyle = useMemo(() => headerDesktopSx(theme), [theme]);
     return (
         <Stack
             direction="row"
-            sx={stackCustom}>
+            sx={desktopStyle.stackSx}>
             <Box
                 ref={refLogo}
-                sx={{ width: 'fit-content' }}>
+                sx={desktopStyle.logoSx}>
                 ExperiStay
             </Box>
             <Box
@@ -38,7 +41,7 @@ export default function HeaderDesktop({
             </Box>
             <Box
                 ref={refButton}
-                sx={boxCustom}>
+                sx={desktopStyle.boxSx}>
                 <ButtonCustom
                     buttonName="Login"
                     buttonIcon={AccountCircleIcon}
@@ -51,20 +54,3 @@ export default function HeaderDesktop({
         </Stack>
     );
 }
-
-// Estilização customizada para o componente Stack
-const stackCustom = (theme: Theme) => ({
-    height: '100%',
-    width: '100%',
-    justifyContent: 'space-between',
-    paddingY: theme.spacing(1),
-    paddingX: theme.spacing(16),
-});
-
-// Estilização customizada para o componente Box
-const boxCustom = (theme: Theme) => ({
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    columnGap: theme.spacing(4),
-});

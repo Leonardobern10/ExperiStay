@@ -1,10 +1,11 @@
-import { Drawer, ListItem, Stack, type Theme } from '@mui/material';
-import { useState, type ReactElement } from 'react';
+import { Drawer, ListItem, Stack, useTheme, type Theme } from '@mui/material';
+import { useMemo, useState, type ReactElement } from 'react';
 import type { HeaderProps } from '../../types/HeaderProps';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '@components/Logo';
 import ButtonCustom from '@components/ButtonCustom';
 import NavList from '@components/ui/NavList';
+import { headerMobileSx } from './header.styles';
 
 export default function HeaderMobile({
     refLogo,
@@ -13,13 +14,15 @@ export default function HeaderMobile({
 }: HeaderProps): ReactElement {
     const [open, setOpen] = useState<boolean>(false);
     const toggleMenu = (isOpen: boolean) => setOpen(isOpen);
+    const theme = useTheme();
+    const mobileStyle = useMemo(() => headerMobileSx(theme), [theme]);
 
     return (
         <Stack
             direction="row"
             justifyContent="space-between"
             alignItems="center"
-            sx={stackCustom}>
+            sx={mobileStyle.stackSx}>
             <Logo ref={refLogo} />
             <ButtonCustom
                 ref={refButton}
@@ -31,7 +34,7 @@ export default function HeaderMobile({
                 anchor="top"
                 open={open}
                 onClose={() => toggleMenu(false)}>
-                <NavList sx={{ width: '50vw' }}>
+                <NavList sx={mobileStyle.navSx}>
                     {headerItemsNav.map((el) => (
                         <ListItem key={el.index}>{el.nameItem}</ListItem>
                     ))}
@@ -40,11 +43,3 @@ export default function HeaderMobile({
         </Stack>
     );
 }
-
-// Estilização customizada para o componente Stack
-const stackCustom = (theme: Theme): object => ({
-    height: '100%',
-    width: '100vw',
-    paddingY: theme.spacing(3),
-    marginY: theme.spacing(0.5),
-});
