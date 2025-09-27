@@ -1,51 +1,49 @@
-import { FormControl, InputLabel, MenuItem } from '@mui/material';
-import { type ReactElement } from 'react';
+import { FormControl, InputLabel, MenuItem, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import SelectCustomUI from '@components/ui/SelectCustomUI';
-import type { SelectItemType } from '../types/SelectItemType';
+import type { InputSelectProps } from '../types/InputSelectProps';
+import { InputSelectSx } from './InputSelect.styles';
 
-export default function InputSelect(props: {
-     value: string | null;
-     onChange: (value: string) => void;
-     label: string;
-     allItems: SelectItemType[];
-     fullWidth?: boolean;
-}): ReactElement {
-     return (
-          <FormControl
-               sx={{
-                    minWidth: '15rem',
-                    width: `${props.fullWidth && '100%'}`,
-               }}>
-               <InputLabel
-                    sx={(theme) => ({ color: theme.palette.primary.main })}
-                    color="primary"
-                    id="demo-simple-select-label">
-                    {props.label}
-               </InputLabel>
-               <SelectCustomUI
-                    sx={{ width: '100%' }}
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={props.value}
-                    label={props.label}
-                    onChange={(e: any) => props.onChange(e.target.value)}
-                    MenuProps={{
-                         PaperProps: {
-                              sx: {
-                                   '& .MuiList-root': {
-                                        display: 'block', // força layout vertical
-                                   },
-                              },
-                         },
-                    }}>
-                    {props.allItems.map((el) => (
-                         <MenuItem
-                              key={el.selectIndex}
-                              value={el.selectValue}>
-                              {el.selectName}
-                         </MenuItem>
-                    ))}
-               </SelectCustomUI>
-          </FormControl>
-     );
+export default function InputSelect({
+    value,
+    onChange,
+    label,
+    allItems,
+    fullWidth,
+}: InputSelectProps): ReactElement {
+    const theme = useTheme();
+    const inputSelectStyles = useMemo(
+        () => InputSelectSx(theme),
+        [theme, fullWidth],
+    );
+    return (
+        <FormControl sx={inputSelectStyles.formSx}>
+            <InputLabel
+                sx={inputSelectStyles.inputLabelSx}
+                color="primary"
+                id="demo-simple-select-label">
+                {label}
+            </InputLabel>
+            <SelectCustomUI
+                sx={inputSelectStyles.selectCustomSx}
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={value}
+                label={label}
+                onChange={(e: any) => onChange(e.target.value)}
+                MenuProps={{
+                    PaperProps: {
+                        sx: inputSelectStyles.paperPropsSx,
+                    },
+                }}>
+                {allItems.map((el) => (
+                    <MenuItem
+                        key={el.selectIndex}
+                        value={el.selectValue}>
+                        {el.selectName}
+                    </MenuItem>
+                ))}
+            </SelectCustomUI>
+        </FormControl>
+    );
 }

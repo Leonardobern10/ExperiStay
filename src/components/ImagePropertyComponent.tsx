@@ -1,40 +1,35 @@
-import { Box } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Box, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import ImageComponent from './ImageComponent';
 import RatingValue from './RatingValue';
 import LabelProperty from './LabelProperty';
+import { imagePropertySx } from './ImagePropertyComponent.styles';
+import type { ImagePropertyComponentProps } from '../types/property/ImagePropertyComponentProps';
 
 export default function ImagePropertyComponent({
-     src,
-     name,
-     location,
-     rating,
-     label,
-     full,
-}: {
-     src: string;
-     name: string;
-     location: string;
-     rating: number;
-     label: string;
-     full?: boolean;
-}): ReactElement {
-     return (
-          <Box
-               sx={{
-                    height: `${full ? '100%' : '50%'}`,
-                    width: '100%',
-                    position: 'relative',
-               }}>
-               <ImageComponent
-                    src={src}
-                    alt={`imagem do imovel em destaque ${name} no(a) ${location}`}
-               />
-               <RatingValue value={rating} />
-               <LabelProperty
-                    highlight={true}
-                    labelName={label}
-               />
-          </Box>
-     );
+    src,
+    name,
+    location,
+    rating,
+    label,
+    full,
+}: ImagePropertyComponentProps): ReactElement {
+    const theme = useTheme();
+    const imagePropertyStyles = useMemo(
+        () => imagePropertySx(theme, full),
+        [theme, full],
+    );
+    return (
+        <Box sx={imagePropertyStyles}>
+            <ImageComponent
+                src={src}
+                alt={`imagem do imovel em destaque ${name} no(a) ${location}`}
+            />
+            <RatingValue value={rating} />
+            <LabelProperty
+                highlight={true}
+                labelName={label}
+            />
+        </Box>
+    );
 }

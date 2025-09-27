@@ -1,24 +1,22 @@
-import { Paper, Typography } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Paper, Typography, useTheme } from '@mui/material';
+import type { LabelPropertyProps } from '../types/LabelPropertyProps';
+import { useMemo, type ReactElement } from 'react';
+import { labelPropertySx } from './LabelProperty,styles';
 
-export default function LabelProperty(props: {
-     labelName: string;
-     highlight?: boolean;
-}): ReactElement {
-     return (
-          <Paper
-               variant="outlined"
-               sx={(theme) => ({
-                    position: `${props.highlight ? 'absolute' : ''}`,
-                    top: `${props.highlight ? '5%' : ''}`,
-                    right: `${props.highlight ? '3%' : ''}`,
-                    width: 'fit-content',
-                    color: theme.palette.primary.main,
-                    paddingX: theme.spacing(2),
-                    borderRadius: theme.shape.borderRadius,
-                    border: 1,
-               })}>
-               <Typography variant="caption"> {props.labelName} </Typography>
-          </Paper>
-     );
+export default function LabelProperty({
+    labelName,
+    highlight,
+}: LabelPropertyProps): ReactElement {
+    const theme = useTheme();
+    const labelStyles = useMemo(
+        () => labelPropertySx(theme, highlight),
+        [theme, highlight],
+    );
+    return (
+        <Paper
+            variant="outlined"
+            sx={labelStyles}>
+            <Typography variant="caption"> {labelName} </Typography>
+        </Paper>
+    );
 }

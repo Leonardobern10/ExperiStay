@@ -1,21 +1,17 @@
 import { allProperties } from '@data/propertyHighlightsData';
-import { Grid } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Grid, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import HighlightComponent from './home/Highlights/HighlightComponent';
+import { containerPropertiesSx } from './ContainerProperties.styles';
 
 export default function ContainerProperties(): ReactElement {
+    const theme = useTheme();
+    const propertiesStyles = useMemo(
+        () => containerPropertiesSx(theme),
+        [theme],
+    );
     return (
-        <Grid
-            sx={(theme) => ({
-                width: '100vw',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-evenly',
-                alignItems: 'center',
-                columnGap: theme.spacing(6),
-                paddingX: theme.spacing(20),
-                paddingY: theme.spacing(10),
-            })}>
+        <Grid sx={propertiesStyles}>
             {allProperties.map((el) => (
                 <HighlightComponent
                     key={el.index}

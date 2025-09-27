@@ -1,21 +1,20 @@
-import { Box, Typography } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Box, Typography, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
+import { priceValueSx } from './priceValueProperty.styles';
 
 export default function PriceValueProperty({
     price,
 }: {
     price: number;
 }): ReactElement {
+    const theme = useTheme();
+    const priceValueStyle = useMemo(() => priceValueSx(theme), [theme]);
     return (
-        <Typography sx={{ fontSize: 30 }}>
+        <Typography sx={priceValueStyle.priceValueTypoSx}>
             {`R$ ${price.toFixed(2)}`}
             <Box
                 component="span"
-                sx={{
-                    fontSize: 12,
-                    opacity: 0.7,
-                    letterSpacing: 1.3,
-                }}>
+                sx={priceValueStyle.priceValueboxSx}>
                 /noite
             </Box>
         </Typography>
