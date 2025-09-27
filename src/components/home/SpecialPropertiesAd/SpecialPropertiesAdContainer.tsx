@@ -1,74 +1,54 @@
-import { Box, Stack, Typography, type Theme } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Box, Stack, Typography, useTheme, type Theme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import { advantages, dataContainer } from '@data/specialPropertiesAdData';
 import AdvantagePropertiesAdComponent from './AdvantagePropertiesAdComponent';
 import MainTitle from '@components/MainTitle';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import ButtonCustom from '@components/ButtonCustom';
+import { specialPropertiesSx } from './specialProperties.styles';
 
 export default function SpecialPropertiesAdContainer(props: {
-     className: string;
+    className: string;
 }): ReactElement {
-     return (
-          <ContainerSectionHome
-               className={props.className}
-               sx={sectionSx}>
-               <Box
-                    sx={{
-                         display: 'flex',
-                         flexDirection: 'column',
-                         alignItems: 'center',
-                    }}>
-                    <MainTitle
-                         string={dataContainer.title + '?'}
-                         align="center"
+    const theme = useTheme();
+    const specialPropertiesStyle = useMemo(
+        () => specialPropertiesSx(theme),
+        [theme],
+    );
+    return (
+        <ContainerSectionHome
+            className={props.className}
+            sx={specialPropertiesStyle.sectionSx}>
+            <Box sx={specialPropertiesStyle.boxTitleSx}>
+                <MainTitle
+                    string={dataContainer.title + '?'}
+                    align="center"
+                />
+                {/** Subtitulo da seção */}
+                <Typography variant="subtitle2">
+                    {dataContainer.subtitle}
+                </Typography>
+            </Box>
+            <Stack
+                spacing={4}
+                sx={specialPropertiesStyle.propertySx}>
+                {advantages.map((el) => (
+                    <AdvantagePropertiesAdComponent
+                        key={el.index}
+                        title={el.title}
+                        description={el.description}
                     />
-                    {/** Subtitulo da seção */}
-                    <Typography variant="subtitle2">
-                         {dataContainer.subtitle}
-                    </Typography>
-               </Box>
-               <Stack
-                    spacing={4}
-                    sx={propertySx}>
-                    {advantages.map((el) => (
-                         <AdvantagePropertiesAdComponent
-                              key={el.index}
-                              title={el.title}
-                              description={el.description}
-                         />
-                    ))}
-               </Stack>
-               <Stack
-                    direction="row"
-                    spacing={8}>
-                    <ButtonCustom
-                         main
-                         buttonName={dataContainer.buttonRegister}
-                    />
-                    <ButtonCustom buttonName={dataContainer.buttonMore} />
-               </Stack>
-          </ContainerSectionHome>
-     );
+                ))}
+            </Stack>
+            <Stack
+                direction="row"
+                spacing={8}>
+                <ButtonCustom
+                    main
+                    buttonName={dataContainer.buttonRegister}
+                />
+                <ButtonCustom buttonName={dataContainer.buttonMore} />
+            </Stack>
+        </ContainerSectionHome>
+    );
 }
-
-const sectionSx = (theme: Theme) => ({
-     width: '70%',
-     border: 0.5,
-     paddingTop: theme.spacing(10),
-     paddingBottom: theme.spacing(10),
-     borderColor: theme.palette.primary.contrastText,
-     borderRadius: theme.shape.borderRadius,
-     marginBottom: theme.spacing(20),
-});
-
-const propertySx = (theme: Theme) => ({
-     flexDirection: {
-          sx: 'column',
-          md: 'row',
-     },
-     alignItems: 'center',
-     justifyContent: 'center',
-     paddingRight: theme.spacing(4),
-     paddingLeft: theme.spacing(4),
-});
