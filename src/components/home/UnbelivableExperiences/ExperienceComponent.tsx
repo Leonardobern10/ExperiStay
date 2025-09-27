@@ -1,55 +1,35 @@
-import { Box, Card, Typography } from '@mui/material';
-import type { ReactElement } from 'react';
+import { Box, Card, Typography, useTheme } from '@mui/material';
+import { useMemo, type ReactElement } from 'react';
 import type { ExperienceComponentsProps } from '../../../types/ExperienceComponentProps';
 import InfoIcon from '@mui/icons-material/Info';
+import { experienceComponentSx } from './unbelivableExperiences.styles';
 
 export default function ExperienceComponent(
-     data: ExperienceComponentsProps,
+    data: ExperienceComponentsProps,
 ): ReactElement {
-     const Icon = data.icon;
-
-     return (
-          <Card
-               variant="elevation"
-               sx={(theme) => ({
-                    backgroundColor: theme.palette.secondary.main,
-                    padding: theme.spacing(4),
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-evenly',
-                    alignItems: 'flex-start',
-                    rowGap: theme.spacing(4),
-                    borderRadius: theme.shape.borderRadius,
-                    [theme.breakpoints.up('md')]: {
-                         padding: theme.spacing(8),
-                    },
-               })}>
-               <Box
-                    sx={(theme) => ({
-                         display: 'flex',
-                         flexDirection: 'row',
-                         justifyContent: 'center',
-                         alignItems: 'center',
-                         columnGap: theme.spacing(4),
-                    })}>
-                    <Icon />
-                    <Typography variant="h3">{data.title}</Typography>
-               </Box>
-               <Typography variant="body1">{data.description}</Typography>
-               <Box
-                    sx={(theme) => ({
-                         display: 'flex',
-                         flexDirection: 'row',
-                         alignItems: 'center',
-                         columnGap: theme.spacing(2),
-                    })}>
-                    <InfoIcon />
-                    <Typography
-                         variant="body1"
-                         color="textSecondary">
-                         {data.alert}
-                    </Typography>
-               </Box>
-          </Card>
-     );
+    const Icon = data.icon;
+    const theme = useTheme();
+    const expComponentStyles = useMemo(
+        () => experienceComponentSx(theme),
+        [theme],
+    );
+    return (
+        <Card
+            variant="elevation"
+            sx={expComponentStyles.cardSx}>
+            <Box sx={expComponentStyles.boxTitleSx}>
+                <Icon />
+                <Typography variant="h3">{data.title}</Typography>
+            </Box>
+            <Typography variant="body1">{data.description}</Typography>
+            <Box sx={expComponentStyles.boxAlertSx}>
+                <InfoIcon />
+                <Typography
+                    variant="body1"
+                    color="textSecondary">
+                    {data.alert}
+                </Typography>
+            </Box>
+        </Card>
+    );
 }
