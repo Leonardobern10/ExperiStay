@@ -8,7 +8,7 @@ export default function PriceValueProperty({
     price: number;
 }): ReactElement {
     const theme = useTheme();
-    const priceValueStyle = useMemo(() => priceValueSx(theme), [theme]);
+    const priceValueStyle = useMemo(() => priceValueSx(), [theme]);
     return (
         <Typography sx={priceValueStyle.priceValueTypoSx}>
             {`R$ ${price.toFixed(2)}`}

@@ -1,6 +1,4 @@
-import type { Theme } from '@mui/material';
-
-export const priceValueSx = (theme: Theme) => ({
+export const priceValueSx = () => ({
     priceValueTypoSx: {
         fontSize: 30,
     },
