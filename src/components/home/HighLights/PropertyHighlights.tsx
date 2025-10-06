@@ -9,11 +9,11 @@ import ButtonCustom from '@components/ButtonCustom';
 import ContainerProperties from '@components/ContainerProperties';
 import { propertyHighlightsSx } from './propertyHighlights.styles';
 import HighlightComponent from './HighlightComponent';
+import type { HighlightType } from '../../../types/HighlightType';
 import {
     allProperties,
     propertyHighlightsData,
-} from '../../../data/propertyHighlightsData.ts';
-import type { HighlightType } from '../../../types/HighlightType';
+} from '@data/propertyHighlightsData';
 
 export default function PropertyHighlights({
     className,
