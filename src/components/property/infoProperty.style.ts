@@ -11,7 +11,6 @@ export const infoPropertySx = (theme: Theme) => ({
             flexDirection: 'row',
             columnGap: theme.spacing(4),
         },
-        border: 0.1,
     },
     infoBoxDescriptionSx: {
         display: 'flex',

@@ -1,7 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import type { PropertyHighlightsType } from '../../../types/PropertyHighlightsType';
-
 import MainTitle from '@components/MainTitle';
 import ContainerSectionHome from '@components/ui/ContainerSectionHome';
 import useWidth from '@hooks/useWidth';
@@ -13,7 +12,7 @@ import HighlightComponent from './HighlightComponent';
 import {
     allProperties,
     propertyHighlightsData,
-} from '@data/propertyHighlightsData';
+} from '../../../data/propertyHighlightsData.ts';
 import type { HighlightType } from '../../../types/HighlightType';
 
 export default function PropertyHighlights({
