@@ -2,7 +2,7 @@ import { Grid, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import { containerPropertiesSx } from './ContainerProperties.styles';
 import type { HighlightType } from '../types/HighlightType';
-import { allProperties } from '@data/propertyHighlightsData';
+import { allProperties } from '@data/nhame';
 import HighlightComponent from './home/highlights/HighlightComponent';
 
 export default function ContainerProperties(): ReactElement {
