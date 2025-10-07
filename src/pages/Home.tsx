@@ -5,7 +5,7 @@ import UnbelivableExperiences from '@components/home/UnbelivableExperiences/Unbe
 import ExclusiveDestinyContainer from '@components/home/ExclusiveDestinys/ExclusiveDestinyContainer';
 import RatingsContainer from '@components/home/Ratings/RatingsContainer';
 import SpecialPropertiesAdContainer from '@components/home/SpecialPropertiesAd/SpecialPropertiesAdContainer';
-import PropertyHighlights from '@components/home/highlights/PropertyHighlights.tsx';
+import PropertyHighlights from '@components/home/high/PropertyHighlights';
 
 export default function Home(): ReactElement {
     return (

@@ -3,7 +3,7 @@ import { useMemo, type ReactElement } from 'react';
 import { containerPropertiesSx } from './ContainerProperties.styles';
 import type { HighlightType } from '../types/HighlightType';
 import { allProperties } from '@data/propertyHighlightsData';
-import HighlightComponent from './home/highlights/HighlightComponent';
+import HighlightComponent from './home/high/HighlightComponent';
 
 export default function ContainerProperties(): ReactElement {
     const theme = useTheme();
