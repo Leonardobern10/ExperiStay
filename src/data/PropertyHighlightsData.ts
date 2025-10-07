@@ -4,7 +4,7 @@ import imageExample from '@images/highlights/florianopolis_highlight.png';
 import bahia from '@images/highlights/bahia_highlight.png';
 import manaus from '@images/highlights/amazonas_highlight.png';
 
-export const propertyHighlightsData: PropertyHighlightsType = {
+export const highlightsData: PropertyHighlightsType = {
     title: 'Imóveis em destaque',
     subtitle:
         'Selecionamos cuidadosamente os melhores imóveis para garantir experiências extraordinárias',

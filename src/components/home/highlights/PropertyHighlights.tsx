@@ -10,17 +10,14 @@ import ContainerProperties from '@components/ContainerProperties';
 import { propertyHighlightsSx } from './propertyHighlights.styles';
 import HighlightComponent from './HighlightComponent';
 import type { HighlightType } from '../../../types/HighlightType';
-import {
-    allProperties,
-    propertyHighlightsData,
-} from '@data/propertyHighlightsData';
+import { allProperties, highlightsData } from '@data/propertyHighlightsData';
 
 export default function PropertyHighlights({
     className,
 }: {
     className: string;
 }): ReactElement {
-    const data: PropertyHighlightsType = propertyHighlightsData;
+    const data: PropertyHighlightsType = highlightsData;
     const currentWidth = useWidth('md');
     const theme = useTheme();
     const propertyHighlightStyle = useMemo(
