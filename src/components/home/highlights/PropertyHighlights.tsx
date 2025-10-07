@@ -10,7 +10,7 @@ import ContainerProperties from '@components/ContainerProperties';
 import { propertyHighlightsSx } from './propertyHighlights.styles';
 import HighlightComponent from './HighlightComponent';
 import type { HighlightType } from '../../../types/HighlightType';
-import { allProperties, highlightsData } from '@data/nhame';
+import { allProperties, highlightsData } from '@data/propertyHighlightsData';
 
 export default function PropertyHighlights({
     className,
