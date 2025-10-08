@@ -5,35 +5,35 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 export const footerContainerData = {
-     description:
-          'Conectamos viajantes à experiências únicas através de imóveis excepcionais nos destinos mais especiais do Brasil.',
-     socials: [InstagramIcon, LinkedInIcon, WhatsAppIcon, FacebookIcon],
+    description:
+        'Conectamos viajantes à experiências únicas através de imóveis excepcionais nos destinos mais especiais do Brasil.',
+    socials: [InstagramIcon, LinkedInIcon, WhatsAppIcon, FacebookIcon],
 };
 
 export const footerNavList: Array<FooterNavListProps> = [
-     {
-          index: 0,
-          title: 'Explorar',
-          items: [
-               'Todos os destinos',
-               'Experiências ùnicas',
-               'Imóveis de luxo',
-               'Útilma hora',
-          ],
-     },
-     {
-          index: 1,
-          title: 'Suporte',
-          items: ['Central de Ajuda', 'Segurança', 'Cancelamentos', 'Contato'],
-     },
-     {
-          index: 2,
-          title: 'Para anfitriões',
-          items: [
-               'Anuncie seu imóvel',
-               'Recursos para anfitriões',
-               'Fórum da Comunidade',
-               'Responsabilidade',
-          ],
-     },
+    {
+        index: 0,
+        title: 'Explorar',
+        items: [
+            'Todos os destinos',
+            'Experiências ùnicas',
+            'Imóveis de luxo',
+            'Útilma hora',
+        ],
+    },
+    {
+        index: 1,
+        title: 'Suporte',
+        items: ['Central de Ajuda', 'Segurança', 'Cancelamentos', 'Contato'],
+    },
+    {
+        index: 2,
+        title: 'Para anfitriões',
+        items: [
+            'Anuncie seu imóvel',
+            'Recursos para anfitriões',
+            'Fórum da Comunidade',
+            'Responsabilidade',
+        ],
+    },
 ];
