@@ -14,12 +14,7 @@ export const footerNavList: Array<FooterNavListProps> = [
     {
         index: 0,
         title: 'Explorar',
-        items: [
-            'Todos os destinos',
-            'Experiências ùnicas',
-            'Imóveis de luxo',
-            'Útilma hora',
-        ],
+        items: ['Todos os destinos', 'Experiências ùnicas', 'Imóveis de luxo'],
     },
     {
         index: 1,
@@ -28,12 +23,7 @@ export const footerNavList: Array<FooterNavListProps> = [
     },
     {
         index: 2,
-        title: 'Para anfitriões',
-        items: [
-            'Anuncie seu imóvel',
-            'Recursos para anfitriões',
-            'Fórum da Comunidade',
-            'Responsabilidade',
-        ],
+        title: 'Anfitriões',
+        items: ['Anuncie seu imóvel', 'Recursos', 'Fórum'],
     },
 ];

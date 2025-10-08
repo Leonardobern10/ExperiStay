@@ -82,22 +82,22 @@ theme = createTheme(theme, {
         },
         /** Textos extensos */
         body1: {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
             fontWeight: 200,
             color: theme.palette.text.primary,
             fontFamily: 'Lexend, sans-serif',
             [theme.breakpoints.up('md')]: {
-                fontSize: '.8rem',
+                fontSize: '1.2rem',
             },
         },
         /** Textos curtos */
         body2: {
-            fontSize: '1.1rem',
+            fontSize: '.8rem',
             fontWeight: 300,
             color: theme.palette.text.primary,
-            fontFamily: 'Poppins, sans-serif',
+            fontFamily: 'Lexend, sans-serif',
             [theme.breakpoints.up('md')]: {
-                fontSize: '.8rem',
+                fontSize: '1.1rem',
             },
         },
         /** Subtitulo do titulo de apresentação */

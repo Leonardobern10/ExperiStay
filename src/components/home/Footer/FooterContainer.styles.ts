@@ -3,11 +3,13 @@ import type { footerContainerSxType } from './footer.types';
 
 export const footerContainerSx = (theme: Theme): footerContainerSxType => ({
     sectionHomeSx: {
-        height: { xs: '100%', md: '70vh' },
+        height: '100%',
         backgroundColor: theme.palette.secondary.main,
-        rowGap: {
-            xs: theme.spacing(1),
-            md: theme.spacing(4),
+        rowGap: theme.spacing(1),
+        padding: theme.spacing(4),
+        [theme.breakpoints.up('md')]: {
+            height: '70vh',
+            rowGap: theme.spacing(4),
         },
     },
     containerFooterSx: {
@@ -17,7 +19,6 @@ export const footerContainerSx = (theme: Theme): footerContainerSxType => ({
         alignItems: 'center',
         height: '70%',
         width: '100%',
-        padding: 8,
     },
     containerMainSx: {
         display: 'flex',
@@ -27,18 +28,18 @@ export const footerContainerSx = (theme: Theme): footerContainerSxType => ({
             xs: 'center',
             md: 'flex-start',
         },
-        width: { xs: '100%', md: '30%' },
+        width: { xs: '100%', md: '40%' },
         rowGap: theme.spacing(4),
     },
     typographySx: {
         opacity: '70%',
+        width: 'fit-content',
         fontWeight: 300,
     },
     containerNavSx: {
         display: 'flex',
         flexDirection: 'row',
         paddingY: theme.spacing(4),
-        paddingX: theme.spacing(8),
         columnGap: theme.spacing(2),
     },
     containerRightsSx: {
@@ -50,9 +51,5 @@ export const footerContainerSx = (theme: Theme): footerContainerSxType => ({
         alignItems: 'center',
         height: '20%',
         width: '100%',
-        paddingX: {
-            xs: theme.spacing(0),
-            md: theme.spacing(8),
-        },
     },
 });

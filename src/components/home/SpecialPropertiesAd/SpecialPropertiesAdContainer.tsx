@@ -40,9 +40,7 @@ export default function SpecialPropertiesAdContainer(props: {
                     />
                 ))}
             </Stack>
-            <Stack
-                direction="row"
-                spacing={8}>
+            <Stack style={specialPropertiesStyle.stackButtonSx}>
                 <ButtonCustom
                     main
                     buttonName={dataContainer.buttonRegister}

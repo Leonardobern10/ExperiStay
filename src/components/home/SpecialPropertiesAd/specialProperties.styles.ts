@@ -11,10 +11,17 @@ export const advantagePropertiesSx = (
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
-        paddingY: theme.spacing(10),
+        justifyContent: 'stretch',
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
+        width: '100%',
+        height: 'fit-content',
+        [theme.breakpoints.up('md')]: {
+            height: '100%',
+        },
     },
     descriptionSx: {
-        width: '80%',
+        width: '100%',
         textAlign: 'center',
         opacity: '70%',
         fontWeight: 200,
@@ -23,7 +30,7 @@ export const advantagePropertiesSx = (
 
 export const specialPropertiesSx = (theme: Theme): SpecialPropertiesSxType => ({
     sectionSx: {
-        width: '70%',
+        width: '80%',
         border: 0.5,
         paddingTop: theme.spacing(10),
         paddingBottom: theme.spacing(10),
@@ -36,14 +43,24 @@ export const specialPropertiesSx = (theme: Theme): SpecialPropertiesSxType => ({
             sx: 'column',
             md: 'row',
         },
-        alignItems: 'center',
+        alignItems: 'flex-end',
         justifyContent: 'center',
-        paddingRight: theme.spacing(4),
-        paddingLeft: theme.spacing(4),
+        paddingRight: theme.spacing(3),
+        paddingLeft: theme.spacing(3),
     },
     boxTitleSx: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'space-between',
+        width: '100%',
+    },
+    stackButtonSx: {
+        flexDirection: 'column',
+        rowGap: theme.spacing(5),
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row',
+            columnGap: theme.spacing(8),
+        },
     },
 });

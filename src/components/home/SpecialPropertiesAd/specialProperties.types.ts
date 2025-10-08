@@ -4,6 +4,7 @@ export type SpecialPropertiesSxType = {
     sectionSx: SxProps<Theme>;
     propertySx: SxProps<Theme>;
     boxTitleSx: SxProps<Theme>;
+    stackButtonSx: SxProps<Theme>;
 };
 
 export type AdvantagePropertiesSxType = {
