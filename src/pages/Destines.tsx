@@ -1,12 +1,12 @@
 import ContainerProperties from '@components/ContainerProperties';
 import ContainerMainDestination from '@components/home/Presentation/MainContainerDestination';
-import InputSelect from '@components/InputSelect';
 
 import { PageContainer } from '@components/ui/PageContainer';
 import { sortOptions } from '@data/allSelectItemsData';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import { destinesSx } from './Destines.styles';
+import InputSelect from '@components/input/InputSelect';
 
 export default function Destines(): ReactElement {
     const theme = useTheme();

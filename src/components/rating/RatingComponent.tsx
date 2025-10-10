@@ -1,8 +1,9 @@
 import { Rating, Stack, Typography, Card, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
-import type { RatingProps } from '../types/RatingProps';
-import AvatarUserRating from './home/Ratings/AvatarUserRating';
+
 import { ratingComponentSx } from './RatingComponent.styles';
+import AvatarUserRating from '@components/home/Ratings/AvatarUserRating';
+import type { RatingProps } from '../../types/RatingProps';
 
 export default function RatingComponent(data: RatingProps): ReactElement {
     const theme = useTheme();

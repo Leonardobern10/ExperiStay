@@ -1,12 +1,12 @@
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import { ratings } from '@data/ratingsData';
-import RatingComponent from '@components/RatingComponent';
 import ContainerSectionHome from '../../ui/ContainerSectionHome';
 import useWidth from '@hooks/useWidth';
 import Carousel from '@components/Carousel';
 import MainTitle from '@components/MainTitle';
 import { containerSx } from './ratings.styles';
+import RatingComponent from '@components/rating/RatingComponent';
 
 export default function RatingsContainer(props: {
     className: string;

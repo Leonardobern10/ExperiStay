@@ -9,9 +9,10 @@ import ButtonCustom from '@components/ButtonCustom';
 import { Controller, useForm, type SubmitHandler } from 'react-hook-form';
 import { allSelectItemsData } from '@data/allSelectItemsData';
 import type { SearchPropertiesProps } from '../../../types/SearchAvailablePropertiesProps';
-import DatePickerCustom from '@components/DatePickerCustom';
-import InputSelect from '@components/InputSelect';
+
 import { containerMainDestinationSx } from './mainContainerDestination.styles';
+import DatePickerCustom from '@components/datePicker/DatePickerCustom';
+import InputSelect from '@components/input/InputSelect';
 
 export default function ContainerMainDestination(): ReactElement {
     const { handleSubmit, control } = useForm<SearchPropertiesProps>({

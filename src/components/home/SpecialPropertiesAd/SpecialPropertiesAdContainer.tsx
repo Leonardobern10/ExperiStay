@@ -40,7 +40,7 @@ export default function SpecialPropertiesAdContainer(props: {
                     />
                 ))}
             </Stack>
-            <Stack style={specialPropertiesStyle.stackButtonSx}>
+            <Stack sx={specialPropertiesStyle.stackButtonSx}>
                 <ButtonCustom
                     main
                     buttonName={dataContainer.buttonRegister}
