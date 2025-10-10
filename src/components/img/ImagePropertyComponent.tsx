@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import ImageComponent from './ImageComponent';
-import RatingValue from './RatingValue';
-import LabelProperty from './LabelProperty';
+import LabelProperty from '../LabelProperty';
 import { imagePropertySx } from './ImagePropertyComponent.styles';
-import type { ImagePropertyComponentProps } from '../types/property/ImagePropertyComponentProps';
+import type { ImagePropertyComponentProps } from '../../types/property/ImagePropertyComponentProps';
+import RatingValue from '@components/rating/RatingValue';
 
 export default function ImagePropertyComponent({
     src,

@@ -1,7 +1,7 @@
 import { Paper, Typography, useTheme } from '@mui/material';
 import type { LabelPropertyProps } from '../types/LabelPropertyProps';
 import { useMemo, type ReactElement } from 'react';
-import { labelPropertySx } from './LabelProperty,styles';
+import { labelPropertySx } from './LabelProperty.styles';
 
 export default function LabelProperty({
     labelName,

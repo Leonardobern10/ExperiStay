@@ -1,22 +1,22 @@
-import ImagePropertyComponent from '@components/ImagePropertyComponent';
+import ImagePropertyComponent from '@components/img/ImagePropertyComponent';
 import { Box } from '@mui/material';
 import type { ReactElement } from 'react';
 
 export default function MainPropertyImage({
-     testImage,
+    testImage,
 }: {
-     testImage: string;
+    testImage: string;
 }): ReactElement {
-     return (
-          <Box sx={{ height: '60vh' }}>
-               <ImagePropertyComponent
-                    src={testImage}
-                    name="text"
-                    rating={5}
-                    location="Miami"
-                    label="Muito bom"
-                    full
-               />
-          </Box>
-     );
+    return (
+        <Box sx={{ height: '60vh' }}>
+            <ImagePropertyComponent
+                src={testImage}
+                name="text"
+                rating={5}
+                location="Miami"
+                label="Muito bom"
+                full
+            />
+        </Box>
+    );
 }

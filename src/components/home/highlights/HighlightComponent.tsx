@@ -3,7 +3,7 @@ import { useMemo, type ReactElement } from 'react';
 import type { HighlightType } from '../../../types/HighlightType';
 import PriceHighlight from './PriceHighlight';
 import DescriptionHighlight from './DescriptionHighlights';
-import ImagePropertyComponent from '@components/ImagePropertyComponent';
+import ImagePropertyComponent from '@components/img/ImagePropertyComponent';
 import { useNavigate } from 'react-router';
 import LikedComponent from '@components/LikedComponent';
 import { highlightComponentSx } from './HighlightsComponent.styles';
