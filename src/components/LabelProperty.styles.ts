@@ -5,11 +5,14 @@ export const labelPropertySx = (
     highlight?: boolean,
 ): SxProps<Theme> => ({
     position: `${highlight ? 'absolute' : ''}`,
-    top: `${highlight ? '5%' : ''}`,
+    top: `${highlight ? '3%' : ''}`,
     right: `${highlight ? '3%' : ''}`,
     width: 'fit-content',
     color: theme.palette.primary.main,
-    paddingX: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
+    paddingTop: theme.spacing(0.5),
+    paddingBottom: theme.spacing(1),
     borderRadius: theme.shape.borderRadius,
     border: 1,
 });
