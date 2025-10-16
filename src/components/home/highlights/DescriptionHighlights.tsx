@@ -12,5 +12,5 @@ export default function DescriptionHighlight({
         return description;
     };
 
-    return <Typography variant="body2">{limitString(100)}</Typography>;
+    return <Typography variant="body1">{limitString(100)}</Typography>;
 }

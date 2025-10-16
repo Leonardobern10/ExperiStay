@@ -51,11 +51,10 @@ theme = createTheme(theme, {
             fontFamily: 'Poppins, sans-serif',
             textShadow: '2px 2px 2px black',
             width: '100%',
-            color: theme.palette.primary.light,
+            color: theme.palette.text.primary,
             [theme.breakpoints.up('md')]: {
                 textAlign: 'center',
                 fontSize: '4rem',
-                color: theme.palette.text.primary,
             },
         },
         /** Titulos de seções da Home */
@@ -63,13 +62,14 @@ theme = createTheme(theme, {
             fontSize: '2rem',
             fontWeight: 400,
             fontFamily: 'Poppins, sans-serif',
+            color: theme.palette.text.primary,
             [theme.breakpoints.up('md')]: {
                 fontSize: '3rem',
             },
         },
         h3: {
             fontFamily: 'Lexend, sans-serif',
-            fontSize: '1.3rem',
+            fontSize: '1.2rem',
             fontWeight: 500,
             color: theme.palette.text.primary,
             [theme.breakpoints.up('md')]: {
@@ -77,27 +77,32 @@ theme = createTheme(theme, {
             },
         },
         h4: {
-            fontSize: '1.8rem',
-            fontWeight: 400,
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '1.2rem',
+            fontWeight: 500,
+            color: theme.palette.text.primary,
+            [theme.breakpoints.up('md')]: {
+                fontSize: '1.8rem',
+            },
         },
         /** Textos extensos */
         body1: {
             fontSize: '1rem',
-            fontWeight: 200,
+            fontWeight: 300,
             color: theme.palette.text.primary,
-            fontFamily: 'Lexend, sans-serif',
+            fontFamily: 'Poppins, sans-serif',
             [theme.breakpoints.up('md')]: {
-                fontSize: '1.2rem',
+                fontSize: '1rem',
             },
         },
         /** Textos curtos */
         body2: {
-            fontSize: '.8rem',
-            fontWeight: 300,
-            color: theme.palette.text.primary,
+            fontSize: '.9rem',
+            fontWeight: 200,
+            color: theme.palette.text.secondary,
             fontFamily: 'Lexend, sans-serif',
             [theme.breakpoints.up('md')]: {
-                fontSize: '1.1rem',
+                fontSize: '1rem',
             },
         },
         /** Subtitulo do titulo de apresentação */
@@ -252,6 +257,27 @@ theme = createTheme(theme, {
             },
         },
         MuiCard: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: theme.palette.secondary.main,
+                    borderRadius: theme.shape.borderRadius,
+                    overflow: 'hidden',
+                    transition: theme.transitions.create(
+                        ['transform', 'box-shadow', 'border-color'],
+                        {
+                            duration: theme.transitions.duration.short,
+                            easing: theme.transitions.easing.easeIn,
+                        },
+                    ),
+                    '&:hover': {
+                        transform: 'translateY(-10px)',
+                        boxShadow: `0px 10px 10px #000`,
+                        borderColor: theme.palette.primary.main,
+                    },
+                },
+            },
+        },
+        MuiCardActionArea: {
             styleOverrides: {
                 root: {
                     backgroundColor: theme.palette.secondary.main,

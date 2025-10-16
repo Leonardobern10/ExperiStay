@@ -17,7 +17,7 @@ export default function HeadInfoProperty({
                 justifyContent="flex-start"
                 spacing={2}>
                 <LocationOnIcon fontSize="inherit" />
-                <Typography variant="body1">{headLocation}</Typography>
+                <Typography variant="body2">{headLocation}</Typography>
             </Stack>
             <Stack
                 direction="row"

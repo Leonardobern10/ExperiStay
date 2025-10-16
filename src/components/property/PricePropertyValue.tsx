@@ -10,8 +10,11 @@ export default function PriceValueProperty({
     const theme = useTheme();
     const priceValueStyle = useMemo(() => priceValueSx(), [theme]);
     return (
-        <Typography sx={priceValueStyle.priceValueTypoSx}>
-            {`R$ ${price.toFixed(2)}`}
+        <Typography
+            variant="h2"
+            color="primary"
+            sx={priceValueStyle.priceValueTypoSx}>
+            {`R$ ${price}`}
             <Box
                 component="span"
                 sx={priceValueStyle.priceValueboxSx}>

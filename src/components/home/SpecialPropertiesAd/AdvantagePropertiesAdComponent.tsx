@@ -15,7 +15,7 @@ export default function AdvantagePropertiesAdComponent(
         <Box sx={advantageStyles.boxSx}>
             <Typography variant="h3">{data.title}</Typography>
             <Typography
-                variant="body2"
+                variant="body1"
                 sx={advantageStyles.descriptionSx}>
                 {data.description}
             </Typography>

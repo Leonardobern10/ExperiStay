@@ -1,6 +1,6 @@
 export const priceValueSx = () => ({
     priceValueTypoSx: {
-        fontSize: 30,
+        fontSize: 50,
     },
     priceValueboxSx: {
         fontSize: 12,
