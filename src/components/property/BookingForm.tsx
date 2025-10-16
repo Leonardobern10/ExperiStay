@@ -25,9 +25,9 @@ export default function BookingForm(): ReactElement {
         <Box
             onSubmit={handleSubmit(onSubmit)}
             component="form"
-            sx={{
+            sx={(theme) => ({
                 width: '100%',
-            }}>
+            })}>
             <LocalizationProvider dateAdapter={AdapterMoment}>
                 <Box
                     sx={(theme) => ({
@@ -36,6 +36,7 @@ export default function BookingForm(): ReactElement {
                         alignItems: 'center',
                         justifyContent: 'flex-end',
                         rowGap: theme.spacing(4),
+                        width: '100%',
                     })}>
                     <Controller
                         name="arrival"
@@ -80,7 +81,6 @@ export default function BookingForm(): ReactElement {
                         submit
                         main={true}
                         buttonName="Buscar"
-                        fullWidth
                     />
                 </Box>
             </LocalizationProvider>

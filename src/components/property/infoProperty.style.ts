@@ -50,6 +50,10 @@ export const infoPropertySx = (theme: Theme) => ({
         display: 'flex',
         flexDirection: 'column',
         minWidth: '40%',
+        boxShadow: `1px 1px 1px ${theme.palette.primary.main},
+                -1px 1px 1px ${theme.palette.primary.main},
+        1px -1px 1px ${theme.palette.primary.main}, 
+        -1px -1px 1px ${theme.palette.primary.main}`,
     },
     infoDividerSx: {
         backgroundColor: theme.palette.primary.light,

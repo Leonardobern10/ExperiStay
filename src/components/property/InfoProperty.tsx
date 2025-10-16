@@ -63,7 +63,8 @@ export default function InfoProperty(): ReactElement {
                 sx={infoStyle.infoBoxAllAcomodationsSx}>
                 <Stack
                     direction="row"
-                    justifyContent="space-between">
+                    justifyContent="space-between"
+                    height="100%">
                     <PriceValueProperty price={1200} />
                     <FavoriteBorderIcon />
                 </Stack>
