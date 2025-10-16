@@ -1,4 +1,4 @@
-import { Box, Card, Typography, useTheme } from '@mui/material';
+import { Box, Card, CardActionArea, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import type { HighlightType } from '../../../types/HighlightType';
 import PriceHighlight from './PriceHighlight';
@@ -16,7 +16,7 @@ export default function HighlightComponent(
     const highlightStyles = useMemo(() => highlightComponentSx(theme), [theme]);
 
     return (
-        <Card
+        <CardActionArea
             className="cardProperty"
             onClick={() => navigate(`/destinos/${hightLightData.index}`)}
             sx={highlightStyles.cardSx}>
@@ -31,7 +31,7 @@ export default function HighlightComponent(
                 <Box>
                     <Typography variant="h3">{hightLightData.name}</Typography>
                     <Typography
-                        variant="body1"
+                        variant="body2"
                         color="textSecondary">
                         {hightLightData.location}
                     </Typography>
@@ -44,6 +44,6 @@ export default function HighlightComponent(
                     <LikedComponent liked={hightLightData.liked} />
                 </Box>
             </Box>
-        </Card>
+        </CardActionArea>
     );
 }
