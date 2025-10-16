@@ -2,13 +2,11 @@ import { Box, Typography, useTheme } from '@mui/material';
 import { forwardRef, useMemo, type ReactElement } from 'react';
 import type { MainTextProps } from '../../../types/MainTextProps';
 import useWidth from '@hooks/useWidth';
-import { slideAnimation } from '@hooks/useAnimation';
 import { mainTextSx } from './mainText.styles';
 
 const MainText = forwardRef<HTMLDivElement, MainTextProps>(
     ({ title, desc }, ref): ReactElement => {
         let width: boolean = useWidth('md');
-        slideAnimation('.mainTextAnimated');
         const theme = useTheme();
         const mainTextStyle = useMemo(() => mainTextSx(theme), [theme]);
         return (

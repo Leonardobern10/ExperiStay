@@ -2,10 +2,10 @@ import { Box, Grid, useTheme } from '@mui/material';
 import { useMemo, useRef, type ReactElement } from 'react';
 import MainText from './MainText';
 import { mainTexts } from '@data/mainTexts';
-import { useMainContentAnimation } from '@hooks/useAnimation';
 import GridMainText from './GridMainText';
 import ContainerMainDestination from './MainContainerDestination';
 import { presentationContainerSx } from './presentationContainer.styles';
+import { motion } from 'motion/react';
 
 export default function PresentationContainer({
     className,
@@ -19,7 +19,6 @@ export default function PresentationContainer({
         () => presentationContainerSx(theme),
         [theme],
     );
-    useMainContentAnimation(container, mainText);
 
     return (
         <Box
@@ -27,7 +26,12 @@ export default function PresentationContainer({
             ref={container}
             sx={presentationStyles.boxContainer}>
             {/* Importação o objeto declarado no fim do arquivo */}
-            <Box sx={presentationStyles.boxImage}>
+            <Box
+                component={motion.div}
+                sx={presentationStyles.boxImage}
+                initial={{ opacity: 0, x: '-50%' }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 2 }}>
                 <GridMainText
                     children={
                         <MainText
