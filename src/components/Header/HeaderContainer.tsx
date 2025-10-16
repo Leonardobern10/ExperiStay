@@ -4,8 +4,8 @@ import { headerItemsNav } from '@data/headerItemsNav';
 import useWidth from '@hooks/useWidth';
 import HeaderDesktop from './HeaderDesktop';
 import HeaderMobile from './HeaderMobile';
-import { useHeaderAnimation } from '@hooks/useAnimation';
 import { headerContainerSx } from './header.styles';
+import { motion } from 'motion/react';
 
 export default function HeaderContainer(props: {
     className?: string;
@@ -17,10 +17,12 @@ export default function HeaderContainer(props: {
     const theme: Theme = useTheme();
     const boxSx = useMemo(() => headerContainerSx(theme), [theme]);
 
-    useHeaderAnimation(elem1, elem2, elem3);
-
     return (
         <Box
+            component={motion.header}
+            initial={{ opacity: 0, y: '-50%' }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
             zIndex={1000}
             className={props.className}
             sx={boxSx}>
