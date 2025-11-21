@@ -20,7 +20,13 @@ export default function Destines(): ReactElement {
                     única no Brasil
                 </Typography>
             </Box>
-            <Box>
+            <Box
+                sx={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}>
                 <ContainerMainDestination />
             </Box>
             <Box sx={destinesStyles.destinesPropertiesContainerSx}>

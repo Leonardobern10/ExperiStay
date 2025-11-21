@@ -1,8 +1,5 @@
 import type { HighlightType } from '../types/HighlightType';
 import type { PropertyHighlightsType } from '../types/PropertyHighlightsType';
-import imageExample from '@images/highlights/florianopolis_highlight.png';
-import bahia from '@images/highlights/bahia_highlight.png';
-import manaus from '@images/highlights/amazonas_highlight.png';
 
 export const highlightsData: PropertyHighlightsType = {
     title: 'Imóveis em destaque',
