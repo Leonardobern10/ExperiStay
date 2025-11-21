@@ -21,7 +21,7 @@ export const allProperties: Array<HighlightType> = [
         price: 1200,
         rating: 5,
         liked: false,
-        img: imageExample,
+        img: './src/assets/images/highlights/florianopolis_highlight.png',
         label: 'Luxo Urbano',
     },
     {
@@ -33,7 +33,7 @@ export const allProperties: Array<HighlightType> = [
         price: 850,
         rating: 3,
         liked: true,
-        img: bahia,
+        img: './src/assets/images/highlights/bahia_highlight.png',
         label: 'Experiência Única',
     },
     {
@@ -45,7 +45,7 @@ export const allProperties: Array<HighlightType> = [
         price: 1600,
         rating: 5,
         liked: false,
-        img: manaus,
+        img: './src/assets/images/highlights/rio_amazonas.png',
         label: 'Aventura',
     },
 ];
