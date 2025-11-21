@@ -1,6 +1,11 @@
 import { Typography } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 
+type MainTitleProps = {
+    string: string;
+    align?: 'center' | 'flex-end' | 'flex-start';
+};
+
 export default function MainTitle(props: {
     string: string;
     align?: 'center' | 'flex-end' | 'flex-start';
@@ -16,11 +21,7 @@ export default function MainTitle(props: {
         <Typography
             color={'textPrimary'}
             variant="h2"
-            sx={{
-                width: '100%',
-                textShadow: '2px 2px 2px black',
-                textAlign: `${props.align && props.align}`,
-            }}>
+            sx={mainTitleStyle(props)}>
             {strings[0]}
             <Typography
                 variant="h2"
@@ -31,3 +32,9 @@ export default function MainTitle(props: {
         </Typography>
     );
 }
+
+const mainTitleStyle = (props: MainTitleProps) => ({
+    width: '100%',
+    textShadow: '2px 2px 2px black',
+    textAlign: `${props.align && props.align}`,
+});

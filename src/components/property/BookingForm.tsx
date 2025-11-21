@@ -1,16 +1,16 @@
-import { Box } from '@mui/material';
+import { Box, useTheme, type Theme } from '@mui/material';
 import type { BookingProperty } from '../../types/property/BookingProperty';
 import type { ReactElement } from 'react';
 import { Controller, useForm, type SubmitHandler } from 'react-hook-form';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-
 import { allSelectItemsData } from '@data/allSelectItemsData';
 import ButtonCustom from '@components/ButtonCustom';
 import DatePickerCustom from '@components/datePicker/DatePickerCustom';
 import InputSelect from '@components/input/InputSelect';
 
 export default function BookingForm(): ReactElement {
+    const theme = useTheme();
     const { handleSubmit, control } = useForm<BookingProperty>({
         defaultValues: {
             arrival: null,
@@ -25,19 +25,9 @@ export default function BookingForm(): ReactElement {
         <Box
             onSubmit={handleSubmit(onSubmit)}
             component="form"
-            sx={(theme) => ({
-                width: '100%',
-            })}>
+            sx={{ width: '100%' }}>
             <LocalizationProvider dateAdapter={AdapterMoment}>
-                <Box
-                    sx={(theme) => ({
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'flex-end',
-                        rowGap: theme.spacing(4),
-                        width: '100%',
-                    })}>
+                <Box sx={boxStyle(theme)}>
                     <Controller
                         name="arrival"
                         control={control}
@@ -87,3 +77,12 @@ export default function BookingForm(): ReactElement {
         </Box>
     );
 }
+
+const boxStyle = (theme: Theme) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    rowGap: theme.spacing(4),
+    width: '100%',
+});

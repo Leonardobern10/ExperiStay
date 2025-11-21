@@ -9,6 +9,7 @@ export const presentationContainerSx = (
         width: '100%',
         height: '100vh',
         paddingY: theme.spacing(8),
+        backgroundColor: theme.palette.background.default,
     },
     boxImage: {
         backgroundImage: `url(${backgroundImage})`,
@@ -38,7 +39,7 @@ export const presentationContainerSx = (
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: theme.spacing(1),
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: theme.palette.background.default,
         borderRadius: theme.shape.borderRadius,
         borderColor: theme.palette.secondary.main,
     },

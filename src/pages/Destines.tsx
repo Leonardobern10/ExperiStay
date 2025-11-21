@@ -24,9 +24,7 @@ export default function Destines(): ReactElement {
                 <ContainerMainDestination />
             </Box>
             <Box sx={destinesStyles.destinesPropertiesContainerSx}>
-                <Stack
-                    direction="row"
-                    width="90%">
+                <Stack sx={destinesStyles.destinesStack}>
                     <Typography variant="body1">
                         3 imóveis disponíveis
                     </Typography>
