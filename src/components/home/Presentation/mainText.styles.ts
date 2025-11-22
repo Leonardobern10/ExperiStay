@@ -3,16 +3,18 @@ import type { MainTextSxType } from './presentation.types';
 
 export const mainTextSx = (theme: Theme): MainTextSxType => ({
     mainTextContainer: {
-        width: {
-            xs: '80%',
-            md: '100%',
-        },
+        marginTop: theme.spacing(13),
+        width: '80%',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         rowGap: theme.spacing(2),
         borderRadius: theme.shape.borderRadius,
+        [theme.breakpoints.up('md')]: {
+            width: '100%',
+            marginTop: theme.spacing(0),
+        },
     },
     boxTitle: {
         display: 'flex',

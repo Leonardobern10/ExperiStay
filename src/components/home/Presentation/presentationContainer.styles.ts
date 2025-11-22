@@ -8,7 +8,6 @@ export const presentationContainerSx = (
     boxContainer: {
         width: '100%',
         height: '100vh',
-        paddingY: theme.spacing(8),
         backgroundColor: theme.palette.background.default,
     },
     boxImage: {
@@ -32,15 +31,13 @@ export const presentationContainerSx = (
         },
     },
     gridCustom: {
-        width: '80%',
+        width: 'fit-content',
         height: 'fit-content',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: theme.spacing(1),
-        backgroundColor: theme.palette.background.default,
         borderRadius: theme.shape.borderRadius,
-        borderColor: theme.palette.secondary.main,
     },
 });
