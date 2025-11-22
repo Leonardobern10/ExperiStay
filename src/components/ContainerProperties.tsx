@@ -1,4 +1,4 @@
-import { Grid, useTheme, Typography, CircularProgress } from '@mui/material';
+import { Grid, useTheme, Typography } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import { containerPropertiesSx } from './ContainerProperties.styles';
 import type { PropertyType } from '../types/HighlightType';
