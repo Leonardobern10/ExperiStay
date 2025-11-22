@@ -1,4 +1,4 @@
-import type { HighlightType } from '../types/HighlightType';
+import type { PropertyType } from '../types/HighlightType';
 import type { PropertyHighlightsType } from '../types/PropertyHighlightsType';
 
 export const highlightsData: PropertyHighlightsType = {
@@ -8,7 +8,7 @@ export const highlightsData: PropertyHighlightsType = {
     buttonName: 'Acessar catálogo',
 };
 
-export const allProperties: Array<HighlightType> = [
+export const allProperties: Array<PropertyType> = [
     {
         index: 0,
         name: 'Penthouse Ipanema',

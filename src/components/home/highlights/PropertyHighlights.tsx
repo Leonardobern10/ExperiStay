@@ -9,7 +9,7 @@ import ButtonCustom from '@components/ButtonCustom';
 import ContainerProperties from '@components/ContainerProperties';
 import { propertyHighlightsSx } from './propertyHighlights.styles';
 import HighlightComponent from './HighlightComponent';
-import type { HighlightType } from '../../../types/HighlightType';
+import type { PropertyType } from '../../../types/HighlightType';
 import { allProperties, highlightsData } from '@data/propertyHighlightsData';
 
 export default function PropertyHighlights({
@@ -41,7 +41,7 @@ export default function PropertyHighlights({
                 <Box sx={propertyHighlightStyle.boxMobileSx}>
                     <Carousel
                         arrow={true}
-                        children={allProperties.map((el: HighlightType) => (
+                        children={allProperties.map((el: PropertyType) => (
                             <HighlightComponent
                                 key={el.index}
                                 index={el.index}

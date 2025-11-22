@@ -1,6 +1,8 @@
 import HeaderContainer from '@components/Header/HeaderContainer';
 import FooterContainer from '@components/home/Footer/FooterContainer';
 import { Grid } from '@mui/material';
+import { getProperties } from '@services/propertyService';
+import { useEffect } from 'react';
 import { Outlet } from 'react-router';
 
 const appStyle = {
@@ -13,6 +15,10 @@ const appStyle = {
 };
 
 function App() {
+    useEffect(() => {
+        getProperties();
+    }, []);
+
     return (
         <Grid
             component="div"

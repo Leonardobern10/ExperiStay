@@ -1,6 +1,6 @@
 import { Box, Card, CardActionArea, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
-import type { HighlightType } from '../../../types/HighlightType';
+import type { PropertyType } from '../../../types/HighlightType';
 import PriceHighlight from './PriceHighlight';
 import DescriptionHighlight from './DescriptionHighlights';
 import ImagePropertyComponent from '@components/img/ImagePropertyComponent';
@@ -9,7 +9,7 @@ import LikedComponent from '@components/LikedComponent';
 import { highlightComponentSx } from './HighlightsComponent.styles';
 
 export default function HighlightComponent(
-    hightLightData: HighlightType,
+    hightLightData: PropertyType,
 ): ReactElement {
     const navigate = useNavigate();
     const theme = useTheme();

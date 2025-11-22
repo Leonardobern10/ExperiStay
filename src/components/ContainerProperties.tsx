@@ -1,7 +1,7 @@
 import { Grid, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import { containerPropertiesSx } from './ContainerProperties.styles';
-import type { HighlightType } from '../types/HighlightType';
+import type { PropertyType } from '../types/HighlightType';
 import { allProperties } from '@data/propertyHighlightsData';
 import HighlightComponent from './home/highlights/HighlightComponent';
 
@@ -13,7 +13,7 @@ export default function ContainerProperties(): ReactElement {
     );
     return (
         <Grid sx={propertiesStyles}>
-            {allProperties.map((el: HighlightType) => (
+            {allProperties.map((el: PropertyType) => (
                 <HighlightComponent
                     key={el.index}
                     index={el.index}
