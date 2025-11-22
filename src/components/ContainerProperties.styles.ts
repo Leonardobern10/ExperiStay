@@ -1,7 +1,10 @@
 import type { SxProps, Theme } from '@mui/material';
 
-export const containerPropertiesSx = (theme: Theme): SxProps<Theme> => ({
-    width: '100vw',
+export const containerPropertiesSx = (
+    theme: Theme,
+    loading: boolean,
+): SxProps<Theme> => ({
+    width: loading ? '5rem' : '100vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
@@ -10,7 +13,8 @@ export const containerPropertiesSx = (theme: Theme): SxProps<Theme> => ({
     paddingX: theme.spacing(8),
     paddingY: theme.spacing(10),
     [theme.breakpoints.up('md')]: {
-        flexDirection: 'row',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
         columnGap: theme.spacing(6),
         paddingX: theme.spacing(20),
     },

@@ -1,4 +1,5 @@
 export type PropertyType = {
+    _id: string;
     index: number;
     name: string;
     location: string;

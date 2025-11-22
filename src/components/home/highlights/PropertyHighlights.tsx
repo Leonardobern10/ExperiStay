@@ -10,7 +10,8 @@ import ContainerProperties from '@components/ContainerProperties';
 import { propertyHighlightsSx } from './propertyHighlights.styles';
 import HighlightComponent from './HighlightComponent';
 import type { PropertyType } from '../../../types/HighlightType';
-import { allProperties, highlightsData } from '@data/propertyHighlightsData';
+import { highlightsData } from '@data/propertyHighlightsData';
+import { useProperties } from '@hooks/useEmployees';
 
 export default function PropertyHighlights({
     className,
@@ -25,6 +26,10 @@ export default function PropertyHighlights({
         [theme],
     );
 
+    const { properties } = useProperties();
+    const top3 = properties?.slice(0, 3);
+    console.log(top3);
+
     return (
         <ContainerSectionHome className={className}>
             <Box sx={propertyHighlightStyle.boxTitleSx}>
@@ -36,14 +41,15 @@ export default function PropertyHighlights({
                 <Typography variant="subtitle2">{data.subtitle}</Typography>
             </Box>
             {currentWidth ? (
-                <ContainerProperties />
+                <ContainerProperties quantity={3} />
             ) : (
                 <Box sx={propertyHighlightStyle.boxMobileSx}>
                     <Carousel
                         arrow={true}
-                        children={allProperties.map((el: PropertyType) => (
+                        children={top3!.map((el: PropertyType) => (
                             <HighlightComponent
-                                key={el.index}
+                                _id={el._id}
+                                key={el._id}
                                 index={el.index}
                                 name={el.name}
                                 location={el.location}
