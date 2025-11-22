@@ -3,26 +3,23 @@ import { useMemo, type ReactElement } from 'react';
 import { containerPropertiesSx } from './ContainerProperties.styles';
 import type { PropertyType } from '../types/HighlightType';
 import HighlightComponent from './home/highlights/HighlightComponent';
-import { useProperties } from '@hooks/useEmployees';
 
 export default function ContainerProperties({
-    quantity,
+    properties,
+    loading,
 }: {
-    quantity?: number;
+    properties: PropertyType[] | null;
+    loading: boolean;
 }): ReactElement {
     const theme = useTheme();
-    const { properties, loading, error } = useProperties(quantity);
     const propertiesStyles = useMemo(
         () => containerPropertiesSx(theme, loading),
         [theme],
     );
     return (
         <Grid sx={propertiesStyles}>
-            {loading && <CircularProgress />}
-            {error && <Typography>Erro ao obter dados: {error}</Typography>}
-            {!loading &&
-                !error &&
-                properties?.map((el: PropertyType) => (
+            {properties ? (
+                properties.map((el: PropertyType) => (
                     <HighlightComponent
                         _id={el._id}
                         key={el._id}
@@ -36,7 +33,10 @@ export default function ContainerProperties({
                         img={el.img}
                         label={el.label}
                     />
-                ))}
+                ))
+            ) : (
+                <Typography>Nenhum registo encontrado!</Typography>
+            )}
         </Grid>
     );
 }
