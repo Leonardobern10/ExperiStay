@@ -3,18 +3,26 @@ import { Box } from '@mui/material';
 import type { ReactElement } from 'react';
 
 export default function MainPropertyImage({
-    testImage,
+    location,
+    name,
+    src,
+    rating,
+    label,
 }: {
-    testImage: string;
+    src: string;
+    location: string;
+    name: string;
+    rating: number;
+    label: string;
 }): ReactElement {
     return (
         <Box sx={{ height: '60vh' }}>
             <ImagePropertyComponent
-                src={testImage}
-                name="text"
-                rating={5}
-                location="Miami"
-                label="Muito bom"
+                src={src}
+                name={name}
+                rating={rating}
+                location={location}
+                label={label}
                 full
             />
         </Box>

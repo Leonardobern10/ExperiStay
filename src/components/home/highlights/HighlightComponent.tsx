@@ -1,6 +1,6 @@
-import { Box, Card, CardActionArea, Typography, useTheme } from '@mui/material';
+import { Box, CardActionArea, Typography, useTheme } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
-import type { PropertyType } from '../../../types/HighlightType';
+import type { PropertyType } from '../../../types/PropertyType';
 import PriceHighlight from './PriceHighlight';
 import DescriptionHighlight from './DescriptionHighlights';
 import ImagePropertyComponent from '@components/img/ImagePropertyComponent';
@@ -18,7 +18,7 @@ export default function HighlightComponent(
     return (
         <CardActionArea
             className="cardProperty"
-            onClick={() => navigate(`/destinos/${hightLightData.index}`)}
+            onClick={() => navigate(`/destinos/${hightLightData._id}`)}
             sx={highlightStyles.cardSx}>
             <ImagePropertyComponent
                 src={hightLightData.img}

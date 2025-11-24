@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import ImageComponent from './ImageComponent';
 import LabelProperty from '../LabelProperty';
@@ -22,10 +22,15 @@ export default function ImagePropertyComponent({
                 alt={`imagem do imovel em destaque ${name} no(a) ${location}`}
             />
             <RatingValue value={rating} />
-            <LabelProperty
-                highlight={true}
-                labelName={label}
-            />
+            <Stack
+                direction="row"
+                width="100%"
+                border="2px solid black">
+                <LabelProperty
+                    highlight={true}
+                    labelName={label}
+                />
+            </Stack>
         </Box>
     );
 }

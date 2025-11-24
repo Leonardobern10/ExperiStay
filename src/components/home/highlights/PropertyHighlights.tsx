@@ -9,7 +9,7 @@ import ButtonCustom from '@components/ButtonCustom';
 import ContainerProperties from '@components/ContainerProperties';
 import { propertyHighlightsSx } from './propertyHighlights.styles';
 import HighlightComponent from './HighlightComponent';
-import type { PropertyType } from '../../../types/HighlightType';
+import type { PropertyType } from '../../../types/PropertyType';
 import { highlightsData } from '@data/propertyHighlightsData';
 import { useProperties } from '@hooks/useProperties';
 
@@ -26,7 +26,7 @@ export default function PropertyHighlights({
         [theme],
     );
     const { properties, loading } = useProperties();
-    const top3: PropertyType[] = properties?.slice(0, 3)!;
+    const top3: PropertyType[] = properties?.slice(0, 3) ?? [];
 
     return (
         <ContainerSectionHome className={className}>
@@ -51,7 +51,6 @@ export default function PropertyHighlights({
                             <HighlightComponent
                                 _id={el._id}
                                 key={el._id}
-                                index={el.index}
                                 name={el.name}
                                 location={el.location}
                                 description={el.description}
@@ -60,6 +59,9 @@ export default function PropertyHighlights({
                                 liked={el.liked}
                                 img={el.img}
                                 label={el.label}
+                                amenities={el.amenities}
+                                labels={el.labels}
+                                features={el.features}
                             />
                         ))}
                     />

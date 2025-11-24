@@ -16,7 +16,7 @@ export default function LabelProperty({
         <Paper
             variant="outlined"
             sx={labelStyles}>
-            <Typography variant="caption"> {labelName} </Typography>
+            <Typography variant="caption">{labelName}</Typography>
         </Paper>
     );
 }

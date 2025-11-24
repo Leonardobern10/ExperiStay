@@ -3,17 +3,17 @@ import type { AcomodationsPropertyProps } from '../../types/property/Acomodation
 import type { ReactElement } from 'react';
 
 export default function HeadAcomodationItem({
-     acomodationIcon,
-     acomodationValue,
+    acomodationIcon,
+    acomodationValue,
 }: AcomodationsPropertyProps): ReactElement {
-     const Icon = acomodationIcon;
-     return (
-          <Stack
-               direction="row"
-               justifyContent="flex-start"
-               spacing={2}>
-               <Icon fontSize="inherit" />
-               <Typography variant="body2">{acomodationValue}</Typography>
-          </Stack>
-     );
+    const Icon = acomodationIcon;
+    return (
+        <Stack
+            direction="row"
+            justifyContent="flex-start"
+            spacing={2}>
+            <Icon fontSize="inherit" />
+            <Typography variant="body2">{acomodationValue}</Typography>
+        </Stack>
+    );
 }

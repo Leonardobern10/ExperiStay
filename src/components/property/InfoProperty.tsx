@@ -3,8 +3,6 @@ import { useMemo, type ReactElement } from 'react';
 import HeadInfoProperty from './HeadInfoProperty';
 import {
     acommodationsData,
-    descriptionExample,
-    headInfoPropertyData,
     labelsPropertyData,
 } from '@data/property/headInfoPropertyData';
 import LabelProperty from '@components/LabelProperty';
@@ -14,22 +12,39 @@ import PriceValueProperty from './PricePropertyValue';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Divider from '@mui/material/Divider';
 import { infoPropertySx } from './infoProperty.style';
+import type { AmenitiesType } from '../../types/AmenitiesType';
 
-export default function InfoProperty(): ReactElement {
+export default function InfoProperty({
+    description,
+    name,
+    location,
+    price,
+    acomodations,
+}: {
+    description: string;
+    name: string;
+    location: string;
+    price: number;
+    acomodations: AmenitiesType;
+}): ReactElement {
     const theme = useTheme();
     const infoStyle = useMemo(() => infoPropertySx(theme), [theme]);
+
+    console.log(acomodations);
+
     return (
         <Box sx={infoStyle.infoBoxContainerSx}>
             <Box sx={infoStyle.infoBoxDescriptionSx}>
                 <HeadInfoProperty
-                    headTitle={headInfoPropertyData.headTitle}
-                    headLocation={headInfoPropertyData.headLocation}
-                    headAcomodations={headInfoPropertyData.headAcomodations}
+                    headTitle={name}
+                    headLocation={location}
+                    headAcomodations={acomodations}
                 />
                 <Typography
                     sx={infoStyle.infoTypographyDescriptionSx}
                     variant="body1">
-                    {descriptionExample}
+                    {' '}
+                    {description}{' '}
                 </Typography>
                 <Box sx={infoStyle.infoBoxTitleSx}>
                     <Typography variant="h3">
@@ -65,7 +80,7 @@ export default function InfoProperty(): ReactElement {
                     direction="row"
                     justifyContent="space-between"
                     height="100%">
-                    <PriceValueProperty price={1200} />
+                    <PriceValueProperty price={price} />
                     <FavoriteBorderIcon />
                 </Stack>
                 <BookingForm />

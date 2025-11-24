@@ -14,7 +14,7 @@ export const containerMainDestinationSx = (theme: Theme) => ({
         alignItems: 'center',
         backgroundColor: theme.palette.background.default,
         borderRadius: theme.shape.borderRadius,
-        border: `2px solid ${theme.palette.primary.contrastText}`,
+        border: `1px solid ${theme.palette.primary.contrastText}`,
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
             padding: theme.spacing(2),

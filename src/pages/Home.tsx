@@ -1,4 +1,4 @@
-import { type ReactElement } from 'react';
+import { useEffect, type ReactElement } from 'react';
 import { PageContainer } from '@components/ui/PageContainer';
 import PresentationContainer from '@components/home/Presentation/PresentationContainer';
 import UnbelivableExperiences from '@components/home/UnbelivableExperiences/UnbelivableExperiencesContainer';
@@ -6,8 +6,12 @@ import ExclusiveDestinyContainer from '@components/home/ExclusiveDestinys/Exclus
 import RatingsContainer from '@components/home/Ratings/RatingsContainer';
 import SpecialPropertiesAdContainer from '@components/home/SpecialPropertiesAd/SpecialPropertiesAdContainer';
 import PropertyHighlights from '@components/home/highlights/PropertyHighlights';
+import { getPropertyById } from '@services/propertyService';
 
 export default function Home(): ReactElement {
+    useEffect(() => {
+        getPropertyById('68f28e12c7b3c174954cf901');
+    }, []);
     return (
         <PageContainer>
             <PresentationContainer className="section" />

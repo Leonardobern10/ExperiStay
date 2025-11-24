@@ -1,4 +1,4 @@
-import type { PropertyType } from './HighlightType';
+import type { PropertyType } from './PropertyType';
 import type { MetaDataGetProperty } from './MetaDataGetProperty';
 
 export type ResponseGetProperty = {

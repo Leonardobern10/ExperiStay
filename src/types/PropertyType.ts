@@ -1,6 +1,7 @@
+import type { AmenitiesType } from './AmenitiesType';
+
 export type PropertyType = {
     _id: string;
-    index: number;
     name: string;
     location: string;
     description: string;
@@ -9,4 +10,7 @@ export type PropertyType = {
     liked: boolean;
     img: string;
     label: string;
+    labels: string[];
+    amenities: AmenitiesType;
+    features: string[];
 };

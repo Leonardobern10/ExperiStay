@@ -1,7 +1,7 @@
-import type { AcomodationsPropertyProps } from './AcomodationsPropertyProps';
+import type { AmenitiesType } from '../../types/AmenitiesType';
 
 export type HeadInfoPropertyProps = {
-     headTitle: string;
-     headLocation: string;
-     headAcomodations: AcomodationsPropertyProps[];
+    headTitle: string;
+    headLocation: string;
+    headAcomodations: AmenitiesType;
 };
