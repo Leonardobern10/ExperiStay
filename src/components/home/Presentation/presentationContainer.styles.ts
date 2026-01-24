@@ -1,5 +1,5 @@
 import type { Theme } from '@mui/material';
-import backgroundImage from '@images/downloadedImage.png';
+import backgroundImage from '@images/bg_site.png';
 import type { PresentationContainerSxType } from './presentation.types';
 
 export const presentationContainerSx = (
@@ -11,10 +11,13 @@ export const presentationContainerSx = (
         backgroundColor: theme.palette.background.default,
     },
     boxImage: {
-        backgroundImage: `url(${backgroundImage})`,
+        background: `linear-gradient(
+      rgba(0,0,0,0.3),
+      rgba(0,0,0,0.3)
+    ), url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'bottom',
         height: '100%',
         width: '100%',
         display: 'flex',

@@ -11,6 +11,8 @@ export const mainTextSx = (theme: Theme): MainTextSxType => ({
         justifyContent: 'space-between',
         rowGap: theme.spacing(2),
         borderRadius: theme.shape.borderRadius,
+        backdropFilter: 'blur(2px)',
+        padding: theme.spacing(2),
         [theme.breakpoints.up('md')]: {
             width: '100%',
             marginTop: theme.spacing(0),
