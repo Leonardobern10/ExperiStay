@@ -68,10 +68,12 @@ export default function Destines(): ReactElement {
                 )}
                 <Stack
                     direction="row"
-                    spacing={5}>
+                    spacing={5}
+                    margin={10}>
                     {totalPages &&
                         [...Array(totalPages)].map((_, i) => (
                             <Button
+                                sx={{ padding: 1, width: 'fit-content' }}
                                 variant={
                                     currentPage === i + 1
                                         ? 'contained'
