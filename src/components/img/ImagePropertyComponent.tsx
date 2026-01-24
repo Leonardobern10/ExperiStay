@@ -24,8 +24,7 @@ export default function ImagePropertyComponent({
             <RatingValue value={rating} />
             <Stack
                 direction="row"
-                width="100%"
-                border="2px solid black">
+                width="100%">
                 <LabelProperty
                     highlight={true}
                     labelName={label}

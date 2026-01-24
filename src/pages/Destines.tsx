@@ -1,6 +1,5 @@
 import ContainerProperties from '@components/ContainerProperties';
 import ContainerMainDestination from '@components/home/Presentation/MainContainerDestination';
-
 import { PageContainer } from '@components/ui/PageContainer';
 import { sortOptions } from '@data/allSelectItemsData';
 import {

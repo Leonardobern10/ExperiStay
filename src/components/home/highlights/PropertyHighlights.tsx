@@ -12,6 +12,7 @@ import HighlightComponent from './HighlightComponent';
 import type { PropertyType } from '../../../types/PropertyType';
 import { highlightsData } from '@data/propertyHighlightsData';
 import { useProperties } from '@hooks/useProperties';
+import { useNavigate } from 'react-router';
 
 export default function PropertyHighlights({
     className,
@@ -27,6 +28,7 @@ export default function PropertyHighlights({
     );
     const { properties, loading } = useProperties();
     const top3: PropertyType[] = properties?.slice(0, 3) ?? [];
+    const navigate = useNavigate();
 
     return (
         <ContainerSectionHome className={className}>
@@ -67,7 +69,10 @@ export default function PropertyHighlights({
                     />
                 </Box>
             )}
-            <ButtonCustom buttonName={data.buttonName} />
+            <ButtonCustom
+                buttonName={data.buttonName}
+                onClick={() => navigate('/destinos')}
+            />
         </ContainerSectionHome>
     );
 }

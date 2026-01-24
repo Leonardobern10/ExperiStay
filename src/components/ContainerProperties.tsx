@@ -23,7 +23,7 @@ export default function ContainerProperties({
                     <HighlightComponent
                         _id={el._id}
                         key={el._id}
-                        index={el.index}
+                        index={el._id}
                         name={el.name}
                         location={el.location}
                         description={el.description}
