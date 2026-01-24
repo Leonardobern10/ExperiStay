@@ -35,6 +35,7 @@ export default function SpecialPropertiesAdContainer(props: {
                 {advantages.map((el) => (
                     <AdvantagePropertiesAdComponent
                         key={el.index}
+                        icon={el.icon}
                         title={el.title}
                         description={el.description}
                     />

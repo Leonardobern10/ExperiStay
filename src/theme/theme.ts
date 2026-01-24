@@ -69,7 +69,7 @@ theme = createTheme(theme, {
         },
         h3: {
             fontFamily: 'Lexend, sans-serif',
-            fontSize: '1.2rem',
+            fontSize: '1.5rem',
             fontWeight: 500,
             color: theme.palette.text.primary,
             [theme.breakpoints.up('md')]: {
@@ -87,7 +87,7 @@ theme = createTheme(theme, {
         },
         /** Textos extensos */
         body1: {
-            fontSize: '1rem',
+            fontSize: '.9rem',
             fontWeight: 300,
             color: theme.palette.text.primary,
             fontFamily: 'Poppins, sans-serif',
@@ -118,7 +118,7 @@ theme = createTheme(theme, {
             fontSize: '.9rem',
             fontWeight: 300,
             minWidth: '60%',
-            maxWidth: '70%',
+            maxWidth: '80%',
             textAlign: 'center',
             color: '#828080ff',
             [theme.breakpoints.up('md')]: {
