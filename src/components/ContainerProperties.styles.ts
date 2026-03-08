@@ -1,10 +1,7 @@
 import type { SxProps, Theme } from '@mui/material';
 
-export const containerPropertiesSx = (
-    theme: Theme,
-    loading: boolean,
-): SxProps<Theme> => ({
-    width: loading ? '5rem' : '100vw',
+export const containerPropertiesSx = (theme: Theme): SxProps<Theme> => ({
+    width: '100vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',

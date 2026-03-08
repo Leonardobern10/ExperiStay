@@ -10,7 +10,7 @@ export type PropertyType = {
     liked: boolean;
     img: string;
     label: string;
-    labels: string[];
-    amenities: AmenitiesType;
-    features: string[];
+    labels?: string[];
+    amenities?: AmenitiesType;
+    features?: string[];
 };

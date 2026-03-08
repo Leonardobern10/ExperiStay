@@ -1,12 +1,37 @@
-import { Box, CardActionArea, Typography, useTheme } from '@mui/material';
+import {
+    Box,
+    CardActionArea,
+    Typography,
+    useTheme,
+    type SxProps,
+    type Theme,
+} from '@mui/material';
 import { useMemo, type ReactElement } from 'react';
 import type { PropertyType } from '../../../types/PropertyType';
 import PriceHighlight from './PriceHighlight';
 import DescriptionHighlight from './DescriptionHighlights';
 import ImagePropertyComponent from '@components/img/ImagePropertyComponent';
-import { useNavigate } from 'react-router';
+import { useNavigate, type NavigateFunction } from 'react-router';
 import LikedComponent from '@components/LikedComponent';
 import { highlightComponentSx } from './HighlightsComponent.styles';
+
+const cardActionOptions = (
+    id: string,
+    style: SxProps<Theme>,
+    navigate: NavigateFunction,
+) => ({
+    className: 'cardProperty',
+    onClick: () => navigate(`/destinos/${id}`),
+    sx: style,
+});
+
+const imagePropertyOptions = (hightLightData: PropertyType) => ({
+    src: hightLightData.img,
+    name: hightLightData.name,
+    label: hightLightData.label,
+    rating: hightLightData.rating,
+    location: hightLightData.location,
+});
 
 export default function HighlightComponent(
     hightLightData: PropertyType,
@@ -17,16 +42,12 @@ export default function HighlightComponent(
 
     return (
         <CardActionArea
-            className="cardProperty"
-            onClick={() => navigate(`/destinos/${hightLightData._id}`)}
-            sx={highlightStyles.cardSx}>
-            <ImagePropertyComponent
-                src={hightLightData.img}
-                name={hightLightData.name}
-                label={hightLightData.label}
-                rating={hightLightData.rating}
-                location={hightLightData.location}
-            />
+            {...cardActionOptions(
+                hightLightData._id,
+                highlightStyles.cardSx,
+                navigate,
+            )}>
+            <ImagePropertyComponent {...imagePropertyOptions(hightLightData)} />
             <Box sx={highlightStyles.boxInfoSx}>
                 <Box>
                     <Typography variant="h3">{hightLightData.name}</Typography>

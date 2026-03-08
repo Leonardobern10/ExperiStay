@@ -2,18 +2,27 @@ import ContainerProperties from '@components/ContainerProperties';
 import ContainerMainDestination from '@components/home/Presentation/MainContainerDestination';
 import { PageContainer } from '@components/ui/PageContainer';
 import { sortOptions } from '@data/allSelectItemsData';
-import {
-    Box,
-    Button,
-    CircularProgress,
-    Stack,
-    Typography,
-    useTheme,
-} from '@mui/material';
+import { Box, Button, Stack, Typography, useTheme } from '@mui/material';
 import { useMemo, useState, type ReactElement } from 'react';
 import { destinesSx } from './Destines.styles';
 import InputSelect from '@components/input/InputSelect';
 import { useProperties } from '@hooks/useProperties';
+
+const inputOptions = {
+    onChange: () => console.log('Ola'),
+    label: 'Organizar por',
+    allItems: sortOptions,
+    value: null,
+};
+
+const boxSx = {
+    sx: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+};
 
 export default function Destines(): ReactElement {
     const theme = useTheme();
@@ -37,13 +46,7 @@ export default function Destines(): ReactElement {
                     única no Brasil
                 </Typography>
             </Box>
-            <Box
-                sx={{
-                    width: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}>
+            <Box {...boxSx}>
                 <ContainerMainDestination />
             </Box>
             <Box sx={destinesStyles.destinesPropertiesContainerSx}>
@@ -51,14 +54,8 @@ export default function Destines(): ReactElement {
                     <Typography variant="body1">
                         {total} imóveis disponíveis
                     </Typography>
-                    <InputSelect
-                        onChange={() => console.log('Ola')}
-                        label="Organizar por"
-                        allItems={sortOptions}
-                        value={null}
-                    />
+                    <InputSelect {...inputOptions} />
                 </Stack>
-                {loading && <CircularProgress />}
                 {error && <Typography>Erro ao obter dados: {error}</Typography>}
                 {!loading && !error && (
                     <ContainerProperties
